@@ -2,17 +2,18 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
-<title>Vuela con Rueda Reserva con Millas</title>
+<title>Vuela con Rueda Reserva con Puntos</title>
 <meta http-equiv="content-language" content="es">
-<meta name="description" content="Servicio de reserva con millas: cuéntanos tu viaje y tus puntos, y encontramos los asientos en clase business y te ayudamos a reservarlos. Empieza con un depósito de $100.">
+<meta name="description" content="Reserva de vuelos con puntos, hecha para ti: $250 por persona, con un depósito de $100 para empezar. Tú pones los puntos, yo encuentro y reservo los asientos.">
 <link rel="canonical" href="https://bio.vuelaconrueda.com/reserva-con-millas/">
-<meta property="og:title" content="Servicio de Reserva con Millas | Vuela con Rueda">
-<meta property="og:description" content="Servicio de reserva con millas: cuéntanos tu viaje y tus puntos, y encontramos los asientos en clase business y te ayudamos a reservarlos. Empieza con un depósito de $100.">
+<link rel="alternate" hreflang="en" href="https://bio.travelsergeant.com/award-booking/">
+<meta property="og:title" content="Reserva de Vuelos con Puntos, Hecha Para Ti | Vuela con Rueda">
+<meta property="og:description" content="Reserva de vuelos con puntos, hecha para ti: $250 por persona, con un depósito de $100 para empezar. Tú pones los puntos, yo encuentro y reservo los asientos.">
 <meta property="og:url" content="https://bio.vuelaconrueda.com/reserva-con-millas/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* Layout: masthead, hero with price card, steps, request form, FAQ */
+/* Layout: language switch, hero with price card, how it works, help levels, honest notes, fit check, intake form */
 :root {
   --blue: #0C3B3C; --brass: #F0A824; --scarlet: #C7502B;
   --bg: #FAF3E7; --surface: #FFFFFF; --ink: #0C3B3C; --muted: #4E5F5E; --line: #E8DCC6; --chip: #F2E6D2;
@@ -80,41 +81,58 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .samples li span { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
 .samples small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
 
+.lang { display: flex; justify-content: flex-end; margin-bottom: 18px; }
+.lang a { font: 700 13px/1 var(--display); letter-spacing: .04em; color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 9px 16px; }
+.lang a:hover { border-color: var(--brass); color: var(--brass); }
+.hero .wrap { display: block; padding-bottom: 0; }
+.hero .grid2 { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 32px; align-items: end; padding-bottom: 44px; }
+@media (max-width: 760px) { .hero .grid2 { grid-template-columns: minmax(0, 1fr); } }
+.hook { font: 700 20px/1.35 var(--display); color: #fff; margin: 0 0 12px; }
 .price-card { border: 1px solid rgba(255,255,255,.25); border-radius: 6px; padding: 20px; background: rgba(255,255,255,.06); }
 .price-card b { font: 700 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 10px; }
-.price-card .amt { font: 800 40px/1 var(--display); color: #fff; margin: 0 0 6px; }
-.price-card p { margin: 0; font-size: 14px; color: rgba(255,255,255,.8); }
-.price-card .btn { margin-top: 14px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; background: var(--brass); color: var(--blue); font: 700 15px/1 var(--display); padding: 14px 20px; border-radius: 4px; text-decoration: none; border: 0; cursor: pointer; }
+.price-card .amt { font: 800 42px/1 var(--display); color: #fff; margin: 0 0 4px; }
+.price-card .amt small { font: 600 15px/1 var(--body); color: rgba(255,255,255,.8); margin-left: 6px; }
+.price-card ul { margin: 12px 0 0; padding-left: 18px; color: rgba(255,255,255,.88); font-size: 14px; display: grid; gap: 6px; }
+.price-card .btn { margin-top: 16px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; background: var(--brass); color: var(--blue); font: 700 15px/1 var(--display); padding: 15px 22px; border-radius: 4px; text-decoration: none; border: 0; cursor: pointer; }
 .btn:hover { filter: brightness(1.06); }
-.btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; }
+.btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, .lang a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+.h2 { font: 800 26px/1.2 var(--display); margin: 0 0 8px; text-wrap: balance; }
+.sub { margin: 0 0 18px; color: var(--muted); max-width: 70ch; }
+.covers { margin: 0; color: var(--muted); max-width: 70ch; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 16px; counter-reset: s; }
 .step { border-top: 3px solid var(--brass); padding-top: 12px; }
 .step span { font: 500 12px/1 var(--mono); color: var(--brass); display: block; margin-bottom: 8px; }
-.step h3 { font: 700 17px/1.3 var(--display); margin: 0 0 6px; }
-.step p { margin: 0; font-size: 15px; color: var(--muted); }
-.h2 { font: 800 24px/1.2 var(--display); margin: 0 0 6px; text-wrap: balance; }
-.sub { margin: 0 0 18px; color: var(--muted); max-width: 68ch; }
+.step p { margin: 0; font-size: 15px; color: var(--ink); }
+.levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; }
+.level { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+.level h3 { font: 800 19px/1.25 var(--display); margin: 0 0 8px; }
+.level p { margin: 0; font-size: 15px; color: var(--muted); }
+.note { background: var(--surface); border-left: 4px solid var(--brass); border-radius: 6px; padding: 20px 22px; display: grid; gap: 12px; max-width: 820px; }
+.note h2 { font: 800 20px/1.25 var(--display); margin: 0; }
+.note p { margin: 0; color: var(--ink); font-size: 16px; }
+.fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.fit div { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+.fit h3 { font: 800 17px/1.25 var(--display); margin: 0 0 10px; }
+.fit ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; color: var(--ink); font-size: 15px; }
+.fit .yes h3 { color: #1F6B3A; } .fit .no h3 { color: var(--scarlet); }
+.cta { text-align: left; }
 form.req { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: grid; gap: 26px; }
 fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 14px; }
 legend { font: 800 18px/1.25 var(--display); padding: 0; margin-bottom: 4px; }
 .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; }
-label.f { display: grid; gap: 6px; font: 600 14px/1.3 var(--body); }
-label.f small { font-weight: 400; color: var(--muted); }
+label.f, .f { display: grid; gap: 6px; font: 600 14px/1.3 var(--body); }
+.f small { font-weight: 400; color: var(--muted); }
 input, select, textarea { font: 400 16px/1.4 var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 11px 12px; width: 100%; }
 textarea { min-height: 96px; resize: vertical; }
 .opts { display: flex; flex-wrap: wrap; gap: 8px; }
-.opts label { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 4px; padding: 9px 12px; font-size: 14px; cursor: pointer; background: var(--bg); }
+.opts label { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 4px; padding: 9px 12px; font-size: 14px; font-weight: 400; cursor: pointer; background: var(--bg); }
 .opts input { width: auto; margin: 0; accent-color: var(--brass); }
 .agree { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink); }
 .agree input { width: auto; margin-top: 3px; accent-color: var(--brass); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .msg { margin: 0; font-size: 15px; }
 .msg.ok { color: #1F6B3A; font-weight: 600; } .msg.err { color: var(--scarlet); font-weight: 600; }
-.faq { display: grid; gap: 10px; max-width: 760px; }
-.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
-.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
-.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
 </style>
 
 </head>
@@ -128,7 +146,7 @@ textarea { min-height: 96px; resize: vertical; }
       <a href="/ofertas-de-vuelos/">Ofertas de vuelos</a>
       <a href="/sweet-spots/">Sweet spots</a>
       <a href="/planificador/">Planificador</a>
-      <a href="/reserva-con-millas/" aria-current="page">Reserva con millas</a>
+      <a href="/reserva-con-millas/" aria-current="page">Reserva con puntos</a>
       <a href="/equipaje/">Equipaje</a>
     </nav>
   </div>
@@ -136,31 +154,54 @@ textarea { min-height: 96px; resize: vertical; }
 
 <section class="hero">
   <div class="wrap">
-    <div>
-      <p class="eyebrow">Reserva con millas</p>
-      <h1>Dime a dónde quieres ir. Nosotros encontramos los asientos.</h1>
-      <p class="lede">Mándanos tu viaje y los puntos que tienes. Buscamos en los programas de aerolíneas a los que llegan tus puntos, encontramos los mejores asientos premio y te ayudamos a reservarlos, para que no pases noches en páginas de aerolíneas.</p>
+    <div class="lang"><a href="https://bio.travelsergeant.com/award-booking/" hreflang="en" lang="en">English</a></div>
+    <div class="grid2">
+      <div>
+        <p class="eyebrow">Reserva con puntos</p>
+        <h1>Reserva de Vuelos con Puntos, Hecha Para Ti</h1>
+        <p class="hook">Tienes los puntos. Encontrar los asientos es la parte difícil.</p>
+        <p class="lede">Dime a dónde quieres ir y tus fechas, y yo busco el espacio de premios, vigilo tus fechas si los asientos aún no se abren, y reservo los vuelos con tus puntos cuando aparezcan los asientos correctos.</p>
+      </div>
+      <aside class="price-card">
+        <b>El precio es simple</b>
+        <p class="amt">$250<small>por persona</small></p>
+        <ul><li>Solo ida o ida y vuelta</li><li>Un depósito de $100 por persona inicia tu búsqueda. No es reembolsable y se descuenta del precio</li><li>El saldo de $150 solo se cobra cuando tus vuelos quedan reservados</li></ul>
+        <a class="btn" href="#request">Empieza Tu Reserva</a>
+      </aside>
     </div>
-    <aside class="price-card">
-      <b>Desde</b>
-      <p class="amt">$100</p>
-      <p>Un depósito de $100 no reembolsable inicia tu búsqueda. Los impuestos y cargos de la aerolínea son aparte.</p>
-      <a class="btn" href="#request">Pide tu reserva</a>
-    </aside>
   </div>
 </section>
 
 <main>
   <div class="wrap">
+    <p class="covers">El precio cubre la búsqueda, el monitoreo y la reserva. Tus puntos cubren las millas, y los impuestos y cargos de la aerolínea se pagan con tu tarjeta al reservar, como en cualquier boleto de premio.</p>
+
     <section aria-labelledby="how-h">
       <h2 class="h2" id="how-h">Cómo funciona</h2>
-      <p class="sub">Cuatro pasos, de la solicitud al pase de abordar.</p>
-      <div class="steps"><div class="step"><span>01</span><h3>Manda tu solicitud</h3><p>Llena el formulario de abajo con tu viaje, quiénes viajan y tus puntos.</p></div><div class="step"><span>02</span><h3>Paga el depósito</h3><p>Revisamos tu solicitud y te mandamos por correo un enlace para pagar el depósito de $100.</p></div><div class="step"><span>03</span><h3>Buscamos</h3><p>Revisamos los programas a los que se transfieren tus puntos y te armamos las mejores opciones.</p></div><div class="step"><span>04</span><h3>Reservas</h3><p>Escoges una opción y te guiamos para mover tus puntos y asegurar el asiento.</p></div></div>
+      <div class="steps"><div class="step"><span>01</span><p>Llena el formulario corto con tu viaje y tus saldos de puntos</p></div><div class="step"><span>02</span><p>Lo reviso y confirmo que puedo tomar la búsqueda</p></div><div class="step"><span>03</span><p>Pagas el depósito de $100 por persona y empiezo a buscar de inmediato</p></div><div class="step"><span>04</span><p>En unos días, te envío las mejores opciones que existen en ese momento</p></div><div class="step"><span>05</span><p>Si una te funciona, eliges cómo terminamos la reserva. Si aún no existe nada bueno, tu búsqueda pasa a mi rastreador diario por hasta 90 días</p></div></div>
+    </section>
+
+    <section aria-labelledby="lv-h">
+      <h2 class="h2" id="lv-h">Tú eliges tu nivel de ayuda</h2>
+      <p class="sub">Todo incluido en el mismo precio.</p>
+      <div class="levels"><div class="level"><h3>Resérvalo tú</h3><p>Te envío los vuelos exactos y una lista clara paso a paso, y reservas a tu ritmo.</p></div><div class="level"><h3>Sigue mi video</h3><p>Grabo un video personal donde te guío por tu reserva exacta, clic por clic, y lo sigues cuando estés listo.</p></div><div class="level"><h3>Reservamos juntos</h3><p>Entramos en una llamada con pantalla compartida, tú inicias sesión, y reservamos en vivo juntos, transferencias incluidas.</p></div></div>
+    </section>
+
+    <section class="note"><h2>Una nota honesta antes de empezar</h2><p>Yo no puedo crear asientos de premio, ni puedo obligar a una aerolínea a liberarlos. A veces las fechas que quieres simplemente no se abren, sobre todo en clase ejecutiva y primera, en días festivos y en rutas populares.</p><p>Lo que sí te prometo es esfuerzo: voy a buscar con todo, revisar tus fechas a diario, y traerte la mejor opción que exista en ese momento.</p><p>Y cuando encuentre algo que te funcione, nos movemos rápido. Los asientos de premio pueden desaparecer en minutos, a veces mientras los estamos viendo. Si te gusta una opción que te envío, di que sí rápido para asegurarla. Dejarla para el día siguiente casi siempre significa que en la mañana ya no está.</p></section>
+<section class="note"><h2>Las fechas fijas son bienvenidas</h2><p>Los asientos de premio en fechas exactas no siempre se abren de inmediato. Para eso es el rastreador: si las primeras opciones no son lo suficientemente buenas, sigo revisando tus fechas a diario hasta que aparezcan los asientos o pase tu fecha límite.</p><p>Cada búsqueda en el rastreador corre por hasta 90 días de revisiones diarias. Si tu viaje está más lejos que eso, acordamos cuándo empiezan tus 90 días, normalmente más cerca del viaje, para que las revisiones diarias cubran las semanas en que es más probable que se abran los asientos.</p><p>Si no se abre nada reservable al final de tu búsqueda, simplemente termina y el depósito es todo lo que pagaste. Y si encuentro vuelos que cumplen lo que pediste y decides no reservarlos, el precio completo se debe, porque el trabajo ya está hecho.</p></section>
+<section class="note"><h2>Algo que nunca te voy a pedir</h2><p>Tus contraseñas, en ningún nivel. Tus puntos se quedan en tus cuentas, y en la llamada con pantalla compartida eres tú quien inicia sesión. Las transferencias de puntos no se pueden deshacer, así que solo las hacemos cuando ya viste y aprobaste los vuelos exactos.</p></section>
+
+    <section aria-labelledby="fit-h">
+      <h2 class="h2" id="fit-h">¿Es para ti?</h2>
+      <div class="fit">
+        <div class="yes"><h3>Es para ti si:</h3><ul><li>Ya tienes los puntos, o casi todos, en tus cuentas</li><li>Tu viaje es dentro de unas semanas o más, para que la búsqueda tenga espacio de trabajar</li><li>Puedes decir que sí rápido cuando aparezcan los asientos correctos</li></ul></div>
+        <div class="no"><h3>Probablemente no es para ti si:</h3><ul><li>Todavía no tienes los puntos. Primero constrúyelos; para eso es el Bootcamp</li><li>Necesitas un asiento garantizado en una fecha exacta pase lo que pase. El espacio de premio no funciona así, y quien te lo prometa está adivinando</li><li>Tu viaje sale en los próximos días. Ahí no hay espacio para el rastreador, aunque igual puedo dar una primera revisada rápida si me lo pides</li></ul></div>
+      </div>
     </section>
 
     <section id="request" aria-labelledby="form-h">
-      <h2 class="h2" id="form-h">Solicita una reserva con millas</h2>
-      <p class="sub">Entre más nos cuentes, mejor la búsqueda. Fechas y aeropuertos flexibles te dan más opciones.</p>
+      <h2 class="h2" id="form-h">Empieza Tu Reserva</h2>
+      <p class="sub">Cuéntame tu viaje y tus saldos de puntos. Reviso cada solicitud y te contesto por correo antes de cobrar cualquier depósito.</p>
       <form class="req" id="req" novalidate>
         <input type="hidden" name="site" value="bio.vuelaconrueda.com">
         <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
@@ -175,7 +216,7 @@ textarea { min-height: 96px; resize: vertical; }
           </div>
         </fieldset>
         <fieldset><legend>Tu viaje</legend>
-          <div class="f" role="group" aria-label="Tipo de viaje"><span class="f" style="font-weight:600">Tipo de viaje</span><div class="opts"><label><input type="radio" name="trip_type" value="Viaje redondo" checked> Viaje redondo</label><label><input type="radio" name="trip_type" value="Solo ida"> Solo ida</label><label><input type="radio" name="trip_type" value="Varias ciudades"> Varias ciudades</label></div></div>
+          <div class="f" role="group" aria-label="Tipo de viaje"><span>Tipo de viaje</span><div class="opts"><label><input type="radio" name="trip_type" value="Ida y vuelta" checked> Ida y vuelta</label><label><input type="radio" name="trip_type" value="Solo ida"> Solo ida</label><label><input type="radio" name="trip_type" value="Varias ciudades"> Varias ciudades</label></div></div>
           <div class="row">
             <label class="f">Desde <small>ciudad o aeropuerto, agrega opciones si eres flexible</small><input name="from" required></label>
             <label class="f">A <small>ciudad, aeropuerto o región</small><input name="to" required></label>
@@ -183,7 +224,10 @@ textarea { min-height: 96px; resize: vertical; }
           <div class="row">
             <label class="f">Fecha de salida<input name="depart" type="date" required></label>
             <label class="f">Fecha de regreso <small>déjala vacía si es solo ida</small><input name="return_date" type="date"></label>
+          </div>
+          <div class="row">
             <label class="f">¿Qué tan flexibles son tus fechas?<select name="flexibility"><option>Fechas exactas</option><option>3 días antes o después</option><option>Cualquier día de ese mes</option><option>Muy flexibles</option></select></label>
+            <label class="f">Fecha límite para reservar <small>opcional, la última fecha en que este viaje todavía te funciona</small><input name="deadline" type="date"></label>
           </div>
         </fieldset>
         <fieldset><legend>Viajeros y cabina</legend>
@@ -198,22 +242,18 @@ textarea { min-height: 96px; resize: vertical; }
           </div>
         </fieldset>
         <fieldset><legend>Tus puntos</legend>
-          <div class="f" role="group" aria-label="Puntos que tienes"><span class="f" style="font-weight:600">Puntos que tienes <small>marca todos los que apliquen y pon los saldos abajo</small></span><div class="opts"><label><input type="checkbox" name="bank" value="Amex Membership Rewards"> Amex Membership Rewards</label><label><input type="checkbox" name="bank" value="Chase Ultimate Rewards"> Chase Ultimate Rewards</label><label><input type="checkbox" name="bank" value="Capital One Miles"> Capital One Miles</label><label><input type="checkbox" name="bank" value="Citi ThankYou"> Citi ThankYou</label><label><input type="checkbox" name="bank" value="Bilt"> Bilt</label><label><input type="checkbox" name="bank" value="Wells Fargo"> Wells Fargo</label><label><input type="checkbox" name="bank" value="Rove"> Rove</label></div></div>
+          <div class="f" role="group" aria-label="Puntos que tienes"><span>Puntos que tienes <small>marca todos los que apliquen</small></span><div class="opts"><label><input type="checkbox" name="bank" value="Amex Membership Rewards"> Amex Membership Rewards</label><label><input type="checkbox" name="bank" value="Chase Ultimate Rewards"> Chase Ultimate Rewards</label><label><input type="checkbox" name="bank" value="Capital One Miles"> Capital One Miles</label><label><input type="checkbox" name="bank" value="Citi ThankYou"> Citi ThankYou</label><label><input type="checkbox" name="bank" value="Bilt"> Bilt</label><label><input type="checkbox" name="bank" value="Wells Fargo"> Wells Fargo</label><label><input type="checkbox" name="bank" value="Rove"> Rove</label></div></div>
           <label class="f">Saldos y otros programas <small>por ejemplo: Amex 180k, United 60k, Marriott 200k</small><textarea name="other_points"></textarea></label>
         </fieldset>
-        <fieldset><legend>Algo más</legend>
-          <label class="f">Notas <small>lo indispensable, lo que no aceptas, ocasiones especiales</small><textarea name="notes"></textarea></label>
+        <fieldset><legend>Nivel de ayuda y notas</legend>
+          <div class="f" role="group" aria-label="Nivel de ayuda"><span>Nivel de ayuda</span><div class="opts"><label><input type="radio" name="help" value="Resérvalo tú" checked> Resérvalo tú</label><label><input type="radio" name="help" value="Sigue mi video"> Sigue mi video</label><label><input type="radio" name="help" value="Reservamos juntos"> Reservamos juntos</label><label><input type="radio" name="help" value="Aún no sé"> Aún no sé</label></div></div>
+          <label class="f">Notas <small>lo indispensable, lo que no aceptas, ocasiones especiales</small><textarea name="notes_text"></textarea></label>
           <label class="f">¿Cómo me encontraste?<select name="heard"><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>Un amigo</option><option>Otro</option></select></label>
-          <label class="agree"><input type="checkbox" name="agree" value="Yes" required> <span>Entiendo que el depósito de $100 no es reembolsable, que los asientos premio no están garantizados y que yo pago los impuestos y cargos de la aerolínea.</span></label>
+          <label class="agree"><input type="checkbox" name="agree" value="Yes" required> <span>Entiendo que el precio es $250 por persona, que el depósito de $100 por persona no es reembolsable y se descuenta del precio, y que los asientos de premio no están garantizados.</span></label>
         </fieldset>
-        <div><button class="btn" type="submit" id="send">Enviar solicitud</button></div>
+        <div><button class="btn" type="submit" id="send">Enviar mi solicitud</button></div>
         <p class="msg" id="msg" role="status" aria-live="polite"></p>
       </form>
-    </section>
-
-    <section class="faq" aria-labelledby="faq-h">
-      <h2 class="h2" id="faq-h">Preguntas frecuentes</h2>
-      <details><summary>¿El depósito es reembolsable?</summary><p>No. El depósito de $100 cubre el tiempo que pasamos buscando tu viaje, se abran o no los asientos.</p></details><details><summary>¿Me garantizan los asientos?</summary><p>Nadie puede. La disponibilidad cambia cada día. Fechas flexibles, aeropuertos cercanos y no casarte con una aerolínea te dan más opciones.</p></details><details><summary>¿Ya transfiero mis puntos?</summary><p>No. No muevas ningún punto hasta que te confirmemos un asiento. Las transferencias a aerolíneas no se pueden deshacer.</p></details><details><summary>¿Qué puntos sirven?</summary><p>Los puntos de bancos como Amex, Chase, Capital One, Citi y Bilt son los más flexibles. Las millas de aerolínea que ya tengas también sirven. Cuéntanos todo lo que tienes.</p></details><details><summary>¿Incluye los impuestos?</summary><p>No. Los impuestos y cargos de la aerolínea los pagas tú al reservar y no son parte de nuestra tarifa.</p></details>
     </section>
   </div>
 </main>
@@ -228,15 +268,20 @@ textarea { min-height: 96px; resize: vertical; }
 <script>
 (function () {
   var ENDPOINT = "https://script.google.com/macros/s/AKfycbx0UzvQVyX1l5tcYzBXR52W_2CmLIvEOmHjrGi7VDn65Qe0zTKuPXYOM4Eu-Glj3jyL_A/exec";
-  var T = {"send": "Enviar solicitud", "sending": "Enviando…", "ok": "¡Listo! Revisa tu correo: te contestamos con los siguientes pasos y el enlace del depósito.", "err": "No se pudo enviar. Inténtalo otra vez o mándanos DM a @vuelaconrueda en Instagram.", "off": "El formulario aún no está conectado. Mándanos DM a @vuelaconrueda en Instagram y empezamos."};
+  var T = {"send": "Enviar mi solicitud", "sending": "Enviando…", "ok": "¡Listo! Reviso tu viaje y te mando los siguientes pasos por correo.", "err": "No se pudo enviar. Inténtalo otra vez o mándame DM a @vuelaconrueda en Instagram.", "off": "El formulario aún no está conectado. Mándame DM a @vuelaconrueda en Instagram."};
+  var L = {"help": "Nivel de ayuda", "deadline": "Fecha límite para reservar"};
   var form = document.getElementById("req"), msg = document.getElementById("msg"), btn = document.getElementById("send");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
     if (!ENDPOINT) { msg.className = "msg err"; msg.textContent = T.off; return; }
-    var data = new URLSearchParams();
-    new FormData(form).forEach(function (v, k) { if (k !== "bank") data.append(k, v); });
-    data.append("bank_points", Array.prototype.map.call(form.querySelectorAll('input[name="bank"]:checked'), function (i) { return i.value; }).join(", "));
+    var fd = new FormData(form), data = new URLSearchParams();
+    fd.forEach(function (v, k) { if (["bank", "help", "deadline", "notes_text"].indexOf(k) < 0) data.append(k, v); });
+    data.append("bank_points", fd.getAll("bank").join(", "));
+    // Help level and book-by deadline ride along in the Notes column of the sheet
+    var extra = [L.help + ": " + (fd.get("help") || "")];
+    if (fd.get("deadline")) extra.push(L.deadline + ": " + fd.get("deadline"));
+    data.append("notes", extra.join(" | ") + (fd.get("notes_text") ? "\n" + fd.get("notes_text") : ""));
     btn.disabled = true; btn.textContent = T.sending; msg.textContent = "";
     fetch(ENDPOINT, { method: "POST", mode: "no-cors", body: data })
       .then(function () { form.reset(); msg.className = "msg ok"; msg.textContent = T.ok; })
