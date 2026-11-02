@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Vuela con Rueda Reserva con Millas</title>
+<meta http-equiv="content-language" content="es">
+<meta name="description" content="Servicio de reserva con millas: cuéntanos tu viaje y tus puntos, y encontramos los asientos en clase business y te ayudamos a reservarlos. Empieza con un depósito de $100.">
+<link rel="canonical" href="https://bio.vuelaconrueda.com/reserva-con-millas/">
+<meta property="og:title" content="Servicio de Reserva con Millas | Vuela con Rueda">
+<meta property="og:description" content="Servicio de reserva con millas: cuéntanos tu viaje y tus puntos, y encontramos los asientos en clase business y te ayudamos a reservarlos. Empieza con un depósito de $100.">
+<meta property="og:url" content="https://bio.vuelaconrueda.com/reserva-con-millas/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: masthead, hero with price card, steps, request form, FAQ */
+:root {
+  --blue: #0C3B3C; --brass: #F0A824; --scarlet: #C7502B;
+  --bg: #FAF3E7; --surface: #FFFFFF; --ink: #0C3B3C; --muted: #4E5F5E; --line: #E8DCC6; --chip: #F2E6D2;
+  --display: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.mast { background: var(--blue); color: #FAF3E7; border-bottom: 4px solid var(--brass); }
+.mast .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.wordmark { font: italic 800 24px/1 var(--display); color: #FAF3E7; letter-spacing: -.01em; white-space: nowrap; }
+.wordmark i { color: #F0A824; font-weight: 700; }
+.logo { height: 44px; width: auto; filter: brightness(0) invert(1); display: block; }
+.mast nav { display: flex; gap: 20px; font: 600 13px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.mast nav a { color: inherit; text-decoration: none; opacity: .8; }
+.mast nav a[aria-current] { opacity: 1; color: var(--brass); }
+
+.hero { background: var(--blue); color: #FAF3E7; }
+.hero .wrap { padding-block: 36px 44px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.eyebrow { font: 700 12px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14px; text-wrap: balance; }
+.lede { margin: 0; max-width: 58ch; color: #D3E2DE; }
+.start { border: 1px solid rgba(240,168,36,.5); border-radius: 6px; padding: 18px; background: rgba(244,241,234,.06); }
+.start b { font: 700 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 8px; }
+.start p { margin: 0; font-size: 14px; color: #E0EBE8; }
+.small { font-size: 12px; color: #A6BEB9; margin: 10px 0 0; }
+
+main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
+.group-h { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+.group-h span { font: 500 12px/1 var(--mono); color: var(--brass); }
+.group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.group-sub { margin: 0 0 16px; color: var(--muted); max-width: 68ch; }
+.tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px; }
+.tool { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; }
+.tool-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.tool h3 { font: 800 20px/1.2 var(--display); margin: 0; }
+.pick { font: 700 10px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; background: var(--brass); color: #0C3B3C; padding: 4px 6px; border-radius: 3px; white-space: nowrap; }
+.tool p { margin: 0; font-size: 15px; color: var(--muted); }
+.use { font-size: 14px; border-left: 3px solid var(--brass); padding-left: 10px; color: var(--ink); }
+.use strong { font-weight: 600; }
+.tool a { justify-self: start; font: 700 14px/1 var(--display); color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+.faq { display: grid; gap: 10px; max-width: 760px; }
+.faq h2 { font: 800 24px/1.2 var(--display); margin: 0 0 6px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
+.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+
+footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .mast nav { display: none; } }
+.actions { display: grid; gap: 10px; justify-items: start; }
+.samples { width: 100%; border-top: 1px dashed var(--line); padding-top: 10px; }
+.samples summary { font: 700 13px/1.3 var(--display); cursor: pointer; color: var(--ink); }
+.samples ul { list-style: none; margin: 10px 0 6px; padding: 0; display: grid; gap: 8px; }
+.samples li { display: grid; gap: 2px; font-size: 14px; }
+.samples li b { font-weight: 600; }
+.samples li span { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.samples small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+
+.price-card { border: 1px solid rgba(255,255,255,.25); border-radius: 6px; padding: 20px; background: rgba(255,255,255,.06); }
+.price-card b { font: 700 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 10px; }
+.price-card .amt { font: 800 40px/1 var(--display); color: #fff; margin: 0 0 6px; }
+.price-card p { margin: 0; font-size: 14px; color: rgba(255,255,255,.8); }
+.price-card .btn { margin-top: 14px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; background: var(--brass); color: var(--blue); font: 700 15px/1 var(--display); padding: 14px 20px; border-radius: 4px; text-decoration: none; border: 0; cursor: pointer; }
+.btn:hover { filter: brightness(1.06); }
+.btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; }
+.step { border-top: 3px solid var(--brass); padding-top: 12px; }
+.step span { font: 500 12px/1 var(--mono); color: var(--brass); display: block; margin-bottom: 8px; }
+.step h3 { font: 700 17px/1.3 var(--display); margin: 0 0 6px; }
+.step p { margin: 0; font-size: 15px; color: var(--muted); }
+.h2 { font: 800 24px/1.2 var(--display); margin: 0 0 6px; text-wrap: balance; }
+.sub { margin: 0 0 18px; color: var(--muted); max-width: 68ch; }
+form.req { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: grid; gap: 26px; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 14px; }
+legend { font: 800 18px/1.25 var(--display); padding: 0; margin-bottom: 4px; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; }
+label.f { display: grid; gap: 6px; font: 600 14px/1.3 var(--body); }
+label.f small { font-weight: 400; color: var(--muted); }
+input, select, textarea { font: 400 16px/1.4 var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 11px 12px; width: 100%; }
+textarea { min-height: 96px; resize: vertical; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts label { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 4px; padding: 9px 12px; font-size: 14px; cursor: pointer; background: var(--bg); }
+.opts input { width: auto; margin: 0; accent-color: var(--brass); }
+.agree { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink); }
+.agree input { width: auto; margin-top: 3px; accent-color: var(--brass); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.msg { margin: 0; font-size: 15px; }
+.msg.ok { color: #1F6B3A; font-weight: 600; } .msg.err { color: var(--scarlet); font-weight: 600; }
+.faq { display: grid; gap: 10px; max-width: 760px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
+.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+</style>
+
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a href="/" aria-label="Vuela con Rueda inicio"><img src="/assets/logo.png" alt="Vuela con Rueda" width="360" height="136" style="height:52px;width:auto;display:block"></a>
+    <nav aria-label="Sitio">
+      <a href="/">Inicio</a>
+      <a href="/herramientas/">Herramientas</a>
+      <a href="/ofertas-de-vuelos/">Ofertas de vuelos</a>
+      <a href="/sweet-spots/">Sweet spots</a>
+      <a href="/planificador/">Planificador</a>
+      <a href="/reserva-con-millas/" aria-current="page">Reserva con millas</a>
+      <a href="/equipaje/">Equipaje</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Reserva con millas</p>
+      <h1>Dime a dónde quieres ir. Nosotros encontramos los asientos.</h1>
+      <p class="lede">Mándanos tu viaje y los puntos que tienes. Buscamos en los programas de aerolíneas a los que llegan tus puntos, encontramos los mejores asientos premio y te ayudamos a reservarlos, para que no pases noches en páginas de aerolíneas.</p>
+    </div>
+    <aside class="price-card">
+      <b>Desde</b>
+      <p class="amt">$100</p>
+      <p>Un depósito de $100 no reembolsable inicia tu búsqueda. Los impuestos y cargos de la aerolínea son aparte.</p>
+      <a class="btn" href="#request">Pide tu reserva</a>
+    </aside>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <section aria-labelledby="how-h">
+      <h2 class="h2" id="how-h">Cómo funciona</h2>
+      <p class="sub">Cuatro pasos, de la solicitud al pase de abordar.</p>
+      <div class="steps"><div class="step"><span>01</span><h3>Manda tu solicitud</h3><p>Llena el formulario de abajo con tu viaje, quiénes viajan y tus puntos.</p></div><div class="step"><span>02</span><h3>Paga el depósito</h3><p>Revisamos tu solicitud y te mandamos por correo un enlace para pagar el depósito de $100.</p></div><div class="step"><span>03</span><h3>Buscamos</h3><p>Revisamos los programas a los que se transfieren tus puntos y te armamos las mejores opciones.</p></div><div class="step"><span>04</span><h3>Reservas</h3><p>Escoges una opción y te guiamos para mover tus puntos y asegurar el asiento.</p></div></div>
+    </section>
+
+    <section id="request" aria-labelledby="form-h">
+      <h2 class="h2" id="form-h">Solicita una reserva con millas</h2>
+      <p class="sub">Entre más nos cuentes, mejor la búsqueda. Fechas y aeropuertos flexibles te dan más opciones.</p>
+      <form class="req" id="req" novalidate>
+        <input type="hidden" name="site" value="bio.vuelaconrueda.com">
+        <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
+        <fieldset><legend>Sobre ti</legend>
+          <div class="row">
+            <label class="f">Nombre completo<input name="name" required autocomplete="name"></label>
+            <label class="f">Correo<input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <div class="row">
+            <label class="f">Teléfono <small>opcional</small><input name="phone" type="tel" autocomplete="tel"></label>
+            <label class="f">Usuario de Instagram <small>opcional</small><input name="instagram" placeholder="@"></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Tu viaje</legend>
+          <div class="f" role="group" aria-label="Tipo de viaje"><span class="f" style="font-weight:600">Tipo de viaje</span><div class="opts"><label><input type="radio" name="trip_type" value="Viaje redondo" checked> Viaje redondo</label><label><input type="radio" name="trip_type" value="Solo ida"> Solo ida</label><label><input type="radio" name="trip_type" value="Varias ciudades"> Varias ciudades</label></div></div>
+          <div class="row">
+            <label class="f">Desde <small>ciudad o aeropuerto, agrega opciones si eres flexible</small><input name="from" required></label>
+            <label class="f">A <small>ciudad, aeropuerto o región</small><input name="to" required></label>
+          </div>
+          <div class="row">
+            <label class="f">Fecha de salida<input name="depart" type="date" required></label>
+            <label class="f">Fecha de regreso <small>déjala vacía si es solo ida</small><input name="return_date" type="date"></label>
+            <label class="f">¿Qué tan flexibles son tus fechas?<select name="flexibility"><option>Fechas exactas</option><option>3 días antes o después</option><option>Cualquier día de ese mes</option><option>Muy flexibles</option></select></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Viajeros y cabina</legend>
+          <div class="row">
+            <label class="f">Adultos<input type="number" name="adults" min="1" max="9" value="1" inputmode="numeric"></label>
+            <label class="f">Niños (2–11)<input type="number" name="children" min="0" max="9" value="0" inputmode="numeric"></label>
+            <label class="f">Bebés en brazos (menos de 2)<input type="number" name="infants" min="0" max="9" value="0" inputmode="numeric"></label>
+          </div>
+          <div class="row">
+            <label class="f">Cabina<select name="cabin"><option>Business</option><option>Primera</option><option>Premium economy</option><option>Económica</option><option>La más barata que funcione</option></select></label>
+            <label class="f">Escalas<select name="stops"><option>Solo directo</option><option>1 escala está bien</option><option>Cualquiera</option></select></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Tus puntos</legend>
+          <div class="f" role="group" aria-label="Puntos que tienes"><span class="f" style="font-weight:600">Puntos que tienes <small>marca todos los que apliquen y pon los saldos abajo</small></span><div class="opts"><label><input type="checkbox" name="bank" value="Amex Membership Rewards"> Amex Membership Rewards</label><label><input type="checkbox" name="bank" value="Chase Ultimate Rewards"> Chase Ultimate Rewards</label><label><input type="checkbox" name="bank" value="Capital One Miles"> Capital One Miles</label><label><input type="checkbox" name="bank" value="Citi ThankYou"> Citi ThankYou</label><label><input type="checkbox" name="bank" value="Bilt"> Bilt</label><label><input type="checkbox" name="bank" value="Wells Fargo"> Wells Fargo</label><label><input type="checkbox" name="bank" value="Rove"> Rove</label></div></div>
+          <label class="f">Saldos y otros programas <small>por ejemplo: Amex 180k, United 60k, Marriott 200k</small><textarea name="other_points"></textarea></label>
+        </fieldset>
+        <fieldset><legend>Algo más</legend>
+          <label class="f">Notas <small>lo indispensable, lo que no aceptas, ocasiones especiales</small><textarea name="notes"></textarea></label>
+          <label class="f">¿Cómo me encontraste?<select name="heard"><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>Un amigo</option><option>Otro</option></select></label>
+          <label class="agree"><input type="checkbox" name="agree" value="Yes" required> <span>Entiendo que el depósito de $100 no es reembolsable, que los asientos premio no están garantizados y que yo pago los impuestos y cargos de la aerolínea.</span></label>
+        </fieldset>
+        <div><button class="btn" type="submit" id="send">Enviar solicitud</button></div>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 class="h2" id="faq-h">Preguntas frecuentes</h2>
+      <details><summary>¿El depósito es reembolsable?</summary><p>No. El depósito de $100 cubre el tiempo que pasamos buscando tu viaje, se abran o no los asientos.</p></details><details><summary>¿Me garantizan los asientos?</summary><p>Nadie puede. La disponibilidad cambia cada día. Fechas flexibles, aeropuertos cercanos y no casarte con una aerolínea te dan más opciones.</p></details><details><summary>¿Ya transfiero mis puntos?</summary><p>No. No muevas ningún punto hasta que te confirmemos un asiento. Las transferencias a aerolíneas no se pueden deshacer.</p></details><details><summary>¿Qué puntos sirven?</summary><p>Los puntos de bancos como Amex, Chase, Capital One, Citi y Bilt son los más flexibles. Las millas de aerolínea que ya tengas también sirven. Cuéntanos todo lo que tienes.</p></details><details><summary>¿Incluye los impuestos?</summary><p>No. Los impuestos y cargos de la aerolínea los pagas tú al reservar y no son parte de nuestra tarifa.</p></details>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Vuela con Rueda · vuelaconrueda.com</span>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  var ENDPOINT = "";
+  var T = {"send": "Enviar solicitud", "sending": "Enviando…", "ok": "¡Listo! Revisa tu correo: te contestamos con los siguientes pasos y el enlace del depósito.", "err": "No se pudo enviar. Inténtalo otra vez o mándanos DM a @vuelaconrueda en Instagram.", "off": "El formulario aún no está conectado. Mándanos DM a @vuelaconrueda en Instagram y empezamos."};
+  var form = document.getElementById("req"), msg = document.getElementById("msg"), btn = document.getElementById("send");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (!ENDPOINT) { msg.className = "msg err"; msg.textContent = T.off; return; }
+    var data = new URLSearchParams();
+    new FormData(form).forEach(function (v, k) { if (k !== "bank") data.append(k, v); });
+    data.append("bank_points", Array.prototype.map.call(form.querySelectorAll('input[name="bank"]:checked'), function (i) { return i.value; }).join(", "));
+    btn.disabled = true; btn.textContent = T.sending; msg.textContent = "";
+    fetch(ENDPOINT, { method: "POST", mode: "no-cors", body: data })
+      .then(function () { form.reset(); msg.className = "msg ok"; msg.textContent = T.ok; })
+      .catch(function () { msg.className = "msg err"; msg.textContent = T.err; })
+      .then(function () { btn.disabled = false; btn.textContent = T.send; });
+  });
+})();
+</script>
+</body></html>
