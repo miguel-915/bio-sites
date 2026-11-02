@@ -166,7 +166,7 @@
         border-top: 1px solid rgba(255, 255, 255, 0.28);
         padding-top: 16px;
       }
-      .stat { flex: 1 1 110px; max-width: 150px; }
+      .stat { flex: 1 1 0; min-width: 0; max-width: 170px; }
       .stat b {
         display: block;
         font-family: "Bricolage Grotesque", "Archivo", sans-serif;
@@ -496,7 +496,6 @@
             <div class="stat"><b data-count="52">52</b><span>países visitados</span></div>
             <div class="stat"><b data-count="500" data-prefix="$" data-suffix="K+">$500K+</b><span>en viajes canjeados</span></div>
             <div class="stat"><b data-count="10" data-suffix="M+">10M+</b><span>puntos ganados</span></div>
-            <div class="stat"><b data-count="35">35</b><span>tarjetas</span></div>
           </div>
         </div>
       </header>
@@ -536,6 +535,15 @@
               <span>
                 <span class="mini-name">Ofertas de vuelos</span>
                 <span class="mini-desc" style="display:block">Las mejores tarifas en efectivo y ofertas con puntos de los servicios que pago.</span>
+              </span>
+            </a>
+            <a class="mini-link" href="/planificador/">
+              <span class="mini-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
+              </span>
+              <span>
+                <span class="mini-name">Planificador de puntos</span>
+                <span class="mini-desc" style="display:block">Elige tu tarjeta y tu saldo y mira qué podrías reservar.</span>
               </span>
             </a>
             <a class="mini-link" href="/herramientas/">
@@ -606,31 +614,12 @@
                 <span class="mini-desc" style="display:block">Viajes premium sin complicarte. Millas en cada compra, acceso a salas VIP y un crédito anual de viaje que cubre casi toda la cuota anual.</span>
               </span>
             </a>
-            <a class="mini-link" href="https://www.rakuten.com/r/MIGUEL13110?eeid=28187" target="_blank" rel="noopener">
-              <span class="mini-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              </span>
-              <span>
-                <span class="mini-name">Rakuten: 5,000 puntos Amex o $50</span>
-                <span class="mini-desc" style="display:block">Únete a Rakuten con mi enlace y elige tu bono de bienvenida: 5,000 puntos de American Express o $50 en efectivo.</span>
-              </span>
-            </a>
-            <a class="mini-link" href="https://www.anrdoezrs.net/click-100842706-17075279" target="_blank" rel="noopener sponsored">
-              <span class="mini-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8l3 3-3 3"/></svg>
-              </span>
-              <span>
-                <span class="mini-name">Seats.aero: encuentra vuelos premio rápido</span>
-                <span class="mini-desc" style="display:block">La herramienta que uso para encontrar asientos con puntos. Busca espacios premio en decenas de programas de aerolíneas a la vez, en lugar de uno por uno.</span>
-              </span>
-            </a>
           </div>
-          <p class="section-sub" style="margin-top:14px">Aviso: estos son mis enlaces de referido y de afiliado. Si te registras o te aprueban, puedo ganar puntos extra o una comisión sin costo adicional para ti. Gracias por apoyar a Vuela con Rueda.</p>
+          <p class="section-sub" style="margin-top:14px">Aviso: estos son mis enlaces de referido. Si te aprueban, puedo ganar puntos extra sin costo adicional para ti.</p>
         </section>
       </main>
 
       <footer>
-        <p class="signoff">¡A volar!</p>
         <p class="byline">Vuela con Rueda, por Miguel Rueda.</p>
       </footer>
     </div>
