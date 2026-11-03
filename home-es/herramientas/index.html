@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Vuela con Rueda Herramientas</title>
+<meta http-equiv="content-language" content="es">
+<meta name="description" content="Las herramientas que uso para ganar puntos y reservar clase business: buscadores de millas, alertas de ofertas de vuelos y alertas de asientos. CardPointers, Savewise, seats.aero, point.me, Roame, ExpertFlyer, Find Flights for Me, Going, Thrifty Traveler y Straight to the Points.">
+<link rel="canonical" href="https://vuelaconrueda.com/herramientas/">
+<meta property="og:title" content="Las Mejores Herramientas para Buscar Vuelos con Millas | Vuela con Rueda">
+<meta property="og:description" content="Todas las herramientas de puntos y millas que uso, para qué sirve cada una y cuándo usarla.">
+<meta property="og:url" content="https://vuelaconrueda.com/herramientas/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: brand masthead, hero with a "where to start" note, three tool groups that match how you plan a trip (search, get alerted, watch a flight), FAQ, footer */
+:root {
+  --blue: #0C3B3C; --brass: #F0A824; --scarlet: #C7502B;
+  --bg: #FAF3E7; --surface: #FFFFFF; --ink: #0C3B3C; --muted: #4E5F5E; --line: #E8DCC6; --chip: #F2E6D2;
+  --display: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.mast { background: var(--blue); color: #FAF3E7; border-bottom: 4px solid var(--brass); }
+.mast .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.wordmark { font: italic 800 24px/1 var(--display); color: #FAF3E7; letter-spacing: -.01em; white-space: nowrap; }
+.wordmark i { color: #F0A824; font-weight: 700; }
+.logo { height: 44px; width: auto; filter: brightness(0) invert(1); display: block; }
+.mast nav { display: flex; gap: 20px; font: 600 13px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.mast nav a { color: inherit; text-decoration: none; opacity: .8; }
+.mast nav a[aria-current] { opacity: 1; color: var(--brass); }
+
+.hero { background: var(--blue); color: #FAF3E7; }
+.hero .wrap { padding-block: 36px 44px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.eyebrow { font: 700 12px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14px; text-wrap: balance; }
+.lede { margin: 0; max-width: 58ch; color: #D3E2DE; }
+.start { border: 1px solid rgba(240,168,36,.5); border-radius: 6px; padding: 18px; background: rgba(244,241,234,.06); }
+.start b { font: 700 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 8px; }
+.start p { margin: 0; font-size: 14px; color: #E0EBE8; }
+.small { font-size: 12px; color: #A6BEB9; margin: 10px 0 0; }
+
+main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
+.group-h { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+.group-h span { font: 500 12px/1 var(--mono); color: var(--brass); }
+.group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.group-sub { margin: 0 0 16px; color: var(--muted); max-width: 68ch; }
+.tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px; }
+.tool { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; }
+.tool-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.tool h3 { font: 800 20px/1.2 var(--display); margin: 0; }
+.pick { font: 700 10px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; background: var(--brass); color: #0C3B3C; padding: 4px 6px; border-radius: 3px; white-space: nowrap; }
+.tool p { margin: 0; font-size: 15px; color: var(--muted); }
+.use { font-size: 14px; border-left: 3px solid var(--brass); padding-left: 10px; color: var(--ink); }
+.use strong { font-weight: 600; }
+.tool a { justify-self: start; font: 700 14px/1 var(--display); color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+.faq { display: grid; gap: 10px; max-width: 760px; }
+.faq h2 { font: 800 24px/1.2 var(--display); margin: 0 0 6px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
+.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+
+footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .mast nav { display: none; } }
+.actions { display: grid; gap: 10px; justify-items: start; }
+.samples { width: 100%; border-top: 1px dashed var(--line); padding-top: 10px; }
+.samples summary { font: 700 13px/1.3 var(--display); cursor: pointer; color: var(--ink); }
+.samples ul { list-style: none; margin: 10px 0 6px; padding: 0; display: grid; gap: 8px; }
+.samples li { display: grid; gap: 2px; font-size: 14px; }
+.samples li b { font-weight: 600; }
+.samples li span { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.samples small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+</style>
+
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a href="/" aria-label="Vuela con Rueda inicio"><img src="/assets/logo.png" alt="Vuela con Rueda" width="360" height="136" style="height:52px;width:auto;display:block"></a>
+    <nav aria-label="Sitio">
+      <a href="/">Inicio</a>
+      <a href="/herramientas/" aria-current="page">Herramientas</a>
+      <a href="/ofertas-de-vuelos/">Ofertas de vuelos</a>
+      <a href="/sweet-spots/">Sweet spots</a>
+      <a href="/planificador/">Planificador</a>
+      <a href="/equipaje/">Equipaje</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Mis herramientas</p>
+      <h1>Las herramientas para viajar con puntos y millas que de verdad uso</h1>
+      <p class="lede">Volar en clase business con puntos depende de dos cosas: juntar suficientes puntos y encontrar el asiento antes que alguien más. Estas son las herramientas que uso cada semana, agrupadas por lo que mejor hace cada una. La mayoría están en inglés, pero son fáciles de usar.</p>
+    </div>
+    <aside class="start">
+      <b>¿Nuevo en esto de los puntos?</b>
+      <p>Empieza con un buscador y un servicio de alertas. seats.aero para buscar asientos tú mismo, más Find Flights for Me para que te lleguen las ofertas, cubren la mayoría de los viajes.</p>
+      <p class="small">Algunos enlaces son de referido o afiliado. Puedo ganar una comisión sin costo para ti.</p>
+    </aside>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section aria-labelledby="g0">
+      <div class="group-h"><span>01</span><h2 id="g0">Gana más puntos: saca más de cada compra</h2></div>
+      <p class="group-sub">Todo viaje empieza con puntos. Estas te ayudan a usar la tarjeta correcta y el portal de compras correcto para ganar lo más posible en lo que ya compras.</p>
+      <div class="tools">
+        <article class="tool">
+          <div class="tool-top"><h3>CardPointers</h3><span class="pick">Uso diario</span></div>
+          <p>Te dice cuál de tus tarjetas gana más en cada tienda y puede activar tus ofertas de Amex y Chase por ti, para que no pierdas créditos.</p>
+          <p class="use"><strong>Úsala cuando</strong> tienes varias tarjetas y no recuerdas cuál usar en cada lugar.</p>
+          <a href="https://cardpointers.com/" target="_blank" rel="noopener">Visitar CardPointers</a>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>Savewise</h3></div>
+          <p>Compara portales de compras que pagan cashback, millas o puntos de tarjeta y te muestra cuál paga más en la tienda donde estás comprando.</p>
+          <p class="use"><strong>Úsala cuando</strong> compras en línea y quieres sumar millas del portal a los puntos de tu tarjeta.</p>
+          <a href="https://getsavewise.com?ref=miguel-2a9eba" target="_blank" rel="noopener">Visitar Savewise</a>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>Rakuten</h3></div>
+          <p>Un portal de compras que te regresa dinero en miles de tiendas. Si vinculas una tarjeta Amex que gana Membership Rewards, puedes recibir puntos de Amex en vez de cashback.</p>
+          <p class="use"><strong>Úsala cuando</strong> compras en línea. Entra a Rakuten antes de pagar y gana además de lo que te da tu tarjeta.</p>
+          <p class="use">Únete con mi enlace y elige tu bono de bienvenida: <strong>5,000 puntos Amex o $50</strong> de cashback.</p>
+          <a href="https://www.rakuten.com/r/MIGUEL13110?eeid=28187" target="_blank" rel="noopener sponsored">Únete a Rakuten</a>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>Rove</h3><span class="pick">1,500 millas gratis</span></div>
+          <p>Un programa de millas gratis, sin tarjeta de crédito. Ganas millas al comprar, comer y reservar hoteles con Rove, y las transfieres a Aeroplan, Flying Blue, Virgin Atlantic, Qatar, Turkish y más. También es la única forma de transferir a Lufthansa Miles &amp; More (con impuestos altos en business y primera).</p>
+          <p class="use"><strong>Úsala cuando</strong> vas empezando o quieres millas extra además de los puntos de tu tarjeta. Si te registras con mi enlace recibes 1,500 millas al instante. Necesitas un número de teléfono de EE. UU.</p>
+          <a href="https://www.rove.com/?signup&amp;referralCode=651YT78S" target="_blank" rel="noopener sponsored">Obtén 1,500 millas gratis</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="g1">
+      <div class="group-h"><span>02</span><h2 id="g1">Buscadores de vuelos con millas: encuentra asientos tú mismo</h2></div>
+      <p class="group-sub">Buscadores de asientos con millas. Úsalos cuando ya sabes más o menos a dónde quieres ir y quieres ver todas las fechas y programas con espacio.</p>
+      <div class="tools">
+        <article class="tool">
+          <div class="tool-top"><h3>seats.aero</h3><span class="pick">Mi favorita</span></div>
+          <p>Muestra la disponibilidad de asientos con millas en decenas de programas, con un calendario de todas las fechas con espacio.</p>
+          <p class="use"><strong>Úsala cuando</strong> tienes una ruta en mente y fechas flexibles, o quieres una alerta cuando se abra clase business.</p>
+          <a href="https://www.anrdoezrs.net/click-100842706-17075279" target="_blank" rel="noopener sponsored">Prueba seats.aero Pro</a>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>point.me</h3></div>
+          <p>Busca una fecha específica y te dice con qué puntos de tus tarjetas puedes reservarla, con instrucciones paso a paso para transferir y reservar.</p>
+          <p class="use"><strong>Úsala cuando</strong> ya tienes fechas fijas y quieres saber la forma más barata de pagar con los puntos que tienes.</p>
+          <a href="https://www.point.me/" target="_blank" rel="noopener">Visitar point.me</a>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>Roame</h3></div>
+          <p>Buscador de millas con muchos programas y una app rápida. Bueno para comparar varios programas lado a lado en un mismo viaje.</p>
+          <p class="use"><strong>Úsala cuando</strong> quieres una segunda opinión sobre una ruta o estás buscando desde el celular.</p>
+          <p class="use">Con el código <strong>MIGUEL</strong> tienes 10% de descuento en tu primer pago de Friends of Roame.</p>
+          <a href="https://roame.travel/?via=miguel" target="_blank" rel="noopener sponsored">Prueba Roame</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="g2">
+      <div class="group-h"><span>03</span><h2 id="g2">Alertas de ofertas: te llegan a ti</h2></div>
+      <p class="group-sub">Equipos que vigilan precios y asientos con millas todo el día y te avisan por correo o mensaje cuando aparece algo bueno. Úsalas cuando estás abierto a ir a donde esté la oferta.</p>
+      <div class="tools">
+        <article class="tool">
+          <div class="tool-top"><h3>Find Flights for Me</h3><span class="pick">Clase business</span></div>
+          <p>Un boletín enfocado en ofertas en clase business, tanto en efectivo como con puntos, con las rutas, programas y socios de transferencia bien explicados.</p>
+          <p class="use"><strong>Úsala cuando</strong> quieres asientos que se hacen cama y que te den los detalles de la reserva listos.</p>
+          <div class="actions">
+          <a href="https://rekomi.link/njjbr8x5kgwc?p=7a2ec388-fd3d-4e21-ad5e-d8d8e58b0655" target="_blank" rel="noopener sponsored">Obtén Find Flights for Me</a>
+          <details class="samples"><summary>Ver ofertas de muestra</summary><ul><li><b>Fráncfort en Condor, clase business</b><span>Desde ~55k puntos por trayecto</span></li></ul><small>Alertas recientes, los detalles son para miembros</small><a href="/ofertas-de-vuelos/">Ver todas las ofertas →</a></details>
+        </div>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>Going</h3></div>
+          <p>Alertas de tarifas baratas en efectivo desde los aeropuertos que elijas, más algunas ofertas con puntos.</p>
+          <p class="use"><strong>Úsala cuando</strong> casi siempre pagas tus vuelos en efectivo y quieres ofertas desde tu aeropuerto.</p>
+          <div class="actions">
+          <a href="https://going.sjv.io/miguel" target="_blank" rel="noopener">Visitar Going</a>
+          <details class="samples"><summary>Ver ofertas de muestra</summary><ul><li><b>San Juan, Puerto Rico</b><span>$195–$356 ida y vuelta</span></li><li><b>Tokio, Japón</b><span>$755 ida y vuelta</span></li><li><b>Londres directo, económica</b><span>12k–31k puntos ida y vuelta</span></li></ul><small>Alertas recientes, los detalles son para miembros</small><a href="/ofertas-de-vuelos/">Ver todas las ofertas →</a></details>
+        </div>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>Thrifty Traveler Premium</h3></div>
+          <p>Ofertas en efectivo y con puntos y millas, con notas claras de cuándo viajar y cómo reservar.</p>
+          <p class="use"><strong>Úsala cuando</strong> quieres ofertas en efectivo y con puntos en un solo servicio.</p>
+          <div class="actions">
+          <a href="https://thriftytraveler.com/a/miguel" target="_blank" rel="noopener">Visitar Thrifty Traveler</a>
+          <details class="samples"><summary>Ver ofertas de muestra</summary><ul><li><b>Europa, clase business</b><span>Desde 48k puntos por trayecto · antes $2k+</span></li><li><b>Okinawa, Japón</b><span>Menos de $890 · antes $1,600</span></li><li><b>Sudeste Asiático, premium economy</b><span>Menos de $1,996 · antes $3,500</span></li></ul><small>Alertas recientes, los detalles son para miembros</small><a href="/ofertas-de-vuelos/">Ver todas las ofertas →</a></details>
+        </div>
+        </article>
+        <article class="tool">
+          <div class="tool-top"><h3>Straight to the Points</h3></div>
+          <p>Alertas de vuelos con millas por mensaje y correo, con el programa para reservar, los socios de transferencia y detalles del asiento.</p>
+          <p class="use"><strong>Úsala cuando</strong> quieres enterarte por mensaje en cuanto se abre un asiento con millas.</p>
+          <a href="https://straighttothepoints.co/r/?aid=26337353" target="_blank" rel="noopener sponsored">Obtén Straight to the Points</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="g3">
+      <div class="group-h"><span>04</span><h2 id="g3">Alertas de asientos: vigila un vuelo que ya quieres</h2></div>
+      <p class="group-sub">Cuando ya escogiste un vuelo, esta lo vigila por ti.</p>
+      <div class="tools">
+        <article class="tool">
+          <div class="tool-top"><h3>ExpertFlyer</h3></div>
+          <p>Te avisa cuando se abre espacio con millas o para upgrade en un vuelo específico, y tiene mapas y alertas de asientos para tomar uno mejor cuando se libere.</p>
+          <p class="use"><strong>Úsala cuando</strong> el vuelo que quieres aún no tiene espacio con millas, o ya reservaste y quieres un mejor asiento.</p>
+          <a href="https://www.expertflyer.com/" target="_blank" rel="noopener">Visitar ExpertFlyer</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Preguntas frecuentes sobre herramientas</h2>
+      <details><summary>¿Cuál es el mejor buscador de vuelos con millas?</summary><p>Para la mayoría, seats.aero. Cubre más programas y te muestra todas las fechas con espacio a la vez. point.me es mejor cuando ya tienes fechas fijas y quieres instrucciones para tus puntos.</p></details>
+      <details><summary>¿Cuál es la diferencia entre un buscador y las alertas de ofertas?</summary><p>Los buscadores son para cuando sabes a dónde quieres ir. Las alertas te llegan a ti y funcionan mejor si eres flexible con el destino.</p></details>
+      <details><summary>¿Necesito todas?</summary><p>No. Un buscador y un servicio de alertas cubren la mayoría de los viajes. Agrega ExpertFlyer cuando empieces a vigilar vuelos específicos.</p></details>
+      <details><summary>¿Son gratis?</summary><p>La mayoría tienen una versión gratis con límites y un plan de pago con búsquedas completas o todas las alertas. Prueba la versión gratis y paga solo la que más uses.</p></details>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Vuela con Rueda no pertenece a ninguna de estas empresas. Algunos enlaces son de referido o afiliado.</span>
+    <span>© 2026 Vuela con Rueda · vuelaconrueda.com</span>
+  </div>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuál es el mejor buscador de vuelos con millas?","acceptedAnswer":{"@type":"Answer","text":"Para la mayoría, seats.aero. point.me es mejor cuando ya tienes fechas fijas y quieres instrucciones para tus puntos."}},{"@type":"Question","name":"¿Cuál es la diferencia entre un buscador y las alertas de ofertas?","acceptedAnswer":{"@type":"Answer","text":"Los buscadores son para cuando sabes a dónde quieres ir. Las alertas te llegan a ti y funcionan mejor si eres flexible con el destino."}},{"@type":"Question","name":"¿Son gratis?","acceptedAnswer":{"@type":"Answer","text":"La mayoría tienen una versión gratis con límites y un plan de pago."}}]}</script>
+
+</body></html>

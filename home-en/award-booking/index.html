@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Travel Sergeant Award Booking</title>
+<meta name="description" content="Award flight booking, done for you: $250 per person, with a $100 deposit to start. You bring the points, I find and book the seats.">
+<link rel="canonical" href="https://travelsergeant.com/award-booking/">
+<link rel="alternate" hreflang="es" href="https://bio.vuelaconrueda.com/reserva-con-millas/">
+<meta property="og:title" content="Award Flight Booking, Done For You | Travel Sergeant">
+<meta property="og:description" content="Award flight booking, done for you: $250 per person, with a $100 deposit to start. You bring the points, I find and book the seats.">
+<meta property="og:url" content="https://travelsergeant.com/award-booking/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: language switch, hero with price card, how it works, help levels, honest notes, fit check, intake form */
+:root {
+  --blue: #0A1F33; --brass: #C9A227; --scarlet: #C8102E;
+  --bg: #FBFAF6; --surface: #FFFFFF; --ink: #0A1F33; --muted: #56606B; --line: #E3DED2; --chip: #EFEBE1;
+  --display: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #07131F; --surface: #0D1C2C; --ink: #EDE9DF; --muted: #A3ACB6; --line: #1E3247; --chip: #17293D; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #07131F; --surface: #0D1C2C; --ink: #EDE9DF; --muted: #A3ACB6; --line: #1E3247; --chip: #17293D; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.mast { background: var(--blue); color: #F4F1EA; border-bottom: 4px solid var(--brass); }
+.mast .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.logo { height: 44px; width: auto; filter: brightness(0) invert(1); display: block; }
+.mast nav { display: flex; gap: 20px; font: 600 13px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.mast nav a { color: inherit; text-decoration: none; opacity: .8; }
+.mast nav a[aria-current] { opacity: 1; color: var(--brass); }
+
+.hero { background: var(--blue); color: #F4F1EA; }
+.hero .wrap { padding-block: 36px 44px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.eyebrow { font: 700 12px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14px; text-wrap: balance; }
+.lede { margin: 0; max-width: 58ch; color: #C9CFD6; }
+.start { border: 1px solid rgba(201,162,39,.45); border-radius: 6px; padding: 18px; background: rgba(244,241,234,.06); }
+.start b { font: 700 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 8px; }
+.start p { margin: 0; font-size: 14px; color: #D7DCE1; }
+.small { font-size: 12px; color: #9AA6B2; margin: 10px 0 0; }
+
+main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
+.group-h { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+.group-h span { font: 500 12px/1 var(--mono); color: var(--brass); }
+.group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.group-sub { margin: 0 0 16px; color: var(--muted); max-width: 68ch; }
+.tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px; }
+.tool { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; }
+.tool-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.tool h3 { font: 800 20px/1.2 var(--display); margin: 0; }
+.pick { font: 700 10px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; background: var(--brass); color: #0A1F33; padding: 4px 6px; border-radius: 3px; white-space: nowrap; }
+.tool p { margin: 0; font-size: 15px; color: var(--muted); }
+.use { font-size: 14px; border-left: 3px solid var(--brass); padding-left: 10px; color: var(--ink); }
+.use strong { font-weight: 600; }
+.tool a { justify-self: start; font: 700 14px/1 var(--display); color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+.faq { display: grid; gap: 10px; max-width: 760px; }
+.faq h2 { font: 800 24px/1.2 var(--display); margin: 0 0 6px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
+.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+
+footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .mast nav { display: none; } }
+.actions { display: grid; gap: 10px; justify-items: start; }
+.samples { width: 100%; border-top: 1px dashed var(--line); padding-top: 10px; }
+.samples summary { font: 700 13px/1.3 var(--display); cursor: pointer; color: var(--ink); }
+.samples ul { list-style: none; margin: 10px 0 6px; padding: 0; display: grid; gap: 8px; }
+.samples li { display: grid; gap: 2px; font-size: 14px; }
+.samples li b { font-weight: 600; }
+.samples li span { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.samples small { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+
+.lang { display: flex; justify-content: flex-end; margin-bottom: 18px; }
+.lang a { font: 700 13px/1 var(--display); letter-spacing: .04em; color: #fff; text-decoration: none; border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 9px 16px; }
+.lang a:hover { border-color: var(--brass); color: var(--brass); }
+.hero .wrap { display: block; padding-bottom: 0; }
+.hero .grid2 { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 32px; align-items: end; padding-bottom: 44px; }
+@media (max-width: 760px) { .hero .grid2 { grid-template-columns: minmax(0, 1fr); } }
+.hook { font: 700 20px/1.35 var(--display); color: #fff; margin: 0 0 12px; }
+.price-card { border: 1px solid rgba(255,255,255,.25); border-radius: 6px; padding: 20px; background: rgba(255,255,255,.06); }
+.price-card b { font: 700 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 10px; }
+.price-card .amt { font: 800 42px/1 var(--display); color: #fff; margin: 0 0 4px; }
+.price-card .amt small { font: 600 15px/1 var(--body); color: rgba(255,255,255,.8); margin-left: 6px; }
+.price-card ul { margin: 12px 0 0; padding-left: 18px; color: rgba(255,255,255,.88); font-size: 14px; display: grid; gap: 6px; }
+.price-card .btn { margin-top: 16px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; background: var(--brass); color: var(--blue); font: 700 15px/1 var(--display); padding: 15px 22px; border-radius: 4px; text-decoration: none; border: 0; cursor: pointer; }
+.btn:hover { filter: brightness(1.06); }
+.btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, .lang a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+.h2 { font: 800 26px/1.2 var(--display); margin: 0 0 8px; text-wrap: balance; }
+.sub { margin: 0 0 18px; color: var(--muted); max-width: 70ch; }
+.covers { margin: 0; color: var(--muted); max-width: 70ch; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 16px; counter-reset: s; }
+.step { border-top: 3px solid var(--brass); padding-top: 12px; }
+.step span { font: 500 12px/1 var(--mono); color: var(--brass); display: block; margin-bottom: 8px; }
+.step p { margin: 0; font-size: 15px; color: var(--ink); }
+.levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; }
+.level { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+.level h3 { font: 800 19px/1.25 var(--display); margin: 0 0 8px; }
+.level p { margin: 0; font-size: 15px; color: var(--muted); }
+.note { background: var(--surface); border-left: 4px solid var(--brass); border-radius: 6px; padding: 20px 22px; display: grid; gap: 12px; max-width: 820px; }
+.note h2 { font: 800 20px/1.25 var(--display); margin: 0; }
+.note p { margin: 0; color: var(--ink); font-size: 16px; }
+.fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.fit div { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+.fit h3 { font: 800 17px/1.25 var(--display); margin: 0 0 10px; }
+.fit ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; color: var(--ink); font-size: 15px; }
+.fit .yes h3 { color: #1F6B3A; } .fit .no h3 { color: var(--scarlet); }
+.cta { text-align: left; }
+form.req { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: grid; gap: 26px; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 14px; }
+legend { font: 800 18px/1.25 var(--display); padding: 0; margin-bottom: 4px; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; }
+label.f, .f { display: grid; gap: 6px; font: 600 14px/1.3 var(--body); }
+.f small { font-weight: 400; color: var(--muted); }
+input, select, textarea { font: 400 16px/1.4 var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 11px 12px; width: 100%; }
+textarea { min-height: 96px; resize: vertical; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts label { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 4px; padding: 9px 12px; font-size: 14px; font-weight: 400; cursor: pointer; background: var(--bg); }
+.opts input { width: auto; margin: 0; accent-color: var(--brass); }
+.agree { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink); }
+.agree input { width: auto; margin-top: 3px; accent-color: var(--brass); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.msg { margin: 0; font-size: 15px; }
+.msg.ok { color: #1F6B3A; font-weight: 600; } .msg.err { color: var(--scarlet); font-weight: 600; }
+</style>
+
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a href="/" aria-label="Travel Sergeant home"><img src="/assets/logo-white.png" alt="Travel Sergeant" width="480" height="165" style="height:44px;width:auto;display:block"></a>
+    <nav aria-label="Site">
+      <a href="/">Start here</a>
+      <a href="/tools/">Tools</a>
+      <a href="/flight-deals/">Flight deals</a>
+      <a href="/award-deals/">Award deals</a>
+      <a href="/award-booking/" aria-current="page">Award booking</a>
+      <a href="/points-planner/">Points planner</a>
+      <a href="/gear/">Gear</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="lang"><a href="https://bio.vuelaconrueda.com/reserva-con-millas/" hreflang="es" lang="es">Español</a></div>
+    <div class="grid2">
+      <div>
+        <p class="eyebrow">Award booking</p>
+        <h1>Award Flight Booking, Done For You</h1>
+        <p class="hook">You have the points. Finding the seats is the hard part.</p>
+        <p class="lede">Tell me where you want to go and your dates, and I will search the award space, watch your dates if the seats are not open yet, and book the flights with your points once the right seats appear.</p>
+      </div>
+      <aside class="price-card">
+        <b>Pricing is simple</b>
+        <p class="amt">$250<small>per person</small></p>
+        <ul><li>One way or roundtrip</li><li>A $100 deposit per person starts your search. It is nonrefundable, and it counts toward the fee</li><li>The $150 balance is charged only when your flights are booked</li></ul>
+        <a class="btn" href="#request">Start Your Award Booking</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <p class="covers">The fee covers the search, the monitoring, and the booking. Your points cover the miles, and the airline taxes and fees are paid with your card at booking, just like any award ticket.</p>
+
+    <section aria-labelledby="how-h">
+      <h2 class="h2" id="how-h">How it works</h2>
+      <div class="steps"><div class="step"><span>01</span><p>Fill out the short intake form with your trip and your points balances</p></div><div class="step"><span>02</span><p>I review it and confirm I can take the search</p></div><div class="step"><span>03</span><p>You pay the $100 per person deposit, and I start searching right away</p></div><div class="step"><span>04</span><p>Within a few days, I send you the best options that exist right now</p></div><div class="step"><span>05</span><p>If one works, you pick how we finish the booking. If nothing good exists yet, your search goes on my daily tracker for up to 90 days</p></div></div>
+    </section>
+
+    <section aria-labelledby="lv-h">
+      <h2 class="h2" id="lv-h">You pick your level of help</h2>
+      <p class="sub">All included in the same price.</p>
+      <div class="levels"><div class="level"><h3>Book it yourself</h3><p>I send the exact flights and a clear step by step list, and you book at your own pace.</p></div><div class="level"><h3>Follow my video</h3><p>I record a personal video walking you through your exact booking, click by click, and you follow along when you are ready.</p></div><div class="level"><h3>Book it together</h3><p>We get on a screen share, you log in, and we book it live together, transfers included.</p></div></div>
+    </section>
+
+    <section class="note"><h2>One honest note before we start</h2><p>I cannot create award seats, and I cannot make an airline release them. Sometimes the dates you want simply do not open, especially in business and first class, around holidays, and on popular routes.</p><p>What I promise is effort: I will search hard, check your dates daily, and bring you the best option that actually exists at that moment.</p><p>And when I find something that fits, we move fast. Award seats can disappear in minutes, sometimes while we are looking at them. If you like an option I send you, say yes quickly so we can lock it in. Leaving it overnight usually means it is gone by morning.</p></section>
+<section class="note"><h2>Fixed dates are welcome</h2><p>Award seats on exact dates do not always open right away. That is what the tracker is for: if the first options are not good enough, I keep checking your dates daily until the seats appear or your deadline passes.</p><p>Every tracker search runs for up to 90 days of daily checks. If your trip is further out than that, we agree on when your 90 days start, usually closer to the trip, so the daily checks cover the weeks when seats are most likely to open.</p><p>If nothing bookable opens by the end of your search, it simply ends, and the deposit is all you ever paid. And if I find flights that match what you asked for and you decide not to book them, the full fee is due, because the work is done.</p></section>
+<section class="note"><h2>One thing I will never ask for</h2><p>Your passwords, at any level. Your points stay in your accounts, and on the screen share you are the one who logs in. Points transfers cannot be undone, so we only make them once you have seen and approved the exact flights.</p></section>
+
+    <section aria-labelledby="fit-h">
+      <h2 class="h2" id="fit-h">Is this a fit?</h2>
+      <div class="fit">
+        <div class="yes"><h3>This is a fit if:</h3><ul><li>You already have the points, or close to them, sitting in your accounts</li><li>Your trip is at least a few weeks out, so the search has room to work</li><li>You can say yes fast when the right seats appear</li></ul></div>
+        <div class="no"><h3>It is probably not a fit if:</h3><ul><li>You do not have the points yet. Build them first; that is what the Bootcamp is for</li><li>You need a guaranteed seat on one exact date no matter what. Award space does not work that way, and anyone who promises it is guessing</li><li>Your trip leaves in the next few days. There is no runway for the tracker then, though I will still take a quick first look if you ask</li></ul></div>
+      </div>
+    </section>
+
+    <section id="request" aria-labelledby="form-h">
+      <h2 class="h2" id="form-h">Start Your Award Booking</h2>
+      <p class="sub">Tell me your trip and your points balances. I review every request and reply by email before any deposit is charged.</p>
+      <form class="req" id="req" novalidate>
+        <input type="hidden" name="site" value="bio.travelsergeant.com">
+        <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
+        <fieldset><legend>About you</legend>
+          <div class="row">
+            <label class="f">Full name<input name="name" required autocomplete="name"></label>
+            <label class="f">Email<input name="email" type="email" required autocomplete="email"></label>
+          </div>
+          <div class="row">
+            <label class="f">Phone <small>optional</small><input name="phone" type="tel" autocomplete="tel"></label>
+            <label class="f">Instagram handle <small>optional</small><input name="instagram" placeholder="@"></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Your trip</legend>
+          <div class="f" role="group" aria-label="Trip type"><span>Trip type</span><div class="opts"><label><input type="radio" name="trip_type" value="Roundtrip" checked> Roundtrip</label><label><input type="radio" name="trip_type" value="One way"> One way</label><label><input type="radio" name="trip_type" value="Multi-city"> Multi-city</label></div></div>
+          <div class="row">
+            <label class="f">From <small>city or airport, add backups if you're flexible</small><input name="from" required></label>
+            <label class="f">To <small>city, airport or region</small><input name="to" required></label>
+          </div>
+          <div class="row">
+            <label class="f">Departure date<input name="depart" type="date" required></label>
+            <label class="f">Return date <small>leave blank for one way</small><input name="return_date" type="date"></label>
+          </div>
+          <div class="row">
+            <label class="f">How flexible are your dates?<select name="flexibility"><option>Exact dates</option><option>Within 3 days</option><option>Any time that month</option><option>Very flexible</option></select></label>
+            <label class="f">Book-by deadline <small>optional, the latest date this trip still works</small><input name="deadline" type="date"></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Travelers and cabin</legend>
+          <div class="row">
+            <label class="f">Adults<input type="number" name="adults" min="1" max="9" value="1" inputmode="numeric"></label>
+            <label class="f">Children (2–11)<input type="number" name="children" min="0" max="9" value="0" inputmode="numeric"></label>
+            <label class="f">Lap infants (under 2)<input type="number" name="infants" min="0" max="9" value="0" inputmode="numeric"></label>
+          </div>
+          <div class="row">
+            <label class="f">Cabin<select name="cabin"><option>Business</option><option>First</option><option>Premium economy</option><option>Economy</option><option>Cheapest that works</option></select></label>
+            <label class="f">Stops<select name="stops"><option>Nonstop only</option><option>1 stop is fine</option><option>Any</option></select></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>Your points</legend>
+          <div class="f" role="group" aria-label="Points you have"><span>Points you have <small>check all that apply</small></span><div class="opts"><label><input type="checkbox" name="bank" value="Amex Membership Rewards"> Amex Membership Rewards</label><label><input type="checkbox" name="bank" value="Chase Ultimate Rewards"> Chase Ultimate Rewards</label><label><input type="checkbox" name="bank" value="Capital One Miles"> Capital One Miles</label><label><input type="checkbox" name="bank" value="Citi ThankYou"> Citi ThankYou</label><label><input type="checkbox" name="bank" value="Bilt"> Bilt</label><label><input type="checkbox" name="bank" value="Wells Fargo"> Wells Fargo</label><label><input type="checkbox" name="bank" value="Rove"> Rove</label></div></div>
+          <label class="f">Balances and other programs <small>for example: Amex 180k, United 60k, Marriott 200k</small><textarea name="other_points"></textarea></label>
+        </fieldset>
+        <fieldset><legend>Help level and notes</legend>
+          <div class="f" role="group" aria-label="Level of help"><span>Level of help</span><div class="opts"><label><input type="radio" name="help" value="Book it yourself" checked> Book it yourself</label><label><input type="radio" name="help" value="Follow my video"> Follow my video</label><label><input type="radio" name="help" value="Book it together"> Book it together</label><label><input type="radio" name="help" value="Not sure yet"> Not sure yet</label></div></div>
+          <label class="f">Notes <small>must-haves, deal breakers, special occasions</small><textarea name="notes_text"></textarea></label>
+          <label class="f">How did you find me?<select name="heard"><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>A friend</option><option>Other</option></select></label>
+          <label class="agree"><input type="checkbox" name="agree" value="Yes" required> <span>I understand the fee is $250 per person, the $100 per person deposit is nonrefundable and counts toward the fee, and award seats are not guaranteed.</span></label>
+        </fieldset>
+        <div><button class="btn" type="submit" id="send">Send my request</button></div>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Travel Sergeant · travelsergeant.com</span>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbx0UzvQVyX1l5tcYzBXR52W_2CmLIvEOmHjrGi7VDn65Qe0zTKuPXYOM4Eu-Glj3jyL_A/exec";
+  var T = {"send": "Send my request", "sending": "Sending…", "ok": "Got it. I'll review your trip and email you next steps.", "err": "That didn't go through. Please try again, or DM @travelsergeant on Instagram.", "off": "The request form isn't connected yet. DM @travelsergeant on Instagram."};
+  var L = {"help": "Level of help", "deadline": "Book-by deadline"};
+  var form = document.getElementById("req"), msg = document.getElementById("msg"), btn = document.getElementById("send");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (!ENDPOINT) { msg.className = "msg err"; msg.textContent = T.off; return; }
+    var fd = new FormData(form), data = new URLSearchParams();
+    fd.forEach(function (v, k) { if (["bank", "help", "deadline", "notes_text"].indexOf(k) < 0) data.append(k, v); });
+    data.append("bank_points", fd.getAll("bank").join(", "));
+    // Help level and book-by deadline ride along in the Notes column of the sheet
+    var extra = [L.help + ": " + (fd.get("help") || "")];
+    if (fd.get("deadline")) extra.push(L.deadline + ": " + fd.get("deadline"));
+    data.append("notes", extra.join(" | ") + (fd.get("notes_text") ? "\n" + fd.get("notes_text") : ""));
+    btn.disabled = true; btn.textContent = T.sending; msg.textContent = "";
+    fetch(ENDPOINT, { method: "POST", mode: "no-cors", body: data })
+      .then(function () { form.reset(); msg.className = "msg ok"; msg.textContent = T.ok; })
+      .catch(function () { msg.className = "msg err"; msg.textContent = T.err; })
+      .then(function () { btn.disabled = false; btn.textContent = T.send; });
+  });
+})();
+</script>
+</body></html>

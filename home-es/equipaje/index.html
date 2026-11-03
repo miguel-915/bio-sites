@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Vuela con Rueda Equipaje</title>
+<meta http-equiv="content-language" content="es">
+<meta name="description" content="Lo que llevo en cada viaje: maletas Away y Béis, cubos de empaque, baterías portátiles y cargadores Anker, almohada de viaje trtl, audífonos Bose con cancelación de ruido y soporte de celular para el avión.">
+<link rel="canonical" href="https://vuelaconrueda.com/equipaje/">
+<meta property="og:title" content="Lo Esencial para Viajar: Lo que Empaco en Cada Viaje | Vuela con Rueda">
+<meta property="og:description" content="Mi equipaje de mano, cómo empaco y lo esencial para vuelos largos, y por qué cada cosa va en mi maleta.">
+<meta property="og:url" content="https://vuelaconrueda.com/equipaje/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: brand masthead, hero styled like a packing manifest, gear grouped by where it lives on a trip (checked/carry-on, inside the bag, power, seat), FAQ, footer */
+:root {
+  --blue: #0C3B3C; --brass: #F0A824; --scarlet: #C7502B; --khaki: #D8CFBC;
+  --bg: #FAF3E7; --surface: #FFFFFF; --ink: #0C3B3C; --muted: #4E5F5E; --line: #E8DCC6; --chip: #F2E6D2;
+  --display: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.mast { background: var(--blue); color: #FAF3E7; border-bottom: 4px solid var(--brass); }
+.mast .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.wordmark { font: italic 800 24px/1 var(--display); color: #FAF3E7; letter-spacing: -.01em; white-space: nowrap; }
+.wordmark i { color: #F0A824; font-weight: 700; }
+.logo { height: 44px; width: auto; filter: brightness(0) invert(1); display: block; }
+.mast nav { display: flex; gap: 20px; font: 600 13px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.mast nav a { color: inherit; text-decoration: none; opacity: .8; }
+.mast nav a[aria-current] { opacity: 1; color: var(--brass); }
+
+.hero { background: var(--blue); color: #FAF3E7; }
+.hero .wrap { padding-block: 36px 44px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.eyebrow { font: 700 12px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14px; text-wrap: balance; }
+.lede { margin: 0; max-width: 56ch; color: #D3E2DE; }
+.manifest { border: 1px solid rgba(240,168,36,.5); border-radius: 6px; padding: 16px 18px; background: rgba(244,241,234,.06); font: 500 13px/1.9 var(--mono); color: #E0EBE8; }
+.manifest b { font: 700 11px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 8px; }
+.manifest ol { margin: 0; padding-left: 22px; }
+.manifest li::marker { color: var(--brass); }
+.small { font: 400 12px/1.4 var(--body); color: #A6BEB9; margin: 10px 0 0; }
+
+main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
+.group-h { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+.group-h span { font: 700 11px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+.group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.group-sub { margin: 0 0 16px; color: var(--muted); max-width: 68ch; }
+.items { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.item { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+.tagline { display: flex; justify-content: space-between; gap: 8px; padding: 10px 16px; border-bottom: 1px dashed var(--line); font: 500 11px/1 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.item-body { padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.item h3 { font: 800 19px/1.25 var(--display); margin: 0; }
+.item p { margin: 0; font-size: 15px; color: var(--muted); }
+.why { font-size: 14px; border-left: 3px solid var(--brass); padding-left: 10px; color: var(--ink); }
+.item-foot { padding: 12px 16px; border-top: 1px solid var(--line); display: flex; gap: 14px; flex-wrap: wrap; }
+.item-foot a { font: 700 14px/1 var(--display); color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+.faq { display: grid; gap: 10px; max-width: 760px; }
+.faq h2 { font: 800 24px/1.2 var(--display); margin: 0 0 6px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
+.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+
+footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .mast nav { display: none; } }
+</style>
+
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a href="/" aria-label="Vuela con Rueda inicio"><img src="/assets/logo.png" alt="Vuela con Rueda" width="360" height="136" style="height:52px;width:auto;display:block"></a>
+    <nav aria-label="Sitio">
+      <a href="/">Inicio</a>
+      <a href="/herramientas/">Herramientas</a>
+      <a href="/ofertas-de-vuelos/">Ofertas de vuelos</a>
+      <a href="/sweet-spots/">Sweet spots</a>
+      <a href="/planificador/">Planificador</a>
+      <a href="/equipaje/" aria-current="page">Equipaje</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Equipaje y accesorios</p>
+      <h1>Lo que empaco en cada viaje</h1>
+      <p class="lede">Desde fines de semana cortos hasta vuelos largos en clase business al otro lado del mundo, esto es lo que va en mi maleta. Nada lujoso, solo cosas que aguantan y hacen el viaje más fácil.</p>
+    </div>
+    <aside class="manifest" aria-label="Lista de empaque">
+      <b>Lista de empaque</b>
+      <ol>
+        <li>Maleta Away o Béis</li>
+        <li>Cubos de empaque</li>
+        <li>Batería portátil Anker</li>
+        <li>Cargador Anker</li>
+        <li>Almohada de viaje trtl</li>
+        <li>Audífonos Bose con cancelación de ruido</li>
+        <li>Soporte de celular para la mesita</li>
+      </ol>
+      <p class="small">Algunos enlaces son de afiliado. Puedo ganar una comisión sin costo para ti. Como Afiliado de Amazon, gano por compras que califican.</p>
+    </aside>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section aria-labelledby="g1">
+      <div class="group-h"><span>Maletas</span><h2 id="g1">Maletas de mano y documentadas</h2></div>
+      <p class="group-sub">Maletas rígidas que ruedan bien, aguantan el maltrato del aeropuerto y caben en el compartimento de arriba.</p>
+      <div class="items">
+        <article class="item">
+          <div class="tagline"><span>Maletas</span><span>De mano y documentada</span></div>
+          <div class="item-body">
+            <h3>Maletas Away</h3>
+            <p>Maletas rígidas y resistentes con ruedas de 360°, sistema de compresión integrado y garantía de por vida.</p>
+            <p class="why">Por qué la llevo: es resistente, rueda fácil por el aeropuerto y es ordenada por dentro.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=Away+luggage&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+        <article class="item">
+          <div class="tagline"><span>Maletas</span><span>De mano y documentada</span></div>
+          <div class="item-body">
+            <h3>Maletas Béis</h3>
+            <p>Maletas rígidas con compartimentos inteligentes, incluyendo bolsas para laptop, zapatos y lo que necesitas a la mano.</p>
+            <p class="why">Por qué la llevo: tiene muchos compartimentos, así no ando buscando cosas en el filtro de seguridad.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=Beis+luggage&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="g2">
+      <div class="group-h"><span>Empaque</span><h2 id="g2">Cubos de empaque</h2></div>
+      <p class="group-sub">Cualquier marca sirve. La idea es que quepa más en la maleta de mano y encontrar todo sin desempacar.</p>
+      <div class="items">
+        <article class="item">
+          <div class="tagline"><span>Empaque</span><span>Cualquier marca</span></div>
+          <div class="item-body">
+            <h3>Cubos de empaque</h3>
+            <p>Bolsas de tela con cierre que mantienen la ropa ordenada por conjunto, persona o día. Los de compresión te dan más espacio.</p>
+            <p class="why">Por qué los llevo: viajando en familia, un cubo por persona hace que llegar al hotel y volver a empacar sea rápido.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=packing+cubes&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="g3">
+      <div class="group-h"><span>Energía</span><h2 id="g3">Baterías portátiles y cargadores</h2></div>
+      <p class="group-sub">Días largos de viaje, enchufes que no sirven y aviones viejos. Con esto mi celular y audífonos siempre tienen batería.</p>
+      <div class="items">
+        <article class="item">
+          <div class="tagline"><span>Energía</span><span>Solo equipaje de mano</span></div>
+          <div class="item-body">
+            <h3>Baterías portátiles Anker</h3>
+            <p>Baterías que cargan tu celular varias veces. Llévalas en el equipaje de mano, porque las aerolíneas no las permiten en maletas documentadas.</p>
+            <p class="why">Por qué las llevo: no ando buscando enchufe en la sala de espera.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=Anker+power+bank&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+        <article class="item">
+          <div class="tagline"><span>Energía</span><span>Cargadores de pared</span></div>
+          <div class="item-body">
+            <h3>Cargadores Anker</h3>
+            <p>Cargadores rápidos y chicos con varios puertos, para cargar celular, laptop y audífonos con un solo enchufe.</p>
+            <p class="why">Por qué los llevo: un solo cargador en vez de un montón de cables, y menos adaptadores en el extranjero.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=Anker+charger&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="g4">
+      <div class="group-h"><span>En el avión</span><h2 id="g4">Comodidad en vuelos largos</h2></div>
+      <p class="group-sub">Las cosas pequeñas que hacen que un vuelo de 12 horas se sienta más corto, en cualquier cabina.</p>
+      <div class="items">
+        <article class="item">
+          <div class="tagline"><span>Comodidad</span><span>Almohada de cuello</span></div>
+          <div class="item-body">
+            <h3>Almohada de viaje trtl</h3>
+            <p>Una bufanda suave con un soporte escondido que sostiene la cabeza, y ocupa mucho menos que una almohada en forma de U.</p>
+            <p class="why">Por qué la llevo: de verdad evita que la cabeza se me vaya hacia adelante cuando duermo sentado.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=trtl+travel+pillow&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+        <article class="item">
+          <div class="tagline"><span>Comodidad</span><span>Audífonos</span></div>
+          <div class="item-body">
+            <h3>Audífonos Bose con cancelación de ruido</h3>
+            <p>Audífonos de diadema que bloquean el ruido del motor, bebés llorando y vecinos ruidosos.</p>
+            <p class="why">Por qué los llevo: llego menos cansado después de un vuelo largo cuando hay silencio.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=Bose+noise+cancelling+headphones&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+        <article class="item">
+          <div class="tagline"><span>Comodidad</span><span>Soporte de celular</span></div>
+          <div class="item-body">
+            <h3>Soporte de celular para la mesita</h3>
+            <p>Un soporte pequeño que se engancha a la mesita o al respaldo y sostiene tu celular o tableta a la altura de los ojos.</p>
+            <p class="why">Por qué lo llevo: puedo ver películas sin sostener el celular cuando la pantalla del asiento es chica o no hay.</p>
+          </div>
+          <div class="item-foot"><a href="https://www.amazon.com/s?k=airplane+phone+holder+tray+table&tag=miguelrueda08-20" target="_blank" rel="noopener sponsored">Ver en Amazon</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Preguntas frecuentes sobre equipaje</h2>
+      <details><summary>¿Puedo llevar una batería portátil en el avión?</summary><p>Sí, en el equipaje de mano. Las aerolíneas no permiten baterías de litio sueltas en maletas documentadas, y casi todas limitan el tamaño a 100 vatios-hora, lo que cubre casi cualquier batería para celular.</p></details>
+      <details><summary>¿Valen la pena los cubos de empaque?</summary><p>Sí, sobre todo si viajas solo con maleta de mano o en familia. Todo queda ordenado y los de compresión te dan más espacio.</p></details>
+      <details><summary>¿Away o Béis: cuál maleta es mejor?</summary><p>Las dos son maletas rígidas y resistentes. Away es sencilla y fuerte; Béis tiene más bolsas y compartimentos. Escoge según cómo te gusta organizarte.</p></details>
+      <details><summary>¿Cuál es la mejor almohada para dormir en el avión?</summary><p>Yo uso la trtl porque sostiene la cabeza sin el volumen de una almohada en U y se guarda plana.</p></details>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Algunos enlaces son de afiliado. Solo pongo cosas que uso.</span>
+    <span>© 2026 Vuela con Rueda · vuelaconrueda.com</span>
+  </div>
+</footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Puedo llevar una batería portátil en el avión?","acceptedAnswer":{"@type":"Answer","text":"Sí, en el equipaje de mano. Las aerolíneas no permiten baterías de litio sueltas en maletas documentadas."}},{"@type":"Question","name":"¿Valen la pena los cubos de empaque?","acceptedAnswer":{"@type":"Answer","text":"Sí, sobre todo si viajas solo con maleta de mano o en familia."}},{"@type":"Question","name":"¿Away o Béis: cuál maleta es mejor?","acceptedAnswer":{"@type":"Answer","text":"Las dos son resistentes. Away es sencilla y fuerte; Béis tiene más bolsas y compartimentos."}}]}</script>
+
+</body></html>

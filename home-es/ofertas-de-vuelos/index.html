@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Vuela con Rueda Ofertas de Vuelos</title>
+<meta http-equiv="content-language" content="es">
+<meta name="description" content="Ofertas de vuelos baratos y en clase business actualizadas cada semana: tarifas en efectivo y ofertas con puntos de Find Flights for Me, Going y Thrifty Traveler, elegidas por Vuela con Rueda.">
+<link rel="canonical" href="https://vuelaconrueda.com/ofertas-de-vuelos/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ofertas de Vuelos Baratos Esta Semana | Vuela con Rueda">
+<meta property="og:description" content="Las mejores tarifas en efectivo y ofertas en clase business con puntos de esta semana, de los servicios de ofertas que pago.">
+<meta property="og:url" content="https://vuelaconrueda.com/ofertas-de-vuelos/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: brand masthead, hero with two "get full details" offers, filter chips, a grid of teaser deal tickets, footer credits */
+:root {
+  --blue: #0C3B3C; --brass: #F0A824; --scarlet: #C7502B;
+  --bg: #FAF3E7; --surface: #FFFFFF; --ink: #0C3B3C; --muted: #4E5F5E; --line: #E8DCC6; --chip: #F2E6D2;
+  --going: #9A6A00; --thrifty: #0E7C66; --fffm: #B4471F; --was: #8A8F96;
+  --display: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B;
+  --going: #F5C463; --thrifty: #6FD1B8; --fffm: #F2A27E; --was: #7F8A96; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B;
+  --going: #F5C463; --thrifty: #6FD1B8; --fffm: #F2A27E; --was: #7F8A96; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.mast { background: var(--blue); color: #FAF3E7; border-bottom: 4px solid var(--brass); }
+.mast .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.wordmark { font: italic 800 24px/1 var(--display); color: #FAF3E7; letter-spacing: -.01em; white-space: nowrap; }
+.wordmark i { color: #F0A824; font-weight: 700; }
+.logo { height: 44px; width: auto; filter: brightness(0) invert(1); display: block; }
+.mast nav { display: flex; gap: 20px; font: 600 13px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.mast nav a { color: inherit; text-decoration: none; opacity: .8; }
+.mast nav a[aria-current] { opacity: 1; color: var(--brass); }
+
+.hero { background: var(--blue); color: #FAF3E7; }
+.hero .wrap { padding-block: 36px 44px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.eyebrow { font: 700 12px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14px; text-wrap: balance; }
+.lede { margin: 0; max-width: 56ch; color: #D3E2DE; }
+.offers { display: grid; gap: 10px; }
+.offer { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: rgba(244,241,234,.06); border: 1px solid rgba(240,168,36,.5); border-radius: 6px; padding: 14px 16px; color: #FAF3E7; text-decoration: none; }
+.offer:hover { background: rgba(244,241,234,.11); }
+.offer.soon { opacity: .6; border-style: dashed; }
+.offer.soon:hover { background: rgba(244,241,234,.06); }
+.diy { margin-top: 40px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 22px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 24px; align-items: center; }
+.diy p { margin: 0; color: var(--muted); font-size: 15px; max-width: 62ch; }
+.diy .links { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--brass); }
+@media (max-width: 760px) { .diy { grid-template-columns: minmax(0, 1fr); } }
+.offer strong { font: 700 15px/1.2 var(--display); display: block; }
+.offer span { font-size: 13px; color: #D3E2DE; }
+.offer em { font: 700 13px/1 var(--display); font-style: normal; color: var(--brass); white-space: nowrap; }
+.small { font-size: 12px; color: #A6BEB9; margin: 2px 0 0; }
+
+.notice { border-bottom: 1px solid var(--line); background: var(--surface); }
+.notice .wrap { padding-block: 12px; display: flex; gap: 10px; align-items: baseline; font-size: 14px; color: var(--muted); flex-wrap: wrap; }
+.tag { font: 700 11px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--scarlet); border: 1.5px solid var(--scarlet); padding: 4px 7px; border-radius: 3px; }
+
+main .wrap { padding-block: 32px 24px; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; align-items: center; }
+.filters button { font: 700 13px/1 var(--display); padding: 10px 13px; border-radius: 4px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.fgroup { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.flabel { font: 700 11px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
+.filters { gap: 14px 22px !important; }
+.filters .count { margin-left: auto; font-size: 13px; color: var(--muted); }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.ticket { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+.t-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 16px 0; }
+.kind { font: 700 10px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.kind.prem { color: var(--brass); }
+.src { font: 700 11px/1 var(--display); padding: 4px 7px; border-radius: 3px; border: 1.5px solid currentColor; white-space: nowrap; }
+.src.g { color: var(--going); } .src.t { color: var(--thrifty); } .src.f { color: var(--fffm); }
+.t-body { padding: 10px 16px 14px; display: grid; gap: 6px; align-content: start; }
+.dest { font: 800 20px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.flag { font: 700 10px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; background: var(--chip); padding: 3px 5px; border-radius: 3px; vertical-align: 3px; margin-left: 4px; }
+.price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+.price b { font: 800 26px/1 var(--display); }
+.price s { color: var(--was); font-size: 14px; }
+.price small { color: var(--muted); font-size: 12px; }
+.when { font-size: 14px; color: var(--muted); margin: 0; }
+.t-foot { border-top: 1px dashed var(--line); padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; }
+.t-foot time { font: 500 12px/1 var(--mono); color: var(--muted); }
+.t-foot a { font-weight: 600; color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.section-h { font: 800 22px/1.2 var(--display); margin: 0 0 6px; }
+.section-sub { margin: 0 0 18px; color: var(--muted); font-size: 15px; max-width: 70ch; }
+.price, .when, .hidden-detail { margin: 0; }
+.rove { margin-top: 36px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; background: var(--surface); border: 1.5px solid var(--brass); border-radius: 8px; padding: 18px 20px; }
+.rove h2 { font: 800 20px/1.25 var(--display); margin: 0 0 4px; }
+.rove p { margin: 0; color: var(--muted); font-size: 15px; max-width: 60ch; }
+.rove a { display: inline-flex; background: var(--brass); color: #0C3B3C; font: 700 14px/1 var(--display); padding: 13px 16px; border-radius: 4px; text-decoration: none; white-space: nowrap; }
+.faq { margin-top: 44px; display: grid; gap: 10px; max-width: 760px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
+.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.hidden-detail { font-size: 12px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+.hidden-detail i { display: inline-block; width: 58px; height: 9px; border-radius: 2px; background: repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 9px); }
+
+.fine { font-size: 12px; color: var(--muted); margin: 16px 0 0; max-width: 80ch; }
+.band { margin-top: 40px; background: var(--blue); color: #FAF3E7; border-radius: 6px; padding: 26px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.band h2 { font: italic 800 22px/1.2 var(--display); margin: 0 0 6px; }
+.band p { margin: 0; color: #D3E2DE; font-size: 14px; max-width: 52ch; }
+.btn { display: inline-flex; align-items: center; background: var(--brass); color: #0C3B3C; font: 700 14px/1 var(--display); padding: 14px 18px; border-radius: 4px; text-decoration: none; }
+footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .mast nav { display: none; } .filters .count { margin-left: 0; width: 100%; } }
+.sa-logo { display: block; width: 210px; max-width: 100%; height: auto; border-radius: 10px; }
+.powered { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+.powered a { display: block; line-height: 0; }
+.powered img { width: 150px; height: auto; border-radius: 8px; display: block; }
+.diy .sa-logo { width: 170px; margin-bottom: 12px; }
+</style>
+
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a href="/" aria-label="Vuela con Rueda inicio"><img src="/assets/logo.png" alt="Vuela con Rueda" width="360" height="136" style="height:52px;width:auto;display:block"></a>
+    <nav aria-label="Sitio">
+      <a href="/">Inicio</a>
+      <a href="/herramientas/">Herramientas</a>
+      <a href="/ofertas-de-vuelos/" aria-current="page">Ofertas de vuelos</a>
+      <a href="/sweet-spots/">Sweet spots</a>
+      <a href="/planificador/">Planificador</a>
+      <a href="/equipaje/">Equipaje</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Ofertas de vuelos · Cada semana</p>
+      <h1>Ofertas de vuelos baratos y en clase business esta semana</h1>
+      <p class="lede">Estoy suscrito a Find Flights for Me, Going y Thrifty Traveler Premium. Estas son las tarifas en efectivo y ofertas con puntos más baratas que encontraron esta semana. Las ciudades de salida y fechas exactas son para sus miembros, así que si alguna te interesa, suscríbete. (Sus alertas están en inglés).</p>
+    </div>
+    <div class="offers">
+      <a class="offer" href="https://rekomi.link/njjbr8x5kgwc?p=7a2ec388-fd3d-4e21-ad5e-d8d8e58b0655" target="_blank" rel="noopener sponsored">
+        <div><strong>Find Flights for Me</strong><span>Ofertas en clase business con efectivo y puntos</span></div><em>Pruébalo →</em>
+      </a>
+      <a class="offer" href="https://going.sjv.io/miguel" target="_blank" rel="noopener sponsored">
+        <div><strong>Going</strong><span>Ofertas desde tu aeropuerto, por correo y app</span></div><em>Pruébalo →</em>
+      </a>
+      <a class="offer" href="https://thriftytraveler.com/a/miguel" target="_blank" rel="noopener sponsored">
+        <div><strong>Thrifty Traveler Premium</strong><span>Tarifas en efectivo y ofertas con puntos y millas</span></div><em>Pruébalo →</em>
+      </a>
+      <a class="offer" href="https://straighttothepoints.co/r/?aid=26337353" target="_blank" rel="noopener sponsored">
+        <div><strong>Straight to the Points</strong><span>Alertas de vuelos con millas por mensaje y correo</span></div><em>Pruébalo →</em>
+      </a>
+      <p class="small">Enlaces de afiliado. Puedo ganar una comisión sin costo para ti.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<main>
+  <div class="wrap">
+    <h2 class="section-h">Vuelos baratos de esta semana</h2>
+    <p class="section-sub">Tarifas en económica, ofertas en premium economy y clase business, y vuelos que puedes reservar con puntos de tarjeta de crédito. Filtra por efectivo o puntos, cabina o vuelos directos.</p>
+    <div class="filters" id="filters">
+      <div class="fgroup" role="group" aria-label="Pagar con"><span class="flabel">Pagar con</span>
+        <button type="button" data-g="pay" data-v="all" aria-pressed="true">Todas</button>
+        <button type="button" data-g="pay" data-v="cash" aria-pressed="false">Efectivo</button>
+        <button type="button" data-g="pay" data-v="points" aria-pressed="false">Puntos</button>
+      </div>
+      <div class="fgroup" role="group" aria-label="Cabina"><span class="flabel">Cabina</span>
+        <button type="button" data-g="cabin" data-v="all" aria-pressed="true">Todas</button>
+        <button type="button" data-g="cabin" data-v="econ" aria-pressed="false">Económica</button>
+        <button type="button" data-g="cabin" data-v="pe" aria-pressed="false">Premium economy</button>
+        <button type="button" data-g="cabin" data-v="bf" aria-pressed="false">Business y primera</button>
+      </div>
+      <div class="fgroup"><button type="button" data-g="ns" data-v="1" aria-pressed="false">Solo directos</button></div>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="grid" id="grid">
+    <article class="ticket" data-pay="cash" data-cabin="econ" data-ns="0">
+      <div class="t-top"><span class="kind">Económica</span><span class="src t">Thrifty Traveler</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Osaka y Tokio, Japón</h3>
+        <p class="price"><b>Menos de $498</b><small>ida y vuelta</small></p>
+        <p class="when">Viaje: Invierno</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-11-01">Visto el 1 nov</time><a href="https://thriftytraveler.com/a/miguel" target="_blank" rel="noopener sponsored">Ver oferta completa en Thrifty Traveler</a></div>
+    </article>
+    <article class="ticket" data-pay="cash" data-cabin="econ" data-ns="0">
+      <div class="t-top"><span class="kind">Económica</span><span class="src g">Going</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Tokio, Japón</h3>
+        <p class="price"><b>$196–$462</b><small>ida y vuelta · tarifa error</small></p>
+        <p class="when">Viaje: Ene–mar</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-11-01">Visto el 1 nov</time><a href="https://going.sjv.io/miguel" target="_blank" rel="noopener sponsored">Ver oferta completa en Going</a></div>
+    </article>
+    <article class="ticket" data-pay="points" data-cabin="econ" data-ns="0">
+      <div class="t-top"><span class="kind">Económica · puntos</span><span class="src t">Thrifty Traveler</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Cancún, México</h3>
+        <p class="price"><b>Menos de 28k SkyMiles</b><small>ida y vuelta</small></p>
+        <p class="when">Viaje: Temporada alta</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-11-01">Visto el 1 nov</time><a href="https://thriftytraveler.com/a/miguel" target="_blank" rel="noopener sponsored">Ver oferta completa en Thrifty Traveler</a></div>
+    </article>
+    <article class="ticket" data-pay="points" data-cabin="bf" data-ns="0">
+      <div class="t-top"><span class="kind prem">Clase ejecutiva · puntos</span><span class="src f">Find Flights for Me</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Doha en Qsuites de Qatar</h3>
+        <p class="price"><b>Desde 70k puntos</b><small>cada tramo</small></p>
+        <p class="when">Viaje: Fechas varían por ruta</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-11-01">Visto el 1 nov</time><a href="https://rekomi.link/njjbr8x5kgwc?p=7a2ec388-fd3d-4e21-ad5e-d8d8e58b0655" target="_blank" rel="noopener sponsored">Ver oferta completa en Find Flights for Me</a></div>
+    </article>
+    <article class="ticket" data-pay="points" data-cabin="bf" data-ns="0">
+      <div class="t-top"><span class="kind prem">Clase ejecutiva · puntos</span><span class="src f">Find Flights for Me</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>China con Air China</h3>
+        <p class="price"><b>Espacio premio raro</b><small>clase ejecutiva</small></p>
+        <p class="when">Viaje: Fechas varían por ruta</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-11-01">Visto el 1 nov</time><a href="https://rekomi.link/njjbr8x5kgwc?p=7a2ec388-fd3d-4e21-ad5e-d8d8e58b0655" target="_blank" rel="noopener sponsored">Ver oferta completa en Find Flights for Me</a></div>
+    </article>
+    <article class="ticket" data-pay="points" data-cabin="bf" data-ns="0">
+      <div class="t-top"><span class="kind prem">Clase ejecutiva · puntos</span><span class="src f">Find Flights for Me</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Europa con Aeromexico</h3>
+        <p class="price"><b>Asientos premio abiertos</b><small>clase ejecutiva</small></p>
+        <p class="when">Viaje: Fechas varían por ruta</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-10-31">Visto el 31 oct</time><a href="https://rekomi.link/njjbr8x5kgwc?p=7a2ec388-fd3d-4e21-ad5e-d8d8e58b0655" target="_blank" rel="noopener sponsored">Ver oferta completa en Find Flights for Me</a></div>
+    </article>
+    <article class="ticket" data-pay="points" data-cabin="bf" data-ns="1">
+      <div class="t-top"><span class="kind prem">Clase ejecutiva · puntos</span><span class="src t">Thrifty Traveler</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Londres, Reino Unido</h3>
+        <p class="price"><b>Desde 42k puntos</b><small>cada tramo</small></p>
+        <p class="when">Viaje: Incluye verano</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-10-30">Visto el 30 oct</time><a href="https://thriftytraveler.com/a/miguel" target="_blank" rel="noopener sponsored">Ver oferta completa en Thrifty Traveler</a></div>
+    </article>
+    <article class="ticket" data-pay="cash" data-cabin="econ" data-ns="1">
+      <div class="t-top"><span class="kind">Económica</span><span class="src t">Thrifty Traveler</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Austin, TX</h3>
+        <p class="price"><b>Desde $116</b><small>ida y vuelta</small></p>
+        <p class="when">Viaje: Incluye días festivos</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-10-30">Visto el 30 oct</time><a href="https://thriftytraveler.com/a/miguel" target="_blank" rel="noopener sponsored">Ver oferta completa en Thrifty Traveler</a></div>
+    </article>
+    <article class="ticket" data-pay="points" data-cabin="bf" data-ns="1">
+      <div class="t-top"><span class="kind prem">Clase ejecutiva · puntos</span><span class="src t">Thrifty Traveler</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>El Cairo, Egipto</h3>
+        <p class="price"><b>Desde 65k puntos</b><small>cada tramo</small></p>
+        <p class="when">Viaje: Primavera y otoño</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-10-29">Visto el 29 oct</time><a href="https://thriftytraveler.com/a/miguel" target="_blank" rel="noopener sponsored">Ver oferta completa en Thrifty Traveler</a></div>
+    </article>
+    <article class="ticket" data-pay="points" data-cabin="bf" data-ns="0">
+      <div class="t-top"><span class="kind prem">Clase ejecutiva · puntos</span><span class="src f">Find Flights for Me</span></div>
+      <div class="t-body">
+        <h3 class="dest"><span class="sr">Vuelos a </span>Argentina, Brasil y Chile con LATAM</h3>
+        <p class="price"><b>Asientos premio abiertos</b><small>clase ejecutiva</small></p>
+        <p class="when">Viaje: Fechas varían por ruta</p>
+        <p class="hidden-detail">Desde <i aria-hidden="true"></i> · Fechas <i aria-hidden="true"></i></p>
+      </div>
+      <div class="t-foot"><time datetime="2026-10-27">Visto el 27 oct</time><a href="https://rekomi.link/njjbr8x5kgwc?p=7a2ec388-fd3d-4e21-ad5e-d8d8e58b0655" target="_blank" rel="noopener sponsored">Ver oferta completa en Find Flights for Me</a></div>
+    </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Ofertas encontradas por Find Flights for Me, Going y Thrifty Traveler y compartidas como adelanto. Vuela con Rueda no está afiliado con estas empresas más allá de los enlaces de referido.</span>
+    <span>© 2026 Vuela con Rueda · vuelaconrueda.com</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿De dónde vienen estas ofertas?","acceptedAnswer":{"@type":"Answer","text":"De Find Flights for Me, Going y Thrifty Traveler Premium, servicios que vigilan los precios y mandan alertas cuando bajan mucho."}},{"@type":"Question","name":"¿Los precios son de ida y vuelta?","acceptedAnswer":{"@type":"Answer","text":"Las tarifas en efectivo son de ida y vuelta en dólares salvo que digan por trayecto. Las ofertas con puntos casi siempre son por trayecto."}},{"@type":"Question","name":"¿Qué tan rápido desaparecen las ofertas?","acceptedAnswer":{"@type":"Answer","text":"Muchas duran desde unas horas hasta unos días."}}]}</script>
+<script>
+const grid = document.getElementById('grid');
+const F = { pay: 'all', cabin: 'all', ns: false };
+function apply() {
+  let n = 0;
+  grid.querySelectorAll('.ticket').forEach(t => {
+    const show = (F.pay === 'all' || t.dataset.pay === F.pay) && (F.cabin === 'all' || t.dataset.cabin === F.cabin) && (!F.ns || t.dataset.ns === '1');
+    t.hidden = !show; if (show) n++;
+  });
+  document.getElementById('count').textContent = n + ' ofertas';
+}
+document.getElementById('filters').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const g = b.dataset.g;
+  if (g === 'ns') { F.ns = !F.ns; b.setAttribute('aria-pressed', F.ns); }
+  else {
+    F[g] = b.dataset.v;
+    document.querySelectorAll('#filters button[data-g="' + g + '"]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  }
+  apply();
+});
+apply();
+</script>
+
+</body></html>
