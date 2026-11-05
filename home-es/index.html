@@ -120,6 +120,8 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .kit { display: grid; gap: 10px; }
 .kit input { min-height: 52px; padding: 0 16px; border-radius: 6px; border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); font: 400 16px var(--body); }
 .kit input:focus { border-color: var(--brass); outline: none; }
+.kit textarea { min-height: 110px; padding: 12px 16px; border-radius: 6px; border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); font: 400 16px var(--body); resize: vertical; }
+.kit textarea:focus { border-color: var(--brass); outline: none; }
 .form-msg { margin: 0; min-height: 1.2em; font-size: 14px; color: var(--muted); }
 .form-msg.ok { color: var(--ink); font-weight: 600; }
 .fine { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
@@ -259,6 +261,25 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
       <div>
         <h3 style="margin-bottom:14px">Conferencias</h3>
         <div class="card-list"><a class="card" href="https://travelmorecon.com/speakers/" target="_blank" rel="noopener"><span><b>TravelMoreCon</b><small>Ponente</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="card" href="https://ftuniversity.com/dallas-2026/" target="_blank" rel="noopener"><span><b>Frequent Traveler University</b><small>Ponente, Dallas 2026</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="card" href="https://chicagoseminars.org/" target="_blank" rel="noopener"><span><b>Chicago Seminars</b><small>Ponente</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="card" href="https://www.tickettailor.com/events/pointmetony/1534314" target="_blank" rel="noopener"><span><b>PointsQuest Nueva York</b><small>Ponente principal con Point Me To NY</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="card"><span><b>PTF</b><small>Ponente</small></span></div></div>
+      </div>
+    </div>
+    <div class="split" style="margin-top:44px;align-items:start">
+      <div>
+        <h3 style="margin-bottom:12px">Invítame a tu evento</h3>
+        <p class="body">He hablado en conferencias de viajes por todo el país, y siempre me encanta compartir lo que hago con un público en vivo. ¿Estás organizando una conferencia, cumbre o meetup? Escríbeme directo, o llena el formulario y te respondo.</p>
+        <div class="card-list" style="margin-top:20px"><a class="card" href="mailto:miguel@travelsergeant.com?subject=Solicitud de charla"><span><b>Escríbeme directo</b><small>miguel@travelsergeant.com</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+      <div class="panel">
+        <form class="kit" action="https://formsubmit.co/miguel@travelsergeant.com" method="post">
+          <input type="hidden" name="_subject" value="Solicitud de charla">
+          <input type="hidden" name="_next" value="https://vuelaconrueda.com/#visto">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <label class="sr" for="sp-name">Tu nombre</label><input id="sp-name" type="text" name="name" placeholder="Tu nombre" required autocomplete="name"><label class="sr" for="sp-email">Tu correo</label><input id="sp-email" type="email" name="email" placeholder="Tu correo" required autocomplete="email"><label class="sr" for="sp-event">Nombre del evento</label><input id="sp-event" type="text" name="event" placeholder="Nombre del evento" required><label class="sr" for="sp-date">Fecha del evento</label><input id="sp-date" type="text" name="date" placeholder="Fecha del evento"><label class="sr" for="sp-loc">Ciudad, o virtual</label><input id="sp-loc" type="text" name="location" placeholder="Ciudad, o virtual"><label class="sr" for="sp-aud">Tamaño esperado del público</label><input id="sp-aud" type="text" name="audience" placeholder="Tamaño esperado del público">
+          <label class="sr" for="sp-msg">Cuéntame de tu evento</label>
+          <textarea id="sp-msg" name="message" placeholder="Cuéntame de tu evento"></textarea>
+          <button type="submit" class="btn btn-brass">Enviar solicitud</button>
+        </form>
       </div>
     </div>
   </div>
