@@ -231,6 +231,8 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
       <h2>Points & Miles 101</h2>
       <p class="body">A free 10 page guide to the basics: how to earn points, how to redeem them for the most value, and which cards to start with. Enter your email and I'll send it over.</p>
       <div style="margin-top:24px"><form class="kit" action="https://app.kit.com/forms/10003006/subscriptions" method="post" data-kit>
+          <label class="sr" for="name1">First name</label>
+          <input id="name1" type="text" name="fields[first_name]" placeholder="First name" required autocomplete="given-name">
           <label class="sr" for="email1">Email address</label>
           <input id="email1" type="email" name="email_address" placeholder="Email address" required autocomplete="email">
           <button type="submit" class="btn btn-brass">Send me the guide</button>
@@ -342,6 +344,8 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
     <div class="panel">
       <p style="margin:0 0 16px">Join the waitlist for launch updates and early bird pricing.</p>
       <form class="kit" action="https://app.kit.com/forms/10002621/subscriptions" method="post" data-kit>
+          <label class="sr" for="name2">First name</label>
+          <input id="name2" type="text" name="fields[first_name]" placeholder="First name" required autocomplete="given-name">
           <label class="sr" for="email2">Email address</label>
           <input id="email2" type="email" name="email_address" placeholder="Email address" required autocomplete="email">
           <button type="submit" class="btn btn-brass">Join the waitlist</button>
