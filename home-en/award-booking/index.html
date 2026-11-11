@@ -201,6 +201,7 @@ textarea { min-height: 96px; resize: vertical; }
       <p class="sub">Tell me your trip and your points balances. I review every request and reply by email before any deposit is charged.</p>
       <form class="req" id="req" novalidate>
         <input type="hidden" name="site" value="bio.travelsergeant.com">
+        <input type="hidden" name="type" id="reqtype" value="Client">
         <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
         <fieldset><legend>About you</legend>
           <div class="row">
@@ -272,6 +273,7 @@ textarea { min-height: 96px; resize: vertical; }
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
     if (!ENDPOINT) { msg.className = "msg err"; msg.textContent = T.off; return; }
+    document.getElementById("reqtype").value = new URLSearchParams(location.search).get("type") === "personal" ? "Personal" : "Client";
     var fd = new FormData(form), data = new URLSearchParams();
     fd.forEach(function (v, k) { if (["bank", "help", "deadline", "notes_text"].indexOf(k) < 0) data.append(k, v); });
     data.append("bank_points", fd.getAll("bank").join(", "));

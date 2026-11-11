@@ -8,7 +8,7 @@ const NOTIFY = 'travelsergeant@gmail.com';
 
 // Form field name -> sheet column header
 const FIELDS = {
-  site: 'Site', name: 'Name', email: 'Email', phone: 'Phone', instagram: 'Instagram',
+  site: 'Site', type: 'Type', name: 'Name', email: 'Email', phone: 'Phone', instagram: 'Instagram',
   trip_type: 'Trip type', from: 'From', to: 'To', depart: 'Depart', return_date: 'Return',
   flexibility: 'Date flexibility', adults: 'Adults', children: 'Children', infants: 'Lap infants',
   cabin: 'Cabin', stops: 'Stops', bank_points: 'Bank points', other_points: 'Airline and hotel points',
