@@ -72,6 +72,8 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 44px; padding: 22px 0 clamp(40px, 6vw, 72px); border-top: 1px solid rgba(255,255,255,.14); max-width: 560px; }
 .stats b { display: block; font: 800 clamp(26px, 3.4vw, 36px)/1 var(--display); color: var(--hero-ink); }
 .stats span { display: block; margin-top: 6px; font-size: 13px; color: var(--hero-sub); line-height: 1.35; }
+.stats a { text-decoration: none; }
+.stats a:hover b { color: var(--brass); }
 .portrait { position: relative; align-self: end; }
 .portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border-radius: 10px 10px 0 0; }
 .portrait::after { content: ""; position: absolute; left: -14px; top: 14px; right: 14px; bottom: 0; border: 2px solid var(--brass); border-bottom: 0; border-radius: 12px 12px 0 0; z-index: -1; }
@@ -183,7 +185,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
 <header class="mast">
   <div class="wrap">
     <a href="#top" aria-label="Travel Sergeant"><img class="logo" src="assets/logo-white.png" alt="Travel Sergeant"></a>
-    <nav aria-label="Main"><a href="#guide">Free guide</a><a href="#booking">Award booking</a><a href="#call">1 on 1 call</a><a href="#course">Course</a><a href="/resources/">Resources</a></nav>
+    <nav aria-label="Main"><a href="#guide">Free guide</a><a href="#booking">Award booking</a><a href="#call">1 on 1 call</a><a href="#course">Course</a><a href="/points-planner/">Points planner</a><a href="/flight-passport/">Flight Passport</a><a href="/resources/">Resources</a></nav>
     <a class="lang" href="https://vuelaconrueda.com/" hreflang="es" lang="es">Español</a>
   </div>
 </header>
@@ -199,7 +201,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
         <a class="btn btn-brass" href="#guide">Get the free guide</a>
         <a class="btn btn-ghost" href="#booking">Have points? I'll find the seats <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <div class="stats"><div><b>$500K+</b><span>travel booked with points</span></div><div><b>10M+</b><span>points earned</span></div><div><b>52</b><span>countries visited</span></div></div>
+      <div class="stats"><a href="/flight-passport/"><b>$500K+</b><span>travel booked with points</span></a><a href="/flight-passport/"><b>10M+</b><span>points earned</span></a><a href="/flight-passport/"><b>52</b><span>countries visited</span></a></div>
     </div>
     <figure class="portrait">
       <img src="assets/home-hero.jpg" alt="Miguel, Travel Sergeant" width="482" height="777">
@@ -269,7 +271,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
       <div>
         <h3 style="margin-bottom:12px">Request a speaking engagement</h3>
         <p class="body">I have spoken at travel conferences across the country, and I am always looking forward to sharing what I do with a live audience. Planning a conference, summit, or meetup? Email me directly, or send the form and I will get back to you.</p>
-        <div class="card-list" style="margin-top:20px"><a class="card" href="mailto:miguel@travelsergeant.com?subject=Speaking request"><span><b>Email me directly</b><small>miguel@travelsergeant.com</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="card-list" style="margin-top:20px"><a class="card" href="mailto:miguel@travelsergeant.com?subject=Speaking request"><span><b>Email me directly</b></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
       <div class="panel">
         <form class="kit" action="https://formsubmit.co/miguel@travelsergeant.com" method="post">

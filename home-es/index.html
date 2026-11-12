@@ -72,6 +72,8 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 44px; padding: 22px 0 clamp(40px, 6vw, 72px); border-top: 1px solid rgba(255,255,255,.14); max-width: 560px; }
 .stats b { display: block; font: 800 clamp(26px, 3.4vw, 36px)/1 var(--display); color: var(--hero-ink); }
 .stats span { display: block; margin-top: 6px; font-size: 13px; color: var(--hero-sub); line-height: 1.35; }
+.stats a { text-decoration: none; }
+.stats a:hover b { color: var(--brass); }
 .portrait { position: relative; align-self: end; }
 .portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border-radius: 10px 10px 0 0; }
 .portrait::after { content: ""; position: absolute; left: -14px; top: 14px; right: 14px; bottom: 0; border: 2px solid var(--brass); border-bottom: 0; border-radius: 12px 12px 0 0; z-index: -1; }
@@ -183,7 +185,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
 <header class="mast">
   <div class="wrap">
     <a href="#top" aria-label="Vuela con Rueda"><img class="logo" src="assets/logo.png" alt="Vuela con Rueda"></a>
-    <nav aria-label="Main"><a href="#guia">Guía gratis</a><a href="#reserva">Reserva con puntos</a><a href="#asesoria">Asesoría</a><a href="#curso">Curso</a><a href="/recursos/">Recursos</a></nav>
+    <nav aria-label="Main"><a href="#guia">Guía gratis</a><a href="#reserva">Reserva con puntos</a><a href="#asesoria">Asesoría</a><a href="#curso">Curso</a><a href="/planificador/">Planificador</a><a href="/pasaporte-de-vuelos/">Pasaporte de vuelos</a><a href="/recursos/">Recursos</a></nav>
     <a class="lang" href="https://travelsergeant.com/" hreflang="en" lang="en">English</a>
   </div>
 </header>
@@ -199,7 +201,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
         <a class="btn btn-brass" href="#guia">Descarga la guía gratis</a>
         <a class="btn btn-ghost" href="#reserva">¿Tienes puntos? Yo te lo busco <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <div class="stats"><div><b>$500K+</b><span>en viajes canjeados</span></div><div><b>10M+</b><span>puntos ganados</span></div><div><b>52</b><span>países visitados</span></div></div>
+      <div class="stats"><a href="/pasaporte-de-vuelos/"><b>$500K+</b><span>en viajes canjeados</span></a><a href="/pasaporte-de-vuelos/"><b>10M+</b><span>puntos ganados</span></a><a href="/pasaporte-de-vuelos/"><b>52</b><span>países visitados</span></a></div>
     </div>
     <figure class="portrait">
       <img src="assets/home-hero.jpg" alt="Miguel, Vuela con Rueda" width="482" height="777">
@@ -269,7 +271,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
       <div>
         <h3 style="margin-bottom:12px">Invítame a tu evento</h3>
         <p class="body">He hablado en conferencias de viajes por todo el país, y siempre me encanta compartir lo que hago con un público en vivo. ¿Estás organizando una conferencia, cumbre o meetup? Escríbeme directo, o llena el formulario y te respondo.</p>
-        <div class="card-list" style="margin-top:20px"><a class="card" href="mailto:miguel@travelsergeant.com?subject=Solicitud de charla"><span><b>Escríbeme directo</b><small>miguel@travelsergeant.com</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+        <div class="card-list" style="margin-top:20px"><a class="card" href="mailto:miguel@travelsergeant.com?subject=Solicitud de charla"><span><b>Escríbeme directo</b></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
       <div class="panel">
         <form class="kit" action="https://formsubmit.co/miguel@travelsergeant.com" method="post">
