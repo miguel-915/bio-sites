@@ -142,9 +142,10 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
       <div class="cards cabins" id="cabins" role="group" aria-label="Cabina"></div>
       <div class="balance">
         <label for="pts">Saldo de puntos</label>
-        <input id="pts" type="range" min="5000" max="200000" step="2500" value="75000">
+        <input id="pts" type="range" min="5000" max="1000000" step="2500" value="75000">
         <output for="pts" id="ptsOut">75,000<small>puntos</small></output>
       </div>
+      <p style="margin:8px 0 0;font-size:12.5px;opacity:.75">Precios por asiento, para un asiento. Solo ida cubre un vuelo; ida y vuelta cubre ambos.</p>
     </div>
   </div>
 </section>
@@ -335,7 +336,7 @@ function renderControls() {
   document.getElementById('roveNote').hidden = card !== 'rove';
 }
 function render() {
-  document.getElementById('ptsOut').innerHTML = fmt(pts) + '<small>puntos</small>';
+  document.getElementById('ptsOut').innerHTML = (pts >= 1000000 ? '1M+' : fmt(pts)) + '<small>puntos</small>';
   const cabinName = CABINS.find(c => c[0] === cabin)[1].toLowerCase();
   const list = [];
   Object.entries(D[cabin]).forEach(([region, rows]) => rows.forEach(r => {
@@ -351,7 +352,7 @@ function render() {
   list.sort((a, b) => (b.kind === 'Viaje redondo') - (a.kind === 'Viaje redondo') || a.cost - b.cost);
   const rts = list.filter(t => t.kind === 'Viaje redondo').length;
   document.getElementById('resMeta').textContent = list.length
-    ? `${list.length} viaje${list.length > 1 ? 's' : ''} en ${cabinName} con ${fmt(pts)} puntos ${CARD_NAME[card]}${rts ? ` · ${rts} redondo${rts > 1 ? 's' : ''}` : ''}`
+    ? `${list.length} viaje${list.length > 1 ? 's' : ''} en ${cabinName} con ${(pts >= 1000000 ? '1M+' : fmt(pts))} puntos ${CARD_NAME[card]}${rts ? ` · ${rts} redondo${rts > 1 ? 's' : ''}` : ''}`
     : '';
   document.getElementById('trips').innerHTML = list.length ? list.map(t => {
     const pct = Math.min(100, Math.round(t.cost / pts * 100));
