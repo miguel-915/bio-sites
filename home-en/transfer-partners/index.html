@@ -20,7 +20,8 @@
 .tgwrap{box-sizing:border-box;max-width:1060px;margin:0 auto;padding:24px 20px 30px;font-family:"IBM Plex Sans","Segoe UI",system-ui,sans-serif}
 .tgwrap *{box-sizing:border-box}
 .tg-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
-.tg-brand{font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:3px;font-size:13px;color:var(--gold)}
+.tg-brand{font-family:Montserrat,sans-serif;font-weight:800;letter-spacing:3px;font-size:13px;color:var(--gold);text-decoration:none}
+.tg-brand:hover{text-decoration:underline}
 .tg-lang{font-size:12.5px;color:var(--khaki);display:flex;align-items:center;gap:6px;font-weight:600}
 .tg-lang svg{flex:none;stroke:var(--gold)}
 .tg-lang a{color:var(--khaki);text-decoration:none;font-weight:600}
@@ -86,7 +87,7 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
 </head>
 <body>
 <div class="screenonly tgwrap" style="background:var(--bg);color:var(--ink)">
-  <div class="tg-top"><div class="tg-brand">TRAVEL SERGEANT</div><div class="tg-lang"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span class="on">EN</span><span class="sep">|</span><a href="https://vuelaconrueda.com/socios-de-transferencia/">ES</a></div></div>
+  <div class="tg-top"><a class="tg-brand" href="/">TRAVEL SERGEANT</a><div class="tg-lang"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span class="on">EN</span><span class="sep">|</span><a href="https://vuelaconrueda.com/socios-de-transferencia/">ES</a></div></div>
   <h1>Credit Card Transfer Partner Guide</h1>
   <p class="tg-sub">This is the complete map of credit card transfer partners. Every transferable points currency, American Express, Bilt, Capital One, Chase, Citi, Rove and Wells Fargo, every airline and hotel program it can become, and the exact transfer ratio for each move. Hover any bank or program to trace where the points can go, then check what each program can book across its alliance and its partners.</p>
   <div class="tg-sec">Every bank, every transfer partner</div>
@@ -95,7 +96,7 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
   <div class="tg-read" id="tgReadOverall">Ratio = bank points : partner points. Updated November 2026.</div>
   <div class="tg-sec">Show only my points</div>
   <p class="tg-hint">Tap the currencies you hold. The diagram and the tables below narrow to just your banks. Tap again to bring one back.</p>
-  <div class="tg-filters"><button class="tg-fbtn" data-bank="American Express">American Express</button><button class="tg-fbtn" data-bank="Bilt">Bilt</button><button class="tg-fbtn" data-bank="Capital One">Capital One</button><button class="tg-fbtn" data-bank="Chase">Chase</button><button class="tg-fbtn" data-bank="Citi">Citi</button><button class="tg-fbtn" data-bank="Rove">Rove</button><button class="tg-fbtn" data-bank="Wells Fargo">Wells Fargo</button></div>
+  <div class="tg-filters"><button class="tg-fbtn tg-ffbtn" data-bank="American Express">American Express</button><button class="tg-fbtn tg-ffbtn" data-bank="Bilt">Bilt</button><button class="tg-fbtn tg-ffbtn" data-bank="Capital One">Capital One</button><button class="tg-fbtn tg-ffbtn" data-bank="Chase">Chase</button><button class="tg-fbtn tg-ffbtn" data-bank="Citi">Citi</button><button class="tg-fbtn tg-ffbtn" data-bank="Rove">Rove</button><button class="tg-fbtn tg-ffbtn" data-bank="Wells Fargo">Wells Fargo</button></div>
   <div class="tg-sec">One bank at a time</div>
   <p class="tg-hint">The same map, one bank at a time, grouped the way the alliances line up. Ratios sit next to each program.</p>
   <div class="tg-filters"><button class="tg-fbtn tg-dbtn" data-bank="American Express">American Express</button><button class="tg-fbtn tg-dbtn" data-bank="Bilt">Bilt</button><button class="tg-fbtn tg-dbtn" data-bank="Capital One">Capital One</button><button class="tg-fbtn tg-dbtn" data-bank="Chase">Chase</button><button class="tg-fbtn tg-dbtn" data-bank="Citi">Citi</button><button class="tg-fbtn tg-dbtn" data-bank="Rove">Rove</button><button class="tg-fbtn tg-dbtn" data-bank="Wells Fargo">Wells Fargo</button></div>
@@ -397,7 +398,7 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
   bookSel.addEventListener('change', renderBook);
 
   /* ---------- filters ---------- */
-  var fbtns = document.querySelectorAll('.tg-fbtn');
+  var fbtns = document.querySelectorAll('.tg-ffbtn');
   function applyFilters(){
     var banks = actBanks();
     if(!banks.length){ D.banks.forEach(function(b){ active[b]=true; }); banks = actBanks(); syncFilterBtns(); }
@@ -409,7 +410,6 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
       });
     });
     if(!active[cur]) setBank(banks[0]); else renderDetail();
-    dbtns.forEach(function(x){ x.style.display = active[x.dataset.bank] ? '' : 'none'; });
     renderOverall(); renderBookOptions();
   }
   function syncFilterBtns(){
