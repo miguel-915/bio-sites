@@ -58,6 +58,9 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .mast nav { display: flex; gap: 22px; margin-left: auto; font: 600 13px/1 var(--display); letter-spacing: .05em; text-transform: uppercase; }
 .mast nav a { text-decoration: none; opacity: .82; }
 .mast nav a:hover { opacity: 1; color: var(--brass); }
+.navdd{position:relative;display:inline-flex}.navdd-p{position:absolute;top:calc(100% + 12px);right:0;min-width:252px;display:none;flex-direction:column;background:var(--blue);border:1px solid color-mix(in srgb, var(--brass) 45%, transparent);border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:60}.navdd:hover .navdd-p,.navdd:focus-within .navdd-p{display:flex}.navdd-p a{padding:9px 12px;border-radius:8px;text-transform:none;letter-spacing:.01em;font-size:13.5px;opacity:.92;white-space:nowrap}.navdd-p a:hover{background:rgba(255,255,255,.06);color:var(--brass);opacity:1}.navdd>a::after{content:" \25BE";color:var(--brass)}
+
+
 .lang { font: 700 12px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding: 9px 12px; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--brass); color: var(--brass); white-space: nowrap; }
 @media (max-width: 900px) { .mast nav { display: none; } .lang { margin-left: auto; } }
 
@@ -185,7 +188,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
 <header class="mast">
   <div class="wrap">
     <a href="#top" aria-label="Travel Sergeant"><img class="logo" src="assets/logo-white.png" alt="Travel Sergeant"></a>
-    <nav aria-label="Main"><a href="#guide">Free guide</a><a href="#booking">Award booking</a><a href="#call">1 on 1 call</a><a href="#course">Course</a><a href="/points-planner/">Points planner</a><a href="/flight-passport/">Flight Passport</a><a href="/resources/">Resources</a></nav>
+    <nav aria-label="Main"><a href="#guide">Free guide</a><a href="#booking">Award booking</a><a href="#call">1 on 1 call</a><a href="#course">Course</a><span class="navdd"><a href="/resources/" aria-haspopup="true">Free tools</a><span class="navdd-p"><a href="/transfer-partners/">Transfer Partner Guide</a><a href="/points-planner/">Points Planner</a><a href="/award-deals/">Sweet Spots</a><a href="/flight-deals/">Flight Deals</a><a href="/flight-passport/">Flight Passport</a><a href="/gear/">Travel Gear</a><a href="/resources/">All Resources</a></span></span></nav>
     <span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span style="color:#D9A441;font-weight:800">EN</span><span style="opacity:.45">|</span><a href="https://vuelaconrueda.com/" hreflang="es" lang="es" style="color:inherit;text-decoration:none;opacity:.85">ES</a></span>
   </div>
 </header>
