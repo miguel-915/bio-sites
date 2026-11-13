@@ -6,7 +6,7 @@
 <title>Flight Passport: Every Flight I Have Logged, Mapped | Travel Sergeant</title>
 <meta name="description" content="Every flight I have logged, mapped by year: miles, airlines, countries, and my longest and shortest flights.">
 <meta property="og:title" content="Flight Passport: Every Flight I Have Logged, Mapped | Travel Sergeant">
-<meta property="og:description" content="My Flighty logbook as a map: 403 flights and 615,676 miles by year, airline and country, with upcoming flights in red.">
+<meta property="og:description" content="Every flight I have logged, mapped by year: miles, airlines, countries, and my longest and shortest flights.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://travelsergeant.com/flight-passport/">
 <meta property="og:image" content="https://travelsergeant.com/assets/home-hero.jpg">
@@ -74,6 +74,13 @@
   .fm-nav{display:flex;gap:20px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:12px 0 2px}
   .fm-nav a{color:inherit;opacity:.75;text-decoration:none}
   .fm-nav a.cur{opacity:1;color:#D9A441}
+  .fm-nav .navdd{position:relative;display:inline-flex}
+  .fm-nav .navdd-p{position:absolute;top:calc(100% + 12px);right:0;min-width:252px;display:none;flex-direction:column;background:#0A1F33;border:1px solid #D9A441;border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:60}
+  .fm-nav .navdd:hover .navdd-p,.fm-nav .navdd:focus-within .navdd-p{display:flex}
+  .fm-nav .navdd-p a{padding:9px 12px;border-radius:8px;text-transform:none;letter-spacing:.01em;font-size:13.5px;opacity:.92;white-space:nowrap}
+  .fm-nav .navdd-p a:hover{background:rgba(255,255,255,.06);color:#D9A441;opacity:1}
+  .fm-nav .navdd>a::after{content:" \25BE";color:#D9A441}
+  .fm-nav .navdd-p::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
   .fm-note{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#D8CFBC;line-height:1.6;border-top:1px solid #27455f;margin-top:28px;padding-top:14px}
   .fm-note b{color:#F4F1EA}
   svg text{font-family:Arial,Helvetica,sans-serif}
@@ -86,7 +93,7 @@
   <h1>Flight Passport</h1>
   <p class="fm-sub">Every flight I have logged, mapped. Pick a year to see where I went. Upcoming flights in red.</p>
 
-  <div class="fm-nav"><a href="/">Home</a><a href="/points-planner/">Points planner</a><a href="/flight-passport/" class="cur">Flight Passport</a><a href="/resources/">Resources</a></div>
+  <div class="fm-nav"><a href="/#guide">Free guide</a><a href="/#booking">Award booking</a><a href="/#call">1 on 1 call</a><a href="/#course">Course</a><span class="navdd"><a href="/resources/" aria-haspopup="true">Free tools</a><span class="navdd-p"><a href="/transfer-partners/">Transfer Partner Guide</a><a href="/points-planner/">Points Planner</a><a href="/award-deals/">Sweet Spots</a><a href="/flight-deals/">Flight Deals</a><a href="/flight-passport/">Flight Passport</a><a href="/gear/">Travel Gear</a><a href="/resources/">All Resources</a></span></span></div>
   <div class="fm-years" id="fmYears"></div>
 
   <div class="fm-stats" id="fmStats"></div>
