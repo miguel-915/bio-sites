@@ -67,7 +67,7 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 /* hero */
 .hero { background: var(--blue); color: var(--hero-ink); padding-block: clamp(40px, 7vw, 88px) 0; overflow: hidden; position: relative; }
 .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 80% at 85% 20%, color-mix(in srgb, var(--brass) 18%, transparent), transparent 70%); pointer-events: none; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 72px); align-items: end; position: relative; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); align-items: end; position: relative; }
 .hero h1 { font-weight: 800; font-size: clamp(38px, 6.4vw, 72px); line-height: 1.02; letter-spacing: -.02em; margin-bottom: 22px; }
 .hero h1 em { font-style: italic; color: var(--brass); }
 .hero .lede { font-size: clamp(17px, 1.8vw, 19px); color: var(--hero-sub); max-width: 56ch; margin: 0 0 30px; }
@@ -94,11 +94,11 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .proof { padding-top: clamp(40px, 6vw, 72px); }
 .proof-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
 .proof-head p { margin: 0; color: var(--muted); max-width: 40ch; }
-.gallery { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 12px; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .gallery figure { margin: 0; border-radius: 8px; overflow: hidden; background: var(--chip); }
 .gallery img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 .gallery figure:first-child img { object-position: 70% center; }
-@media (max-width: 700px) { .gallery { grid-template-columns: 1fr 1fr; } .gallery figure:first-child { grid-column: 1 / -1; } .gallery figure:first-child img { aspect-ratio: 4 / 3; } }
+@media (max-width: 700px) { .gallery { grid-template-columns: 1fr; } .gallery img { aspect-ratio: 4 / 3; } }
 
 /* help cards */
 .helps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
@@ -207,7 +207,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
       <div class="stats"><a href="/flight-passport/"><b>$500K+</b><span>travel booked with points</span></a><a href="/flight-passport/"><b>10M+</b><span>points earned</span></a><a href="/flight-passport/"><b>52</b><span>countries visited</span></a></div>
     </div>
     <figure class="portrait">
-      <img src="assets/home-hero.jpg" alt="Miguel, Travel Sergeant" width="482" height="777">
+      <img src="assets/home-hero.jpg" alt="Miguel, Travel Sergeant" width="800" height="1000">
       <figcaption><a href="https://www.instagram.com/travelsergeant/" target="_blank" rel="noopener">@travelsergeant</a></figcaption>
     </figure>
   </div>
@@ -216,7 +216,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
 <section class="proof">
   <div class="wrap">
     <div class="proof-head"><h2>This is what points buy.</h2><p>Every one of these seats was booked with miles, not cash.</p></div>
-    <div class="gallery"><figure><img src="assets/home-g1.jpg" alt="Etihad First Apartment" loading="lazy" width="640" height="481"></figure><figure><img src="assets/home-g2.jpg" alt="First class suite" loading="lazy" width="640" height="856"></figure><figure><img src="assets/home-g3.jpg" alt="First class suite with bed" loading="lazy" width="640" height="856"></figure></div>
+    <div class="gallery"><figure><img src="assets/home-g1.jpg" alt="Etihad First Apartment" loading="lazy" width="640" height="800"></figure><figure><img src="assets/home-g2.jpg" alt="First class suite" loading="lazy" width="640" height="800"></figure><figure><img src="assets/home-g3.jpg" alt="First class suite with bed" loading="lazy" width="640" height="800"></figure></div>
     <p style="text-align:center;margin:26px 0 0"><a class="btn btn-brass" href="/booked-with-points/dad-london-rome/">Read a full trip, priced out</a></p>
     <p style="text-align:center;margin:12px 0 0"><a href="/booked-with-points/">All Booked With Points stories</a></p>
   </div>
