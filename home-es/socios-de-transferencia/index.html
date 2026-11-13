@@ -92,8 +92,6 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
   <nav aria-label="Main" class="stdnav"><a href="/#guia">Guía gratis</a><a href="/#reserva">Reserva con puntos</a><a href="/#asesoria">Asesoría</a><a href="/#curso">Curso</a><span class="navdd"><a href="/recursos/" aria-haspopup="true">Herramientas</a><span class="navdd-p"><a href="/socios-de-transferencia/">Guía de socios de transferencia</a><a href="/planificador/">Planificador de puntos</a><a href="/sweet-spots/">Sweet Spots</a><a href="/ofertas-de-vuelos/">Ofertas de vuelos</a><a href="/pasaporte-de-vuelos/">Pasaporte de vuelos</a><a href="/equipaje/">Equipaje</a><a href="/recursos/">Todos los recursos</a></span></span></nav>
   <h1>Guía de socios de transferencia de tarjetas de crédito</h1>
   <p class="tg-sub">Este es el mapa completo de los socios de transferencia de tarjetas de crédito. Cada moneda de puntos transferible, American Express, Bilt, Capital One, Chase, Citi, Rove y Wells Fargo, cada programa de aerolínea y hotel al que puede llegar, y la proporción exacta de cada movimiento.</p>
-  <div class="tg-sec">Mostrar solo mis puntos</div>
-  <div class="tg-filters"><button class="tg-fbtn tg-ffbtn" data-bank="American Express">American Express</button><button class="tg-fbtn tg-ffbtn" data-bank="Bilt">Bilt</button><button class="tg-fbtn tg-ffbtn" data-bank="Capital One">Capital One</button><button class="tg-fbtn tg-ffbtn" data-bank="Chase">Chase</button><button class="tg-fbtn tg-ffbtn" data-bank="Citi">Citi</button><button class="tg-fbtn tg-ffbtn" data-bank="Rove">Rove</button><button class="tg-fbtn tg-ffbtn" data-bank="Wells Fargo">Wells Fargo</button></div>
   <div class="tg-sec">Un banco a la vez</div>
   <div class="tg-filters"><button class="tg-fbtn tg-dbtn" data-bank="American Express">American Express</button><button class="tg-fbtn tg-dbtn" data-bank="Bilt">Bilt</button><button class="tg-fbtn tg-dbtn" data-bank="Capital One">Capital One</button><button class="tg-fbtn tg-dbtn" data-bank="Chase">Chase</button><button class="tg-fbtn tg-dbtn" data-bank="Citi">Citi</button><button class="tg-fbtn tg-dbtn" data-bank="Rove">Rove</button><button class="tg-fbtn tg-dbtn" data-bank="Wells Fargo">Wells Fargo</button></div>
   <div class="tg-chart"><svg id="tgDetail" viewBox="0 0 1060 600" role="img" aria-label="Sankey diagram, one bank"></svg></div>
@@ -330,28 +328,7 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
   }
   bookSel.addEventListener('change', renderBook);
 
-  /* ---------- filters ---------- */
-  var fbtns = document.querySelectorAll('.tg-ffbtn');
-  function applyFilters(){
-    var banks = actBanks();
-    if(!banks.length){ D.banks.forEach(function(b){ active[b]=true; }); banks = actBanks(); syncFilterBtns(); }
-    document.querySelectorAll('.screenonly table.tg-table').forEach(function(tbl){
-      tbl.querySelectorAll('[data-bank]').forEach(function(c){ c.style.display = active[c.dataset.bank] ? '' : 'none'; });
-      tbl.querySelectorAll('tbody tr').forEach(function(tr){
-        var have = (tr.dataset.banks||'').split(' ');
-        tr.style.display = have.some(function(b){ return active[b]; }) ? '' : 'none';
-      });
-    });
-    if(!active[cur]) setBank(banks[0]); else renderDetail();
-    renderBookOptions();
-  }
-  function syncFilterBtns(){
-    fbtns.forEach(function(x){ var on = active[x.dataset.bank]; x.classList.toggle('on', on); x.style.background = on ? D.bankColors[x.dataset.bank] : ''; });
-  }
-  fbtns.forEach(function(x){
-    x.addEventListener('click', function(){ active[x.dataset.bank] = !active[x.dataset.bank]; syncFilterBtns(); applyFilters(); });
-  });
-  syncFilterBtns(); setBank(cur); renderBookOptions();
+  setBank(cur); renderBookOptions();
 })();
 </script>
 </body>
