@@ -88,11 +88,20 @@ table.tot td,table.tot th{padding:9px 10px;border-bottom:1px solid var(--line);t
 table.tot td:last-child,table.tot th:last-child{text-align:right;font-weight:600;white-space:nowrap}
 table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-bottom:none}
 .disc{font-size:14px;color:var(--muted);border-left:3px solid var(--brass);padding-left:12px}
+.saved{background:var(--brass);color:#0A1F33;font-weight:800;font-size:21px;text-align:center;padding:14px 16px;border-radius:10px;margin:0 0 16px}
+.totals{background:var(--brass);color:#0A1F33;border-radius:12px;padding:18px 22px}
+.totals b{font-size:18px}
+.totals ol{margin:10px 0 0;padding-left:22px;font-weight:600}
+.totals li{margin:3px 0}
+.totals .small{color:#0A1F33;opacity:.85;margin:10px 0 0}
+.totals .savedbig{background:#0A1F33;color:var(--brass);font:800 24px/1.2 var(--display);border-radius:8px;padding:12px 16px;margin:14px 0 4px}
+.invest{margin:14px 0 0;font-size:16.5px}.invest a{color:inherit;font-weight:800}
 .card1{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit}
 .card1 img{width:100%;height:100%;object-fit:cover;display:block}
 .card1 .cb{padding:20px 22px}
 .card1 h3{font:800 21px/1.25 var(--display);margin:0 0 8px}
 .card1 p{margin:0;color:var(--muted);font-size:15px}
+.card1 .cardsave{color:var(--brass);font:800 17px var(--display);margin:8px 0 0}
 @media (max-width:720px){.card1{grid-template-columns:1fr}}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
 .btn{display:inline-block;background:var(--brass);color:#0A1F33;font:700 14px/1 var(--display);padding:12px 20px;border-radius:6px;text-decoration:none}
@@ -103,7 +112,7 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
 <header class="mast">
   <div class="wrap">
     <a href="/" aria-label="Vuela con Rueda inicio"><img src="/assets/logo.png" alt="Vuela con Rueda" width="360" height="136" style="height:52px;width:auto;display:block"></a>
-    <nav aria-label="Main" class="stdnav"><a href="/#guia">Guía gratis</a><a href="/#reserva">Reserva con puntos</a><a href="/#asesoria">Asesoría</a><a href="/#curso">Curso</a><span class="navdd"><a href="/recursos/" aria-haspopup="true">Herramientas</a><span class="navdd-p"><a href="/socios-de-transferencia/">Guía de socios de transferencia</a><a href="/planificador/">Planificador de puntos</a><a href="/sweet-spots/">Sweet Spots</a><a href="/ofertas-de-vuelos/">Ofertas de vuelos</a><a href="/pasaporte-de-vuelos/">Pasaporte de vuelos</a><a href="/equipaje/">Equipaje</a><a href="/recursos/">Todos los recursos</a></span></span></nav><span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F0A824" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><a href="https://travelsergeant.com/booked-with-points/" hreflang="en" lang="en" style="color:inherit;text-decoration:none;opacity:.85">EN</a><span style="opacity:.45">|</span><span style="color:#F0A824;font-weight:800">ES</span></span>
+    <nav aria-label="Main" class="stdnav"><a href="/#guia">Guía gratis</a><a href="/#reserva">Reserva con puntos</a><a href="/#asesoria">Asesoría</a><a href="/bootcamp-de-puntos-y-millas/">Curso</a><span class="navdd"><a href="/recursos/" aria-haspopup="true">Herramientas</a><span class="navdd-p"><a href="/socios-de-transferencia/">Guía de socios de transferencia</a><a href="/planificador/">Planificador de puntos</a><a href="/sweet-spots/">Sweet Spots</a><a href="/ofertas-de-vuelos/">Ofertas de vuelos</a><a href="/pasaporte-de-vuelos/">Pasaporte de vuelos</a><a href="/equipaje/">Equipaje</a><a href="/recursos/">Todos los recursos</a></span></span></nav><span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F0A824" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><a href="https://travelsergeant.com/booked-with-points/" hreflang="en" lang="en" style="color:inherit;text-decoration:none;opacity:.85">EN</a><span style="opacity:.45">|</span><span style="color:#F0A824;font-weight:800">ES</span></span>
   </div>
 </header>
 
@@ -132,14 +141,14 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
       <a class="card1" href="/reservado-con-puntos/papa-londres-roma/">
         <img src="/assets/booked/dad-aa-new-business.jpg" alt="Miguel y su papá en la clase business de American Airlines">
         <span class="cb"><h3>Llevé a mi papá a Londres y Roma</h3>
-        <p>La nueva business de American, una noche en el Park Hyatt de Londres, Roma, y el regreso largo por Nápoles y París. Efectivo pagado $2,781.47, puntos usados 192,000, ahorro frente al precio de lista $10,908.</p></span>
+        <p>La nueva business de American, una noche en el Park Hyatt de Londres, Roma, y el regreso largo por Nápoles y París. Efectivo pagado $2,781.47, puntos usados 192,000, ahorro frente al precio de lista $10,908.</p><p class="cardsave">Ahorro $10,908</p></span>
       </a>
     </section>
     <section>
       <a class="card1" href="/reservado-con-puntos/papas-helsinki-irlanda/">
         <img src="/assets/booked/parents-cliffs-of-moher.jpg" alt="Los papás de Miguel en los acantilados de Moher en Irlanda">
         <span class="cb"><h3>Llevé a mis papás a Helsinki e Irlanda</h3>
-        <p>Dos tarifas de acompañante, business de Finnair a Helsinki, una ruta por Irlanda en carretera, y regreso en business de Aer Lingus. Efectivo pagado $2,339.77, puntos usados 419,500, ahorro en los vuelos largos $15,657.57.</p></span>
+        <p>Dos tarifas de acompañante, business de Finnair a Helsinki, una ruta por Irlanda en carretera, y regreso en business de Aer Lingus. Efectivo pagado $2,339.77, puntos usados 419,500, ahorro en los vuelos largos $15,657.57.</p><p class="cardsave">Ahorro $15,657.57</p></span>
       </a>
     </section>
   </div>

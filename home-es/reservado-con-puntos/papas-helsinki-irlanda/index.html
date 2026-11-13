@@ -94,11 +94,14 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
 .totals ol{margin:10px 0 0;padding-left:22px;font-weight:600}
 .totals li{margin:3px 0}
 .totals .small{color:#0A1F33;opacity:.85;margin:10px 0 0}
+.totals .savedbig{background:#0A1F33;color:var(--brass);font:800 24px/1.2 var(--display);border-radius:8px;padding:12px 16px;margin:14px 0 4px}
+.invest{margin:14px 0 0;font-size:16.5px}.invest a{color:inherit;font-weight:800}
 .card1{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit}
 .card1 img{width:100%;height:100%;object-fit:cover;display:block}
 .card1 .cb{padding:20px 22px}
 .card1 h3{font:800 21px/1.25 var(--display);margin:0 0 8px}
 .card1 p{margin:0;color:var(--muted);font-size:15px}
+.card1 .cardsave{color:var(--brass);font:800 17px var(--display);margin:8px 0 0}
 @media (max-width:720px){.card1{grid-template-columns:1fr}}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
 .btn{display:inline-block;background:var(--brass);color:#0A1F33;font:700 14px/1 var(--display);padding:12px 20px;border-radius:6px;text-decoration:none}
@@ -109,7 +112,7 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
 <header class="mast">
   <div class="wrap">
     <a href="/" aria-label="Vuela con Rueda inicio"><img src="/assets/logo.png" alt="Vuela con Rueda" width="360" height="136" style="height:52px;width:auto;display:block"></a>
-    <nav aria-label="Main" class="stdnav"><a href="/#guia">Guía gratis</a><a href="/#reserva">Reserva con puntos</a><a href="/#asesoria">Asesoría</a><a href="/#curso">Curso</a><span class="navdd"><a href="/recursos/" aria-haspopup="true">Herramientas</a><span class="navdd-p"><a href="/socios-de-transferencia/">Guía de socios de transferencia</a><a href="/planificador/">Planificador de puntos</a><a href="/sweet-spots/">Sweet Spots</a><a href="/ofertas-de-vuelos/">Ofertas de vuelos</a><a href="/pasaporte-de-vuelos/">Pasaporte de vuelos</a><a href="/equipaje/">Equipaje</a><a href="/recursos/">Todos los recursos</a></span></span></nav><span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F0A824" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><a href="https://travelsergeant.com/booked-with-points/parents-helsinki-ireland/" hreflang="en" lang="en" style="color:inherit;text-decoration:none;opacity:.85">EN</a><span style="opacity:.45">|</span><span style="color:#F0A824;font-weight:800">ES</span></span>
+    <nav aria-label="Main" class="stdnav"><a href="/#guia">Guía gratis</a><a href="/#reserva">Reserva con puntos</a><a href="/#asesoria">Asesoría</a><a href="/bootcamp-de-puntos-y-millas/">Curso</a><span class="navdd"><a href="/recursos/" aria-haspopup="true">Herramientas</a><span class="navdd-p"><a href="/socios-de-transferencia/">Guía de socios de transferencia</a><a href="/planificador/">Planificador de puntos</a><a href="/sweet-spots/">Sweet Spots</a><a href="/ofertas-de-vuelos/">Ofertas de vuelos</a><a href="/pasaporte-de-vuelos/">Pasaporte de vuelos</a><a href="/equipaje/">Equipaje</a><a href="/recursos/">Todos los recursos</a></span></span></nav><span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F0A824" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><a href="https://travelsergeant.com/booked-with-points/parents-helsinki-ireland/" hreflang="en" lang="en" style="color:inherit;text-decoration:none;opacity:.85">EN</a><span style="opacity:.45">|</span><span style="color:#F0A824;font-weight:800">ES</span></span>
   </div>
 </header>
 
@@ -136,10 +139,11 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
         <li>Puntos usados: 419,500</li>
         <li>Más 1 certificado de noche gratis</li>
         <li>Precio de lista de los vuelos largos: $15,900</li>
-        <li>Ahorro en esos vuelos: $15,657.57</li>
       </ol>
+      <div class="savedbig">Ahorro en esos vuelos: $15,657.57</div>
       <p class="small">Las cuentas tramo por tramo van abajo, incluidos los hoteles y los tramos que pagamos en efectivo.</p>
       </aside>
+      <p class="invest">La inversión de Fundadores en la membresía es $297. Esos vuelos solos ahorraron $15,657.57. <a href="/bootcamp-de-puntos-y-millas/">Mira la membresía</a></p>
     </section>
 
     <section>
@@ -204,7 +208,7 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
       <div class="group-h"><span>El cómo</span><h2>De dónde salieron los puntos</h2></div>
       <p class="group-sub" style="margin-bottom:8px">Casi todo empezó como puntos Amex. Moví puntos Amex para completar los programas que necesitaba, y las millas de Alaska también salieron de mis tarjetas de Alaska, de bonos de bienvenida y del gasto normal. Los puntos Virgin y los de Marriott salieron del mismo hábito: gana en un lugar, muévelos cuando aparecen los asientos, y reserva rápido. Las tarifas de acompañante hicieron el trabajo silencioso en los vuelos internos. Una tarifa completa más un acompañante de $99, dos veces, nos puso a los cuatro en Seattle de ida y vuelta por unos $302 cada uno.</p>
       <p class="group-sub">¿Podrías reservar esto hoy? La forma sí. Los precios exactos no. Alaska cambió cómo pone precio a los premios con socios desde este viaje, y 55,000 millas por la business de Finnair ya no es el precio que debes esperar. La tarifa de acompañante sigue existiendo, y los hoteles siguen aceptando puntos y certificados. Si quieres ayuda para encontrar asientos como estos, para eso está mi servicio de búsqueda con puntos, y si quieres aprender a hacerlo tú, para eso está el Bootcamp.</p>
-      <div class="btnrow"><a class="btn" href="/#guia">Quiero la guía gratis</a><a class="btn ghost" href="/#curso">Ver Doce Meses para Despegar</a></div>
+      <div class="btnrow"><a class="btn" href="/#guia">Quiero la guía gratis</a><a class="btn ghost" href="/bootcamp-de-puntos-y-millas/">Ver Doce Meses para Despegar</a></div>
     </section>
 
     <section>

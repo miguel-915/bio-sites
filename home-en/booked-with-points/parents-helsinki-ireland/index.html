@@ -91,11 +91,14 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
 .totals ol{margin:10px 0 0;padding-left:22px;font-weight:600}
 .totals li{margin:3px 0}
 .totals .small{color:#0A1F33;opacity:.85;margin:10px 0 0}
+.totals .savedbig{background:#0A1F33;color:var(--brass);font:800 24px/1.2 var(--display);border-radius:8px;padding:12px 16px;margin:14px 0 4px}
+.invest{margin:14px 0 0;font-size:16.5px}.invest a{color:inherit;font-weight:800}
 .card1{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit}
 .card1 img{width:100%;height:100%;object-fit:cover;display:block}
 .card1 .cb{padding:20px 22px}
 .card1 h3{font:800 21px/1.25 var(--display);margin:0 0 8px}
 .card1 p{margin:0;color:var(--muted);font-size:15px}
+.card1 .cardsave{color:var(--brass);font:800 17px var(--display);margin:8px 0 0}
 @media (max-width:720px){.card1{grid-template-columns:1fr}}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
 .btn{display:inline-block;background:var(--brass);color:#0A1F33;font:700 14px/1 var(--display);padding:12px 20px;border-radius:6px;text-decoration:none}
@@ -106,7 +109,7 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
 <header class="mast">
   <div class="wrap">
     <a href="/" aria-label="Travel Sergeant home"><img src="/assets/logo-white.png" alt="Travel Sergeant" width="480" height="165" style="height:44px;width:auto;display:block"></a>
-    <nav aria-label="Main" class="stdnav"><a href="/#guide">Free guide</a><a href="/#booking">Award booking</a><a href="/#call">1 on 1 call</a><a href="/#course">Course</a><span class="navdd"><a href="/resources/" aria-haspopup="true">Free tools</a><span class="navdd-p"><a href="/transfer-partners/">Transfer Partner Guide</a><a href="/points-planner/">Points Planner</a><a href="/award-deals/">Sweet Spots</a><a href="/flight-deals/">Flight Deals</a><a href="/flight-passport/">Flight Passport</a><a href="/gear/">Travel Gear</a><a href="/resources/">All Resources</a></span></span></nav><span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span style="color:#D9A441;font-weight:800">EN</span><span style="opacity:.45">|</span><a href="https://vuelaconrueda.com/reservado-con-puntos/papas-helsinki-irlanda/" hreflang="es" lang="es" style="color:inherit;text-decoration:none;opacity:.85">ES</a></span>
+    <nav aria-label="Main" class="stdnav"><a href="/#guide">Free guide</a><a href="/#booking">Award booking</a><a href="/#call">1 on 1 call</a><a href="/points-and-miles-bootcamp/">Course</a><span class="navdd"><a href="/resources/" aria-haspopup="true">Free tools</a><span class="navdd-p"><a href="/transfer-partners/">Transfer Partner Guide</a><a href="/points-planner/">Points Planner</a><a href="/award-deals/">Sweet Spots</a><a href="/flight-deals/">Flight Deals</a><a href="/flight-passport/">Flight Passport</a><a href="/gear/">Travel Gear</a><a href="/resources/">All Resources</a></span></span></nav><span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span style="color:#D9A441;font-weight:800">EN</span><span style="opacity:.45">|</span><a href="https://vuelaconrueda.com/reservado-con-puntos/papas-helsinki-irlanda/" hreflang="es" lang="es" style="color:inherit;text-decoration:none;opacity:.85">ES</a></span>
   </div>
 </header>
 
@@ -133,10 +136,11 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
         <li>Points used: 419,500</li>
         <li>Plus 1 free night certificate</li>
         <li>Retail price of the long haul flights: $15,900</li>
-        <li>Money saved on those flights: $15,657.57</li>
       </ol>
+      <div class="savedbig">Money saved on those flights: $15,657.57</div>
       <p class="small">Full leg by leg accounting below, including the hotels and the legs we paid cash for.</p>
       </aside>
+      <p class="invest">The Founders investment in the membership is $297. These flights alone saved $15,657.57. <a href="/points-and-miles-bootcamp/">See the membership</a></p>
     </section>
 
     <section>
@@ -201,7 +205,7 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
       <div class="group-h"><span>How</span><h2>Where the points came from</h2></div>
       <p class="group-sub" style="margin-bottom:8px">Most of it started as Amex points. I moved Amex points over to top up the programs I needed, and the Alaska miles also came from my Alaska cards, from welcome bonuses and regular spend. The Virgin points and the Marriott points came from the same habit: earn in one place, move them when the seats show up, and book fast. The companion fares did the quiet work on the domestic flights. One full fare plus a $99 companion, twice, put four of us in Seattle and back for about $302 each.</p>
       <p class="group-sub">Could you book this today? The shape of it, yes. The exact prices, no. Alaska has changed how it prices partner awards since this trip, and 55,000 miles for Finnair business is not the price to expect now. The companion fare still exists, and the hotels still take points and certificates. If you want help finding seats like these, that is exactly what my award search does, and if you want to learn to do it yourself, that is what the Bootcamp teaches.</p>
-      <div class="btnrow"><a class="btn" href="/#guide">Get the free guide</a><a class="btn ghost" href="/#course">See Twelve Months to Takeoff</a></div>
+      <div class="btnrow"><a class="btn" href="/#guide">Get the free guide</a><a class="btn ghost" href="/points-and-miles-bootcamp/">See Twelve Months to Takeoff</a></div>
     </section>
 
     <section>
