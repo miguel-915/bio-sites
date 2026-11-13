@@ -89,6 +89,11 @@ table.tot td:last-child,table.tot th:last-child{text-align:right;font-weight:600
 table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-bottom:none}
 .disc{font-size:14px;color:var(--muted);border-left:3px solid var(--brass);padding-left:12px}
 .saved{background:var(--brass);color:#0A1F33;font-weight:800;font-size:21px;text-align:center;padding:14px 16px;border-radius:10px;margin:0 0 16px}
+.totals{background:var(--brass);color:#0A1F33;border-radius:12px;padding:18px 22px}
+.totals b{font-size:18px}
+.totals ol{margin:10px 0 0;padding-left:22px;font-weight:600}
+.totals li{margin:3px 0}
+.totals .small{color:#0A1F33;opacity:.85;margin:10px 0 0}
 .card1{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit}
 .card1 img{width:100%;height:100%;object-fit:cover;display:block}
 .card1 .cb{padding:20px 22px}
@@ -115,7 +120,16 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
       <h1>Llevé a mis papás a Helsinki e Irlanda</h1>
       <p class="lede">En mayo de 2025 llevé a mi mamá y a mi papá a Finlandia e Irlanda. Cuatro volamos a Seattle, tres cruzamos el océano en clase business, y recorrimos Irlanda de Kilkenny a Doolin a Dublín. Aquí van todos los números, tal como se cobraron.</p>
     </div>
-    <aside class="manifest" aria-label="Totales del viaje">
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <section>
+      <figure class="ph"><img src="/assets/booked/parents-cliffs-of-moher.jpg" alt="Los papás de Miguel en los acantilados de Moher en Irlanda"><figcaption>Los acantilados de Moher, Irlanda.</figcaption></figure>
+    </section>
+
+    <section>
+      <aside class="totals" aria-label="Totales del viaje">
       <b>Los totales, el viaje completo</b>
       <ol>
         <li>Efectivo pagado: $2,339.77</li>
@@ -125,13 +139,7 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
         <li>Ahorro en esos vuelos: $15,657.57</li>
       </ol>
       <p class="small">Las cuentas tramo por tramo van abajo, incluidos los hoteles y los tramos que pagamos en efectivo.</p>
-    </aside>
-  </div>
-</section>
-<main>
-  <div class="wrap">
-    <section>
-      <figure class="ph"><img src="/assets/booked/parents-cliffs-of-moher.jpg" alt="Los papás de Miguel en los acantilados de Moher en Irlanda"><figcaption>Los acantilados de Moher, Irlanda.</figcaption></figure>
+      </aside>
     </section>
 
     <section>
@@ -177,7 +185,6 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
 
     <section>
       <div class="group-h"><h2>Las cuentas</h2></div>
-      <p class="saved">Ahorro frente al precio de lista: $15,657.57</p>
       <table class="tot">
         <tr><th>Lo que reservamos con millas</th><th>Precio de lista</th></tr>
         <tr><td>Seattle a Helsinki, business, tres viajeros</td><td>$9,300</td></tr>

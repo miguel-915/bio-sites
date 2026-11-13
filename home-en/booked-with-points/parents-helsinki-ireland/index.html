@@ -86,6 +86,11 @@ table.tot td:last-child,table.tot th:last-child{text-align:right;font-weight:600
 table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-bottom:none}
 .disc{font-size:14px;color:var(--muted);border-left:3px solid var(--brass);padding-left:12px}
 .saved{background:var(--brass);color:#0A1F33;font-weight:800;font-size:21px;text-align:center;padding:14px 16px;border-radius:10px;margin:0 0 16px}
+.totals{background:var(--brass);color:#0A1F33;border-radius:12px;padding:18px 22px}
+.totals b{font-size:18px}
+.totals ol{margin:10px 0 0;padding-left:22px;font-weight:600}
+.totals li{margin:3px 0}
+.totals .small{color:#0A1F33;opacity:.85;margin:10px 0 0}
 .card1{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit}
 .card1 img{width:100%;height:100%;object-fit:cover;display:block}
 .card1 .cb{padding:20px 22px}
@@ -112,7 +117,16 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
       <h1>I took my parents to Helsinki and Ireland</h1>
       <p class="lede">In May 2025 I took my mom and dad to Finland and Ireland. Four of us flew up to Seattle, three of us crossed the ocean in business class, and we worked our way across Ireland from Kilkenny to Doolin to Dublin. Here is every number, exactly as it posted.</p>
     </div>
-    <aside class="manifest" aria-label="Trip totals">
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <section>
+      <figure class="ph"><img src="/assets/booked/parents-cliffs-of-moher.jpg" alt="Miguel parents at the Cliffs of Moher in Ireland"><figcaption>Cliffs of Moher, Ireland.</figcaption></figure>
+    </section>
+
+    <section>
+      <aside class="totals" aria-label="Trip totals">
       <b>The totals, the whole trip</b>
       <ol>
         <li>Cash paid: $2,339.77</li>
@@ -122,13 +136,7 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
         <li>Money saved on those flights: $15,657.57</li>
       </ol>
       <p class="small">Full leg by leg accounting below, including the hotels and the legs we paid cash for.</p>
-    </aside>
-  </div>
-</section>
-<main>
-  <div class="wrap">
-    <section>
-      <figure class="ph"><img src="/assets/booked/parents-cliffs-of-moher.jpg" alt="Miguel parents at the Cliffs of Moher in Ireland"><figcaption>Cliffs of Moher, Ireland.</figcaption></figure>
+      </aside>
     </section>
 
     <section>
@@ -174,7 +182,6 @@ table.tot tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-b
 
     <section>
       <div class="group-h"><h2>The math</h2></div>
-      <p class="saved">Money saved from retail: $15,657.57</p>
       <table class="tot">
         <tr><th>What we booked with miles</th><th>Retail</th></tr>
         <tr><td>Seattle to Helsinki, business, three travelers</td><td>$9,300</td></tr>
