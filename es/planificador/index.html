@@ -353,8 +353,8 @@ function render() {
     let t = null;
     if (rt && rt <= pts) t = { kind: 'Viaje redondo', cost: rt, tax: tOut + tBack };
     else if (oneWay <= pts) t = { kind: 'Solo ida', cost: oneWay, tax: dir === 'in' ? tBack : tOut, rt };
-    if (t) { if (dir === 'in') route = route.split('→').map(s => s.trim()).reverse().join(' → ');
-      list.push({ ...t, head: dir === 'in' ? 'desde' : 'a', region, prog, route, airline, ns, ratio }); }
+    if (t) { const routeShown = dir === 'in' ? route.split('→').map(s => s.trim()).reverse().join(' → ') : route;
+      list.push({ ...t, place: ['Europe','Asia','Africa','Oceania','South America'].includes(region) ? (dir === 'in' ? routeShown.split('→')[0].trim() : routeShown.split('→').pop().trim()) : region, head: dir === 'in' ? 'desde' : 'a', region, prog, route: routeShown, airline, ns, ratio }); }
   }));
   list.sort((a, b) => (b.kind === 'Viaje redondo') - (a.kind === 'Viaje redondo') || a.cost - b.cost);
   const rts = list.filter(t => t.kind === 'Viaje redondo').length;
@@ -366,7 +366,7 @@ function render() {
     return `<article class="trip">
       <div class="trip-top"><span class="region">${esc(REG[t.region] || t.region)}</span><span class="type ${t.kind === 'Viaje redondo' ? 'rt' : ''}">${t.kind}</span></div>
       <div class="trip-body">
-        <h3>${esc(t.airline)}${t.ns ? ' directo' : ''} ${t.head} ${esc(t.region === 'Europe' || t.region === 'Asia' || t.region === 'Africa' || t.region === 'Oceania' || t.region === 'South America' ? t.route.split('→').pop().trim() : t.region)}</h3>
+        <h3>${esc(t.airline)}${t.ns ? ' directo' : ''} ${t.head} ${esc(t.place)}</h3>
         <p class="route">${esc(t.route)}</p>
         <div class="cost"><b>${fmt(t.cost)}</b><span>puntos · ${t.tax ? '~$' + fmt(t.tax) + ' de impuestos' : 'impuestos varían'}${t.tax > 500 ? ' (altos)' : ''}</span></div>
         <div class="meter" role="img" aria-label="Usa ${pct}% de tus puntos"><i style="width:${pct}%"></i></div>
