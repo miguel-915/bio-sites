@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.stdnav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.navdd{position:relative;display:inline-flex}.navdd-p{position:absolute;top:calc(100% + 12px);right:0;min-width:252px;display:none;flex-direction:column;background:#0C3B3C;border:1px solid #F0A82473;border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:60}.navdd:hover .navdd-p,.navdd:focus-within .navdd-p{display:flex}.navdd-p a{padding:9px 12px;border-radius:8px;text-transform:none;letter-spacing:.01em;font-size:13.5px;opacity:.92;white-space:nowrap;color:#F4F1EA;text-decoration:none}.navdd-p a:hover{background:rgba(255,255,255,.06);color:#F0A824;opacity:1}.navdd>a::after{content:" \25BE";color:#F0A824}.navdd-p::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}</style>
+<title>Doce Meses para Despegar | Bootcamp de Puntos y Millas | Vuela con Rueda</title>
+<meta http-equiv="content-language" content="es">
+<meta name="description" content="De cero puntos a tu primer viaje internacional: el Bootcamp de Puntos y Millas, comunidad privada, dos llamadas grupales al mes y una vigilancia de vuelo de 90 días. Fundadores abren el 27 de noviembre de 2026.">
+<link rel="canonical" href="https://vuelaconrueda.com/bootcamp-de-puntos-y-millas/">
+<meta property="og:title" content="Doce Meses para Despegar | Vuela con Rueda">
+<meta property="og:description" content="De cero puntos a tu primer viaje internacional: el Bootcamp de Puntos y Millas, comunidad privada, dos llamadas grupales al mes y una vigilancia de vuelo de 90 días. Fundadores abren el 27 de noviembre de 2026.">
+<meta property="og:url" content="https://vuelaconrueda.com/bootcamp-de-puntos-y-millas/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: brand masthead, hero styled like a packing manifest, gear grouped by where it lives on a trip (checked/carry-on, inside the bag, power, seat), FAQ, footer */
+:root {
+  --blue: #0C3B3C; --brass: #F0A824; --scarlet: #C7502B; --khaki: #D8CFBC;
+  --bg: #FAF3E7; --surface: #FFFFFF; --ink: #0C3B3C; --muted: #4E5F5E; --line: #E8DCC6; --chip: #F2E6D2;
+  --display: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #062323; --surface: #0B2E2E; --ink: #F3EADB; --muted: #A9BDB9; --line: #1D4747; --chip: #173B3B; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.mast { background: var(--blue); color: #FAF3E7; border-bottom: 4px solid var(--brass); }
+.mast .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.wordmark { font: italic 800 24px/1 var(--display); color: #FAF3E7; letter-spacing: -.01em; white-space: nowrap; }
+.wordmark i { color: #F0A824; font-weight: 700; }
+.logo { height: 44px; width: auto; filter: brightness(0) invert(1); display: block; }
+.mast nav { display: flex; gap: 20px; font: 600 13px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; }
+.mast nav a { color: inherit; text-decoration: none; opacity: .8; }
+.mast nav a[aria-current] { opacity: 1; color: var(--brass); }
+
+.hero { background: var(--blue); color: #FAF3E7; }
+.hero .wrap { padding-block: 36px 44px; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: end; }
+.eyebrow { font: 700 12px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); margin: 0 0 14px; }
+h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14px; text-wrap: balance; }
+.lede { margin: 0; max-width: 56ch; color: #D3E2DE; }
+.manifest { border: 1px solid rgba(240,168,36,.5); border-radius: 6px; padding: 16px 18px; background: rgba(244,241,234,.06); font: 500 13px/1.9 var(--mono); color: #E0EBE8; }
+.manifest b { font: 700 11px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 8px; }
+.manifest ol { margin: 0; padding-left: 22px; }
+.manifest li::marker { color: var(--brass); }
+.small { font: 400 12px/1.4 var(--body); color: #A6BEB9; margin: 10px 0 0; }
+
+main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
+.group-h { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+.group-h span { font: 700 11px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+.group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
+.group-sub { margin: 0 0 16px; color: var(--muted); max-width: 68ch; }
+.items { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.item { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+.tagline { display: flex; justify-content: space-between; gap: 8px; padding: 10px 16px; border-bottom: 1px dashed var(--line); font: 500 11px/1 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.item-body { padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.item h3 { font: 800 19px/1.25 var(--display); margin: 0; }
+.item p { margin: 0; font-size: 15px; color: var(--muted); }
+.why { font-size: 14px; border-left: 3px solid var(--brass); padding-left: 10px; color: var(--ink); }
+.item-foot { padding: 12px 16px; border-top: 1px solid var(--line); display: flex; gap: 14px; flex-wrap: wrap; }
+.item-foot a { font: 700 14px/1 var(--display); color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+.faq { display: grid; gap: 10px; max-width: 760px; }
+.faq h2 { font: 800 24px/1.2 var(--display); margin: 0 0 6px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.faq summary { font: 700 16px/1.35 var(--display); cursor: pointer; }
+.faq p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+
+footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); display: grid; gap: 6px; }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .mast nav { display: none; } }
+</style>
+
+<style>
+.sp-form{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px}
+.sp-form h3{font:800 20px/1.25 var(--display);margin:0 0 8px}
+.sp-form p{margin:0 0 14px;font-size:15px;color:var(--muted)}
+.sp-form label{display:block;font:600 13px/1.3 var(--display);margin:0 0 6px}
+.sp-form input{width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font-size:15px;margin:0 0 12px}
+.sp-form button{width:100%;background:var(--brass);color:#0A1F33;border:0;font:700 15px/1 var(--display);padding:13px 20px;border-radius:6px;cursor:pointer}
+.sp-form .fine{font-size:13px;color:var(--muted);margin:12px 0 0}
+.sp-form .form-msg{font-size:14px;margin:10px 0 0}
+.sp-form .form-msg.ok{color:var(--brass);font-weight:700}
+.btn{display:inline-block;background:var(--brass);color:#0A1F33;font:700 14px/1 var(--display);padding:12px 20px;border-radius:6px;text-decoration:none}
+.btn.ghost{background:transparent;border:1.5px solid var(--brass);color:var(--ink)}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+.card h3{font:800 19px/1.25 var(--display);margin:0 0 10px}
+.card p,.card li{font-size:15px;color:var(--muted)}
+.card ul{margin:0;padding-left:18px}
+.card li{margin:0 0 8px}
+table.stack{width:100%;border-collapse:collapse;font-size:15px}
+table.stack td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.stack td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+table.stack tr.grand td{font-weight:800;border-top:2px solid var(--brass);border-bottom:none}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:820px){.mods{grid-template-columns:1fr}}
+.mod{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:15px}
+.mod b{font-family:var(--display)}
+.mod .n{color:var(--brass);font:800 13px/1 var(--display);display:block;margin-bottom:5px}
+.price .big{font:800 34px/1 var(--display);margin:0 0 6px}
+.price p{font-size:15px;color:var(--muted);margin:0 0 8px}
+.vip{background:var(--blue);color:var(--hero-ink);border-radius:8px;padding:26px 28px}
+.vip h2,.vip h3{color:var(--hero-ink)}
+.vip p,.vip li{color:var(--hero-sub);font-size:15px}
+.vip ul{margin:0 0 14px;padding-left:18px}
+.vip li{margin:0 0 8px}
+.vip .btn{margin-top:6px}
+details.faq{border-bottom:1px solid var(--line);padding:14px 0}
+details.faq summary{font:700 16px/1.35 var(--display);cursor:pointer}
+details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
+.card1{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:inherit}
+.card1 img{width:100%;height:100%;object-fit:cover;display:block}
+.card1 .cb{padding:20px 22px}
+.card1 h3{font:800 21px/1.25 var(--display);margin:0 0 8px}
+.card1 p{margin:0 0 8px;color:var(--muted);font-size:15px}
+.card1 .more{font:700 14px/1 var(--display);color:var(--brass)}
+@media (max-width:720px){.card1{grid-template-columns:1fr}}
+.about{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start}
+.about img{width:100%;height:auto;border-radius:8px;display:block}
+@media (max-width:720px){.about{grid-template-columns:1fr}.about img{max-width:220px}}
+.disc{font-size:14px;color:var(--muted);border-left:3px solid var(--brass);padding-left:12px}
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <a href="/" aria-label="Vuela con Rueda inicio"><img src="/assets/logo.png" alt="Vuela con Rueda" width="360" height="136" style="height:52px;width:auto;display:block"></a>
+    <nav aria-label="Main" class="stdnav"><a href="/#guia">Guía gratis</a><a href="/#reserva">Reserva con puntos</a><a href="/#asesoria">Asesoría</a><a href="/#curso">Curso</a><span class="navdd"><a href="/recursos/" aria-haspopup="true">Herramientas</a><span class="navdd-p"><a href="/socios-de-transferencia/">Guía de socios de transferencia</a><a href="/planificador/">Planificador de puntos</a><a href="/sweet-spots/">Sweet Spots</a><a href="/ofertas-de-vuelos/">Ofertas de vuelos</a><a href="/pasaporte-de-vuelos/">Pasaporte de vuelos</a><a href="/equipaje/">Equipaje</a><a href="/recursos/">Todos los recursos</a></span></span></nav><span class="langsw" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;vertical-align:middle"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F0A824" stroke-width="2" stroke-linecap="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><a href="https://travelsergeant.com/points-and-miles-bootcamp/" hreflang="en" lang="en" style="color:inherit;text-decoration:none;opacity:.85">EN</a><span style="opacity:.45">|</span><span style="color:#F0A824;font-weight:800">ES</span></span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Doce Meses para Despegar</p>
+      <h1>De Cero Puntos a Tu Primer Viaje Internacional</h1>
+      <p class="lede">Una membresía de 12 meses con una sola meta: tu primer viaje internacional con puntos. Incluye el Bootcamp de Puntos y Millas completo, la comunidad privada, dos llamadas grupales al mes y una vigilancia de 90 días sobre el vuelo que quieres, con un plan claro en todo el camino.</p>
+      <p class="lede">Hecho para quien nunca ha salido del país, o solo ha cruzado a México a ver a su familia y nunca ha hecho un viaje de verdad al extranjero. Ese era yo. Mi primer viaje internacional llegó ya pasados los treinta.</p>
+    </div>
+    <aside class="sp-form" id="join">
+      <h3>Únete a la lista de espera</h3>
+      <p>Los lugares de Fundadores abren el viernes 27 de noviembre de 2026. Los primeros 25 miembros entran con $297. La lista de espera recibe el enlace de pago primero.</p>
+      <form data-kit data-ok="Revisa tu correo para confirmar tu lugar en la lista." data-err="Algo salió mal. Inténtalo de nuevo." action="https://app.kit.com/forms/9928000/subscriptions" method="post">
+        <label for="sp-name">Tu nombre</label>
+        <input id="sp-name" type="text" name="fields[first_name]" placeholder="Tu nombre" required autocomplete="given-name">
+        <label for="sp-email">Tu correo</label>
+        <input id="sp-email" type="email" name="email_address" placeholder="Tu correo" required autocomplete="email">
+        <button type="submit">Quiero mi lugar</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+      <p class="fine">Un correo cuando abra la inscripción, más avisos del lanzamiento.</p>
+    </aside>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Reservado Con Puntos</p>
+    <h2>Viajes que reservé con puntos, con todas las cuentas</h2>
+    <div class="grid2">
+      <a class="card1" href="/reservado-con-puntos/papa-londres-roma/"><img src="/assets/booked/dad-aa-new-business.jpg" alt="El nuevo asiento business de American" loading="lazy"><span class="cb"><h3>Londres y Roma con mi papá</h3><p>192,000 puntos y $2,781.47 en efectivo, todo incluido. Solo los tramos con puntos tenían un precio de lista de $12,000. Ahorro total: $10,908.</p><span class="more">Lee el viaje completo</span></span></a>
+      <a class="card1" href="/reservado-con-puntos/papas-helsinki-irlanda/"><img src="/assets/booked/parents-cliffs-of-moher.jpg" alt="Los acantilados de Moher, Irlanda" loading="lazy"><span class="cb"><h3>Helsinki e Irlanda con mis papás</h3><p>419,500 puntos, un certificado de noche gratis y $2,339.77 en efectivo. Los dos premios grandes en business tenían un precio de lista de $15,900. Ahorro total: $15,657.57.</p><span class="more">Lee el viaje completo</span></span></a>
+    </div>
+    <p style="margin-top:14px"><a href="/reservado-con-puntos/">Todas las historias de Reservado Con Puntos</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid2">
+      <div class="card">
+        <h3>Para quién es</h3>
+        <ul>
+          <li>Nunca has salido del país, o solo has cruzado a México a ver a tu familia.</li>
+          <li>Tienes puntos sin un plan, o todavía no tienes ni un solo punto.</li>
+          <li>Quieres un orden claro: qué tarjeta, qué bono, qué transferencia, qué reserva.</li>
+          <li>Vas a hacer el trabajo si alguien te muestra los pasos.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Para quién no es</h3>
+        <ul>
+          <li>Ya reservas viajes complejos con puntos por tu cuenta.</li>
+          <li>Quieres que alguien reserve por ti. Yo no reservo por nadie. Tú reservas en tu cuenta.</li>
+          <li>Buscas un atajo raro para saltarte las reglas de los bancos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">La membresía</p>
+    <h2>Todo lo que incluye</h2>
+    <table class="stack">
+      <tr><td>Bootcamp de Puntos y Millas: más de 30 lecciones en video, en orden</td><td>$997</td></tr>
+      <tr><td>12 meses en la comunidad privada de Skool, dos llamadas grupales al mes, laboratorio de reservas en vivo incluido</td><td>$1,200</td></tr>
+      <tr><td>LIGHT WATCH: una vigilancia activa de un vuelo por 90 días, con alertas de premios, revisiones manuales y boletines de ofertas, revisada seguido</td><td>$300</td></tr>
+      <tr><td>Plantillas: control de puntos, control 5/24, calendario de cuotas anuales y sweet spots desde tu aeropuerto</td><td>$197</td></tr>
+      <tr><td>Alertas de ofertas dentro de Skool por 12 meses</td><td>$240</td></tr>
+      <tr><td>Guiones en español para llamadas con bancos, de retención y reconsideración</td><td>$97</td></tr>
+      <tr><td>Acceso para tu esposo, esposa o pareja. Una membresía por hogar</td><td>$497</td></tr>
+      <tr class="grand"><td>Valor total, comprado por separado</td><td>$3,528</td></tr>
+    </table>
+    <p>Cada miembro recibe además $50 de descuento en cualquier opción de búsqueda y reserva con puntos y $50 de descuento en la Asesoría 1 a 1 de Puntos y Millas. Las actualizaciones del curso están incluidas mientras tu membresía esté activa. Una membresía, dos jugadores: los dos en casa pueden tener tarjetas y ganar bonos de bienvenida a su nombre, así la casa gana al doble de velocidad. Los beneficios de la membresía cuentan una sola vez por hogar.</p>
+    <div class="card" style="margin-top:16px">
+      <h3>Los Fundadores reciben algo más</h3>
+      <p>Tu Plan de Vuelo: una llamada personal de 30 minutos conmigo, con formulario de entrada antes. Se desbloquea al terminar el Módulo 2 y se reserva dentro de los 60 días siguientes. Con la llamada, el paquete de Fundadores vale $3,828.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">El curso</p>
+    <h2>El Bootcamp, módulo por módulo</h2>
+    <p>Más de 30 lecciones en video. Cada módulo construye sobre el anterior.</p>
+    <div class="mods">
+      <div class="mod"><span class="n">Módulo 1</span><b>Fundamentos y empezar desde cero</b></div>
+      <div class="mod"><span class="n">Módulo 2</span><b>Ganar puntos sin gastar de más</b></div>
+      <div class="mod"><span class="n">Módulo 3</span><b>Elegir las tarjetas correctas</b></div>
+      <div class="mod"><span class="n">Módulo 4</span><b>Transferencias paso a paso</b></div>
+      <div class="mod"><span class="n">Módulo 5</span><b>Buscar espacios con puntos</b></div>
+      <div class="mod"><span class="n">Módulo 6</span><b>Reservar, paso a paso</b></div>
+      <div class="mod"><span class="n">Módulo 7</span><b>Rutas para nuestra audiencia</b></div>
+      <div class="mod"><span class="n">Módulo 8</span><b>Usar bien tus puntos y tu plan</b></div>
+      <div class="mod"><span class="n">Módulo 9</span><b>Arbitraje de puntos, comprar puntos con estrategia</b></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Inscripción</p>
+    <h2>Cómo abren los lugares</h2>
+    <div class="grid3">
+      <div class="card price"><p class="big">$297</p><h3>Fundadores</h3><p>Primeros 25 lugares. Abre el viernes 27 de noviembre de 2026. Cuando se acaban los 25, Fundadores cierra para siempre.</p></div>
+      <div class="card price"><p class="big">$497</p><h3>Early</h3><p>Siguientes 225 lugares. Abre cuando Fundadores se llena y cierra al agotarse o el 31 de diciembre de 2026, lo que pase primero.</p></div>
+      <div class="card price"><p class="big">$997</p><h3>Regular</h3><p>O 3 pagos de $377. Abre cuando Early cierra y queda abierto.</p></div>
+    </div>
+    <p>El precio con el que entras se queda contigo al renovar, mientras tu membresía se mantenga activa. Es una inversión, no un gasto. El ahorro típico en un primer viaje puede valer $1,000 o más. Necesitas buen crédito, y el ahorro nunca está garantizado: depende de tus puntos, tus fechas y tu constancia.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="vip">
+      <p class="eyebrow">VIP Mano a Mano</p>
+      <h2>Para miembros que quieren mi acompañamiento todo el año</h2>
+      <p>VIP vive dentro de la misma comunidad, con un nivel privado de apoyo encima de todo lo anterior.</p>
+      <ul>
+        <li>Cuatro llamadas personales de 60 minutos, una por trimestre</li>
+        <li>Tres solicitudes activas de LIGHT WATCH, y tus vigilancias empiezan primero</li>
+        <li>Un crédito de $350 al año para una solicitud de búsqueda y reserva, depósito incluido</li>
+        <li>Si también eres Fundador, tu Plan de Vuelo cuenta como tu primera llamada trimestral</li>
+      </ul>
+      <p>VIP Fundadores: $1,497 para los primeros 10 lugares. Después $2,497. Solo hay 50 lugares VIP activos entre mis dos marcas, y un lugar se abre solo cuando otro queda libre.</p>
+      <a class="btn" href="#join">Quiero entrar a la lista VIP</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">La garantía</p>
+    <h2>El segundo año va por mi cuenta</h2>
+    <p>Termina los módulos principales. Asiste a seis llamadas grupales. Inicia una solicitud de LIGHT WATCH con fechas que se puedan reservar. Sigue tu plan de tarjetas. Fundadores y VIP también completan sus llamadas personales. Si en 12 meses todavía no canjeaste un viaje, tus siguientes 12 meses son gratis.</p>
+    <p class="disc">Las aprobaciones de tarjetas y la disponibilidad de premios nunca están garantizadas, ni por mí ni por nadie.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Próximamente</p>
+    <h2>Tarjetas de Estados Unidos sin seguro social</h2>
+    <p>¿Vives fuera de Estados Unidos o todavía no tienes seguro social? También puedes entrar al juego de los puntos.</p>
+    <p>Estoy preparando un servicio paso a paso para ayudarte a:</p>
+    <ul>
+      <li>Sacar tu ITIN</li>
+      <li>Abrir tu primera tarjeta de Estados Unidos, asegurada si hace falta</li>
+      <li>Seguir una ruta clara para llegar a las tarjetas que sí dan puntos y bonos fuertes</li>
+    </ul>
+    <p>Sin atajos raros y sin prometer aprobaciones. Un proceso real, en orden, con guía en cada paso.</p>
+    <div class="btnrow"><a class="btn ghost" href="#join">Únete a la lista de espera y entra primero cuando abra</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="about">
+      <img src="/assets/home-hero.jpg" alt="Miguel Rueda" loading="lazy">
+      <div>
+        <p class="eyebrow">Tu maestro</p>
+        <h2>Miguel Rueda</h2>
+        <p>Soy de El Paso, Texas. Pasé más de tres años como coanfitrión del podcast Let's Get To The Points y escribo para AwardWallet. Todo lo que enseño aquí sale de viajes que yo mismo reservé, para mi familia y para mí, empezando desde cero puntos. Mi mensaje es simple: los latinos también pertenecemos en primera clase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Preguntas</p>
+    <h2>Antes de entrar</h2>
+    <details class="faq"><summary>¿Cuándo puedo entrar?</summary><p>La inscripción abre el viernes 27 de noviembre de 2026. Primero van los Fundadores, los primeros 25 lugares con $297. Únete a la lista de espera y el enlace de pago te llega primero.</p></details>
+    <details class="faq"><summary>No tengo puntos ni tarjetas de viaje. ¿Esto es para mí?</summary><p>Sí. El curso empieza desde cero: cómo funciona el crédito, cómo prepararte para tu primera tarjeta y cuál abrir primero, en qué orden.</p></details>
+    <details class="faq"><summary>¿Qué puntaje de crédito necesito?</summary><p>Las aprobaciones piden buen crédito, y nadie puede garantizar una aprobación. El curso empieza con una ruta de crédito para que sepas dónde estás antes de solicitar nada.</p></details>
+    <details class="faq"><summary>¿Tú reservas los vuelos por mí?</summary><p>No. Yo no reservo por nadie, y nunca pido tus contraseñas ni tus puntos. Tú reservas en tu propia cuenta. El curso, las llamadas y LIGHT WATCH existen para que llegues a esa reserva con un plan.</p></details>
+    <details class="faq"><summary>¿Cómo funciona LIGHT WATCH?</summary><p>Me mandas un viaje que quieres. Por 90 días lo vigilamos con alertas de premios, revisiones manuales y boletines de ofertas, y lo revisamos seguido. Cuando abre un asiento que te sirve, te aviso y tú lo reservas. Es una vigilancia, no un servicio de búsqueda diaria.</p></details>
+    <details class="faq"><summary>¿Mi pareja puede aprender conmigo?</summary><p>Sí. Una membresía cubre tu hogar. Los dos pueden ver el curso y tener tarjetas a su nombre, así la casa gana bonos de bienvenida al doble de velocidad. Los beneficios, como la vigilancia de vuelo y las llamadas, cuentan una vez por hogar. Una membresía. Dos jugadores. El doble de bonos de bienvenida.</p></details>
+    <details class="faq"><summary>¿Y si hago el trabajo y todavía no viajo?</summary><p>Esa es la garantía. Termina los módulos principales, asiste a seis llamadas grupales, inicia una solicitud de LIGHT WATCH con fechas que se puedan reservar y sigue tu plan de tarjetas. Si en 12 meses no canjeaste un viaje, tus siguientes 12 meses son gratis.</p></details>
+    <details class="faq"><summary>¿Qué pasa después de mis 12 meses?</summary><p>Puedes renovar al precio con el que entraste, mientras tu membresía se mantenga activa. Los reembolsos siguen los <a href="/terminos/">términos publicados</a>.</p></details>
+    <div class="btnrow" style="margin-top:22px"><a class="btn" href="#join">Únete a la lista de espera</a></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>Algunos enlaces son de afiliado. Solo pongo cosas que uso.</span>
+    <span>© 2026 Vuela con Rueda · vuelaconrueda.com</span>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('form[data-kit]').forEach(f => f.addEventListener('submit', async e => {
+  e.preventDefault();
+  const msg = f.querySelector('.form-msg'), btn = f.querySelector('button');
+  btn.disabled = true;
+  try {
+    await fetch(f.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(f)) });
+    msg.textContent = f.dataset.ok; msg.className = 'form-msg ok'; f.reset();
+  } catch (err) { msg.textContent = f.dataset.err; }
+  btn.disabled = false;
+}));
+</script>
+
+</body>
+</html>
