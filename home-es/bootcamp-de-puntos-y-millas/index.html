@@ -289,7 +289,15 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
       <li>Seguir una ruta clara para llegar a las tarjetas que sí dan puntos y bonos fuertes</li>
     </ul>
     <p>Sin atajos raros y sin prometer aprobaciones. Un proceso real, en orden, con guía en cada paso.</p>
-    <div class="btnrow"><a class="btn ghost" href="#join">Únete a la lista de espera y entra primero cuando abra</a></div>
+    <form data-kit data-ok="Revisa tu correo para confirmar tu lugar en la lista de ITIN." data-err="Algo salió mal. Inténtalo de nuevo." action="https://app.kit.com/forms/10186102/subscriptions" method="post">
+      <label for="itin-nombre">Nombre</label>
+      <input id="itin-nombre" type="text" name="fields[first_name]" placeholder="Nombre" required autocomplete="given-name">
+      <label for="itin-correo">Correo electrónico</label>
+      <input id="itin-correo" type="email" name="email_address" placeholder="Correo electrónico" required autocomplete="email">
+      <button type="submit">Unirme a la lista de ITIN</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="fine">Esta lista es solo para el servicio de ITIN. Es aparte de la lista de espera del Bootcamp.</p>
   </div>
 </section>
 

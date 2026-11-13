@@ -285,7 +285,15 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
       <li>Follow a clear roadmap toward the cards that earn real points and strong bonuses</li>
     </ul>
     <p>No weird shortcuts and no promised approvals. A real process, in order, with guidance at every step.</p>
-    <div class="btnrow"><a class="btn ghost" href="#join">Join the waitlist and be first in when it opens</a></div>
+    <form data-kit data-ok="Check your inbox to confirm your spot on the ITIN list." data-err="Something went wrong. Try again." action="https://app.kit.com/forms/10186083/subscriptions" method="post">
+      <label for="itin-name">First name</label>
+      <input id="itin-name" type="text" name="fields[first_name]" placeholder="First name" required autocomplete="given-name">
+      <label for="itin-email">Email address</label>
+      <input id="itin-email" type="email" name="email_address" placeholder="Email address" required autocomplete="email">
+      <button type="submit">Join the ITIN waitlist</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="fine">This list is only for the ITIN service. It is separate from the Bootcamp waitlist.</p>
   </div>
 </section>
 
