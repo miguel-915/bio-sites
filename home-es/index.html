@@ -131,11 +131,8 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .form-msg.ok { color: var(--ink); font-weight: 600; }
 .fine { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
 
-.guide-cover { aspect-ratio: 4 / 5; max-width: 340px; border-radius: 6px; padding: 28px; background: var(--blue); color: var(--hero-ink); display: flex; flex-direction: column; justify-content: space-between;
+.guide-cover { display: block; width: 100%; max-width: 340px; height: auto; border-radius: 6px;
   box-shadow: 18px 18px 0 var(--brass); margin-inline: auto; }
-.guide-cover small { font: 500 12px/1 var(--mono); color: var(--brass); letter-spacing: .08em; }
-.guide-cover b { font: italic 800 40px/1 var(--display); }
-.guide-cover span { font-size: 14px; color: var(--hero-sub); }
 
 /* quotes */
 .quotes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
@@ -232,7 +229,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
 
 <section class="alt" id="guia">
   <div class="wrap split">
-    <div class="guide-cover" aria-hidden="true"><small>GUÍA GRATIS</small><b>Puntos y Millas 101</b><span>Vuela con Rueda</span></div>
+    <img class="guide-cover" src="assets/guide-cover.jpg" alt="Puntos y Millas 101" width="1000" height="1414">
     <div>
       <p class="kicker">Guía gratis</p>
       <h2>Puntos y Millas 101</h2>
