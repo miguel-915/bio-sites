@@ -36,6 +36,7 @@
 .tg-chart svg{display:block;min-width:780px;width:100%;height:auto}
 .tg-read{font-size:13.5px;color:var(--ink);margin:10px 2px 0;min-height:20px}
 .tg-read b{color:var(--gold)}
+#tgDetail path{cursor:pointer}
 .tg-filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 2px}
 .tg-fbtn{font-family:inherit;font-size:13.5px;font-weight:700;color:var(--khaki);background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:8px 16px;cursor:pointer}
 .tg-fbtn.on{color:#0c1a26;border-color:transparent}
@@ -139,6 +140,7 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
   /* ---------- per bank detail diagram ---------- */
   var svgD = document.getElementById('tgDetail'), readD = document.getElementById('tgReadDetail');
   var cur = D.banks[0];
+  var lockD = null;
   function renderDetail(){
     while(svgD.firstChild) svgD.removeChild(svgD.firstChild);
     var progs = D.programs.filter(function(p){ return p.ratios[cur]; });
@@ -184,14 +186,18 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
       });
     }
     function clr(){ gR.querySelectorAll('path').forEach(function(p){ p.style.fillOpacity=''; }); }
-    gR.querySelectorAll('path').forEach(function(p){ p.addEventListener('mouseenter', function(){ hi(p.dataset.prog, p.dataset.cat); }); p.addEventListener('mouseleave', clr); });
-    gN.querySelectorAll('[data-prog]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hi(n.dataset.prog, n.dataset.cat); }); n.addEventListener('mouseleave', clr); });
-    gL.querySelectorAll('[data-prog]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hi(n.dataset.prog, n.dataset.cat); }); n.addEventListener('mouseleave', clr); });
+    function restore(){ if(lockD) hi(lockD.prog, lockD.cat); else clr(); }
+    function lock(p){ lockD = { prog: p.dataset.prog || null, cat: p.dataset.cat }; hi(lockD.prog, lockD.cat); }
+    gR.querySelectorAll('path').forEach(function(p){ p.addEventListener('mouseenter', function(){ hi(p.dataset.prog, p.dataset.cat); }); p.addEventListener('mouseleave', restore); p.addEventListener('click', function(){ lock(p); }); });
+    gN.querySelectorAll('[data-prog]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hi(n.dataset.prog, n.dataset.cat); }); n.addEventListener('mouseleave', restore); n.addEventListener('click', function(){ lock(n); }); });
+    gL.querySelectorAll('[data-prog]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hi(n.dataset.prog, n.dataset.cat); }); n.addEventListener('mouseleave', restore); n.addEventListener('click', function(){ lock(n); }); });
+    if(lockD) hi(lockD.prog, lockD.cat);
     svgD.appendChild(gR); svgD.appendChild(gN); svgD.appendChild(gL);
     readD.textContent = cur + ' · ' + progs.length + ' ' + PW;
   }
   var dbtns = document.querySelectorAll('.tg-dbtn');
   function setBank(b){
+    lockD = null;
     cur = b;
     dbtns.forEach(function(x){ var on = x.dataset.bank===b; x.classList.toggle('on', on); x.style.background = on ? D.bankColors[b] : ''; });
     renderDetail();
