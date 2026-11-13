@@ -140,6 +140,8 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
       <p class="rove-note" id="roveNote" hidden>Rove is free. <a href="https://www.rove.com/?signup&amp;referralCode=651YT78S" target="_blank" rel="noopener sponsored">Sign up with my link</a> and get 1,500 miles right away, then earn more when you shop and book hotels. A US phone number is required.</p>
       <span class="wallet-label">Cabin</span>
       <div class="cards cabins" id="cabins" role="group" aria-label="Cabin"></div>
+      <span class="wallet-label">Direction</span>
+      <div class="cards dirs" id="dirs" role="group" aria-label="Direction"></div>
       <div class="balance">
         <label for="pts">Points balance</label>
         <input id="pts" type="range" min="5000" max="1000000" step="2500" value="75000">
@@ -207,6 +209,7 @@ const CARDS = [
   { id: 'rove', name: 'Rove', hint: 'Free · 1,500 to start', pts: 25000 }
 ];
 const CABINS = [['economy', 'Economy'], ['premium', 'Premium economy'], ['business', 'Business'], ['first', 'First']];
+const DIRS = [['out', 'From North America'], ['in', 'To North America']];
 // Which programs each card transfers to (seats.aero, Oct 2026). Number = transfer ratio when not 1:1
 const XFER = {
   'American AAdvantage': { citi: 1 },
@@ -323,7 +326,7 @@ const D = {
   }
 };
 const CARD_NAME = Object.fromEntries(CARDS.map(c => [c.id, c.name]));
-let card = 'capitalone', pts = 75000, cabin = 'business';
+let card = 'capitalone', pts = 75000, cabin = 'business', dir = 'out';
 const fmt = n => n.toLocaleString('en-US');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -332,6 +335,8 @@ function renderControls() {
     `<button type="button" data-id="${c.id}" aria-pressed="${c.id === card}">${c.name}<small>${c.hint}</small></button>`).join('');
   document.getElementById('cabins').innerHTML = CABINS.map(([id, name]) =>
     `<button type="button" data-cabin="${id}" aria-pressed="${id === cabin}">${name}</button>`).join('');
+  document.getElementById('dirs').innerHTML = DIRS.map(([id, name]) =>
+    `<button type="button" data-dir="${id}" aria-pressed="${id === dir}">${name}</button>`).join('');
   document.getElementById('roveNote').hidden = card !== 'rove';
 }
 function render() {
@@ -342,11 +347,13 @@ function render() {
     const [prog, out, tOut, route, airline, ns, back, tBack] = r;
     const ratio = (XFER[prog] || {})[card];
     if (!ratio) return;
-    const oneWay = Math.ceil(out / ratio), rt = back ? Math.ceil((out + back) / ratio) : 0;
+    const rt = back ? Math.ceil((out + back) / ratio) : 0;
+    const oneWay = Math.ceil((dir === 'in' ? (back || Infinity) : out) / ratio);
     let t = null;
     if (rt && rt <= pts) t = { kind: 'Round trip', cost: rt, tax: tOut + tBack };
-    else if (oneWay <= pts) t = { kind: 'One way', cost: oneWay, tax: tOut, rt };
-    if (t) list.push({ ...t, region, prog, route, airline, ns, ratio });
+    else if (oneWay <= pts) t = { kind: 'One way', cost: oneWay, tax: dir === 'in' ? tBack : tOut, rt };
+    if (t) { if (dir === 'in') route = route.split('→').map(s => s.trim()).reverse().join(' → ');
+      list.push({ ...t, head: dir === 'in' ? 'from' : 'to', region, prog, route, airline, ns, ratio }); }
   }));
   list.sort((a, b) => (b.kind === 'Round trip') - (a.kind === 'Round trip') || a.cost - b.cost);
   const rts = list.filter(t => t.kind === 'Round trip').length;
@@ -358,7 +365,7 @@ function render() {
     return `<article class="trip">
       <div class="trip-top"><span class="region">${esc(t.region)}</span><span class="type ${t.kind === 'Round trip' ? 'rt' : ''}">${t.kind}</span></div>
       <div class="trip-body">
-        <h3>${esc(t.airline)}${t.ns ? ' nonstop' : ''} to ${esc(t.region === 'Europe' || t.region === 'Asia' || t.region === 'Africa' || t.region === 'Oceania' || t.region === 'South America' ? t.route.split('→').pop().trim() : t.region)}</h3>
+        <h3>${esc(t.airline)}${t.ns ? ' nonstop' : ''} ${t.head} ${esc(t.region === 'Europe' || t.region === 'Asia' || t.region === 'Africa' || t.region === 'Oceania' || t.region === 'South America' ? t.route.split('→').pop().trim() : t.region)}</h3>
         <p class="route">${esc(t.route)}</p>
         <div class="cost"><b>${fmt(t.cost)}</b><span>points · ${t.tax ? '~$' + fmt(t.tax) + ' taxes' : 'taxes vary'}${t.tax > 500 ? ' (high)' : ''}</span></div>
         <div class="meter" role="img" aria-label="Uses ${pct}% of your points"><i style="width:${pct}%"></i></div>
@@ -378,6 +385,10 @@ document.getElementById('cards').addEventListener('click', e => {
 document.getElementById('cabins').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   cabin = b.dataset.cabin; renderControls(); render();
+});
+document.getElementById('dirs').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  dir = b.dataset.dir; renderControls(); render();
 });
 document.getElementById('pts').addEventListener('input', e => { pts = +e.target.value; render(); });
 renderControls(); render();
