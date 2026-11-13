@@ -90,16 +90,10 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
   <div class="tg-top"><a class="tg-brand" href="/">TRAVEL SERGEANT</a><div class="tg-lang"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span class="on">EN</span><span class="sep">|</span><a href="https://vuelaconrueda.com/socios-de-transferencia/">ES</a></div></div>
   <nav aria-label="Main" class="stdnav"><a href="/#guide">Free guide</a><a href="/#booking">Award booking</a><a href="/#call">1 on 1 call</a><a href="/#course">Course</a><span class="navdd"><a href="/resources/" aria-haspopup="true">Free tools</a><span class="navdd-p"><a href="/transfer-partners/">Transfer Partner Guide</a><a href="/points-planner/">Points Planner</a><a href="/award-deals/">Sweet Spots</a><a href="/flight-deals/">Flight Deals</a><a href="/flight-passport/">Flight Passport</a><a href="/gear/">Travel Gear</a><a href="/resources/">All Resources</a></span></span></nav>
   <h1>Credit Card Transfer Partner Guide</h1>
-  <p class="tg-sub">This is the complete map of credit card transfer partners. Every transferable points currency, American Express, Bilt, Capital One, Chase, Citi, Rove and Wells Fargo, every airline and hotel program it can become, and the exact transfer ratio for each move. Hover any bank or program to trace where the points can go, then check what each program can book across its alliance and its partners.</p>
-  <div class="tg-sec">Every bank, every transfer partner</div>
-  <p class="tg-hint">Hover a bank on the left or a program on the right. The readout shows the ratio for the ribbon you touch.</p>
-  <div class="tg-chart"><svg id="tgOverall" viewBox="0 0 1060 600" role="img" aria-label="Sankey diagram, all banks"></svg></div>
-  <div class="tg-read" id="tgReadOverall">Ratio = bank points : partner points. Updated November 2026.</div>
+  <p class="tg-sub">This is the complete map of credit card transfer partners. Every transferable points currency, American Express, Bilt, Capital One, Chase, Citi, Rove and Wells Fargo, every airline and hotel program it can become, and the exact transfer ratio for each move.</p>
   <div class="tg-sec">Show only my points</div>
-  <p class="tg-hint">Tap the currencies you hold. The diagram and the tables below narrow to just your banks. Tap again to bring one back.</p>
   <div class="tg-filters"><button class="tg-fbtn tg-ffbtn" data-bank="American Express">American Express</button><button class="tg-fbtn tg-ffbtn" data-bank="Bilt">Bilt</button><button class="tg-fbtn tg-ffbtn" data-bank="Capital One">Capital One</button><button class="tg-fbtn tg-ffbtn" data-bank="Chase">Chase</button><button class="tg-fbtn tg-ffbtn" data-bank="Citi">Citi</button><button class="tg-fbtn tg-ffbtn" data-bank="Rove">Rove</button><button class="tg-fbtn tg-ffbtn" data-bank="Wells Fargo">Wells Fargo</button></div>
   <div class="tg-sec">One bank at a time</div>
-  <p class="tg-hint">The same map, one bank at a time, grouped the way the alliances line up. Ratios sit next to each program.</p>
   <div class="tg-filters"><button class="tg-fbtn tg-dbtn" data-bank="American Express">American Express</button><button class="tg-fbtn tg-dbtn" data-bank="Bilt">Bilt</button><button class="tg-fbtn tg-dbtn" data-bank="Capital One">Capital One</button><button class="tg-fbtn tg-dbtn" data-bank="Chase">Chase</button><button class="tg-fbtn tg-dbtn" data-bank="Citi">Citi</button><button class="tg-fbtn tg-dbtn" data-bank="Rove">Rove</button><button class="tg-fbtn tg-dbtn" data-bank="Wells Fargo">Wells Fargo</button></div>
   <div class="tg-chart"><svg id="tgDetail" viewBox="0 0 1060 600" role="img" aria-label="Sankey diagram, one bank"></svg></div>
   <div class="tg-read" id="tgReadDetail"></div>
@@ -141,73 +135,6 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
            ' L'+x2+','+(y2+h2)+' C'+(x2-dx)+','+(y2+h2)+' '+(x1+dx)+','+(y1+h1)+' '+x1+','+(y1+h1)+' Z';
   }
   function actBanks(){ return D.banks.filter(function(b){ return active[b]; }); }
-
-  /* ---------- overall diagram ---------- */
-  var svgO = document.getElementById('tgOverall'), readO = document.getElementById('tgReadOverall');
-  var defO = readO.textContent;
-  function renderOverall(){
-    while(svgO.firstChild) svgO.removeChild(svgO.firstChild);
-    var banks = actBanks();
-    var progs = D.programs.filter(function(p){ return banks.some(function(b){ return p.ratios[b]; }); });
-    var CGAP=20, TOP=12, BGAP=16, MINSLOT=24;
-    var counts = {}; banks.forEach(function(b){ counts[b]=0; });
-    var inbound = {};
-    progs.forEach(function(p){ inbound[p.name]=0; banks.forEach(function(b){ if(p.ratios[b]){ counts[b]++; inbound[p.name]++; } }); });
-    var totalEdges = banks.reduce(function(s,b){ return s+counts[b]; },0);
-    var slot = {}; progs.forEach(function(p){ slot[p.name]=Math.max(MINSLOT, inbound[p.name]*9.3); });
-    var nCats = D.cats.filter(function(c){ return progs.some(function(p){ return p.cat===c; }); }).length;
-    var progTotal = progs.reduce(function(s,p){ return s+slot[p.name]; },0) + (nCats-1)*CGAP;
-    var bankScale = (progTotal - (banks.length-1)*BGAP)/Math.max(totalEdges,1);
-    var H = TOP*2 + progTotal;
-    svgO.setAttribute('viewBox','0 0 1060 '+H);
-    var BX=168, PX=776, NW=16;
-    var gR=el('g',{}), gN=el('g',{}), gL=el('g',{});
-    var bankSeg = {}, by = TOP;
-    banks.forEach(function(b){
-      var h = counts[b]*bankScale; bankSeg[b]={y:by, h:h, next:by};
-      var nd = el('rect',{x:BX, y:by, width:NW, height:Math.max(h,2), rx:3, fill:D.bankColors[b]});
-      nd.dataset.bank=b; gN.appendChild(nd);
-      var tx = el('text',{x:BX-10, y:by+h/2, 'text-anchor':'end','dominant-baseline':'middle', fill:'var(--ink)','font-size':14,'font-weight':700});
-      tx.textContent = D.short[b] + ' (' + counts[b] + ')'; tx.dataset.bank=b; gL.appendChild(tx);
-      by += h + BGAP;
-    });
-    var progSeg = {}, py = TOP, lastCat = null;
-    progs.forEach(function(p){
-      if(lastCat && p.cat!==lastCat) py += CGAP;
-      lastCat = p.cat; progSeg[p.name]={y:py, h:slot[p.name], next:py, share:slot[p.name]/inbound[p.name]};
-      var nd = el('rect',{x:PX, y:py, width:NW, height:slot[p.name], rx:3, fill:p.color});
-      nd.dataset.prog=p.name; gN.appendChild(nd);
-      var tx = el('text',{x:PX+NW+10, y:py+slot[p.name]/2, 'dominant-baseline':'middle', fill:'var(--ink)','font-size':13});
-      tx.textContent = p.name; tx.dataset.prog=p.name; gL.appendChild(tx);
-      py += slot[p.name];
-    });
-    progs.forEach(function(p){
-      banks.forEach(function(b){
-        if(!p.ratios[b]) return;
-        var bs = bankSeg[b], ps = progSeg[p.name];
-        var d = ribbon(BX+NW, bs.next, PX, ps.next, bankScale, ps.share);
-        bs.next += bankScale; ps.next += ps.share;
-        var path = el('path',{d:d, fill:D.bankColors[b], 'fill-opacity':0.42, stroke:'none'});
-        path.dataset.bank=b; path.dataset.prog=p.name; path.dataset.ratio=p.ratios[b];
-        gR.appendChild(path);
-      });
-    });
-    function hiBank(b){ gR.querySelectorAll('path').forEach(function(p){ p.style.fillOpacity = p.dataset.bank===b ? 0.9 : 0.05; }); }
-    function hiProg(n){ gR.querySelectorAll('path').forEach(function(p){ p.style.fillOpacity = p.dataset.prog===n ? 0.9 : 0.05; }); }
-    function clr(){ gR.querySelectorAll('path').forEach(function(p){ p.style.fillOpacity=''; }); readO.textContent = defO; }
-    gR.querySelectorAll('path').forEach(function(p){
-      p.addEventListener('mouseenter', function(){
-        gR.querySelectorAll('path').forEach(function(q){ q.style.fillOpacity = (q.dataset.bank===p.dataset.bank && q.dataset.prog===p.dataset.prog) ? 0.95 : ((q.dataset.bank===p.dataset.bank || q.dataset.prog===p.dataset.prog) ? 0.5 : 0.05); });
-        readO.innerHTML = '<b>'+p.dataset.bank+'</b> to <b>'+p.dataset.prog+'</b> · '+p.dataset.ratio;
-      });
-      p.addEventListener('mouseleave', clr);
-    });
-    gN.querySelectorAll('[data-bank]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hiBank(n.dataset.bank); }); n.addEventListener('mouseleave', clr); });
-    gL.querySelectorAll('[data-bank]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hiBank(n.dataset.bank); }); n.addEventListener('mouseleave', clr); });
-    gN.querySelectorAll('[data-prog]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hiProg(n.dataset.prog); }); n.addEventListener('mouseleave', clr); });
-    gL.querySelectorAll('[data-prog]').forEach(function(n){ n.addEventListener('mouseenter', function(){ hiProg(n.dataset.prog); }); n.addEventListener('mouseleave', clr); });
-    svgO.appendChild(gR); svgO.appendChild(gN); svgO.appendChild(gL);
-  }
 
   /* ---------- per bank detail diagram ---------- */
   var svgD = document.getElementById('tgDetail'), readD = document.getElementById('tgReadDetail');
@@ -410,7 +337,7 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
       });
     });
     if(!active[cur]) setBank(banks[0]); else renderDetail();
-    renderOverall(); renderBookOptions();
+    renderBookOptions();
   }
   function syncFilterBtns(){
     fbtns.forEach(function(x){ var on = active[x.dataset.bank]; x.classList.toggle('on', on); x.style.background = on ? D.bankColors[x.dataset.bank] : ''; });
@@ -418,7 +345,7 @@ table.tg-table td.no{background:rgba(255,255,255,.025)}
   fbtns.forEach(function(x){
     x.addEventListener('click', function(){ active[x.dataset.bank] = !active[x.dataset.bank]; syncFilterBtns(); applyFilters(); });
   });
-  syncFilterBtns(); renderOverall(); setBank(cur); renderBookOptions();
+  syncFilterBtns(); setBank(cur); renderBookOptions();
 })();
 </script>
 </body>
