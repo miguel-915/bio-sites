@@ -86,7 +86,7 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .proof-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
 .proof-head p { margin: 0; color: var(--muted); max-width: 40ch; }
 .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.gallery figure { margin: 0; border-radius: 8px; overflow: hidden; background: var(--chip); }
+.gallery figure { margin: 0; border-radius: 8px; overflow: hidden; background: var(--chip); }.gallery figcaption{padding:10px 12px 12px;font-size:13.5px;line-height:1.45;color:var(--muted)}.gallery figcaption b{color:var(--ink)}.gallery figcaption b.sv{color:var(--brass);font-size:15px}
 .gallery img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 .gallery figure:first-child img { object-position: 70% center; }
 @media (max-width: 700px) { .gallery { grid-template-columns: 1fr; } .gallery img { aspect-ratio: 4 / 3; } }
@@ -200,7 +200,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
 <section class="proof">
   <div class="wrap">
     <div class="proof-head"><h2>Esto es lo que compran los puntos.</h2><p>Cada uno de estos asientos se reservó con millas, no con dinero.</p></div>
-    <div class="gallery"><figure><img src="assets/home-g1.jpg" alt="Etihad First Apartment" loading="lazy" width="640" height="800"></figure><figure><img src="assets/home-g2.jpg" alt="Suite de primera clase" loading="lazy" width="640" height="800"></figure><figure><img src="assets/home-g3.jpg" alt="Suite de primera clase con cama" loading="lazy" width="640" height="800"></figure></div>
+    <div class="gallery"><figure><img src="assets/home-g1.jpg" alt="Etihad First Apartment" loading="lazy" width="640" height="800"><figcaption>Etihad First Apartment, Londres a Abu Dabi<br><b>65,000 puntos</b> vs $5,000+ en efectivo · <b class="sv">Ahorro $4,665+</b></figcaption></figure><figure><img src="assets/home-g2.jpg" alt="Suite de primera clase" loading="lazy" width="640" height="800"><figcaption>Singapore Suites, Singapur a Delhi<br><b>58,500 puntos</b> vs $3,000+ en efectivo · <b class="sv">Ahorro $2,954+</b></figcaption></figure><figure><img src="assets/home-g3.jpg" alt="Suite de primera clase con cama" loading="lazy" width="640" height="800"></figure></div>
     <p style="text-align:center;margin:26px 0 0"><a class="btn btn-brass" href="/reservado-con-puntos/papa-londres-roma/">Lee un viaje completo, con las cuentas</a></p>
     <p style="text-align:center;margin:12px 0 0"><a href="/reservado-con-puntos/">Todas las historias de Reservado Con Puntos</a></p>
   </div>
