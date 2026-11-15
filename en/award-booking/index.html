@@ -126,6 +126,8 @@ textarea { min-height: 96px; resize: vertical; }
 .opts { display: flex; flex-wrap: wrap; gap: 8px; }
 .opts label { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 4px; padding: 9px 12px; font-size: 14px; font-weight: 400; cursor: pointer; background: var(--bg); }
 .opts input { width: auto; margin: 0; accent-color: var(--brass); }
+.opts .cost { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.cost-note { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; }
 .agree { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink); }
 .agree input { width: auto; margin-top: 3px; accent-color: var(--brass); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
@@ -237,7 +239,7 @@ textarea { min-height: 96px; resize: vertical; }
           <label class="f">Balances and other programs <small>for example: Amex 180k, United 60k, Marriott 200k</small><textarea name="other_points"></textarea></label>
         </fieldset>
         <fieldset><legend>Help level and notes</legend>
-          <div class="f" role="group" aria-label="Level of help"><span>Level of help</span><div class="opts"><label><input type="radio" name="help" value="Book it yourself" checked> Book it yourself</label><label><input type="radio" name="help" value="Follow my video"> Follow my video</label><label><input type="radio" name="help" value="Book it together"> Live guided booking</label><label><input type="radio" name="help" value="Not sure yet"> Not sure yet</label></div></div>
+          <div class="f" role="group" aria-label="Level of help"><span>Level of help</span><div class="opts"><label><input type="radio" name="help" value="Book it yourself" checked> Book it yourself <span class="cost">$250 per person</span></label><label><input type="radio" name="help" value="Follow my video"> Follow my video <span class="cost">$300 per person</span></label><label><input type="radio" name="help" value="Book it together"> Live guided booking <span class="cost">$400 per person</span></label><label><input type="radio" name="help" value="Not sure yet"> Not sure yet</label></div><p class="cost-note">$100 deposit per person starts the search and counts toward the fee.</p></div>
           <label class="f">Notes <small>must-haves, deal breakers, special occasions. Open jaw or a second itinerary? Put those flights here. Two itineraries max per request.</small><textarea name="notes_text"></textarea></label>
           <label class="f">How did you find me?<select name="heard"><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>A friend</option><option>Other</option></select></label>
           <label class="agree"><input type="checkbox" name="agree" value="Yes" required> <span>I understand the fee depends on the level I picked ($250, $300, or $400 per person), the $100 per person deposit is nonrefundable and counts toward the fee, the balance for my level is due when flights matching my request are found whether I book them or not, and award seats are not guaranteed.</span></label>

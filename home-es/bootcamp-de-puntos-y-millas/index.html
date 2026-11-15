@@ -115,6 +115,16 @@ table.stack tr.grand td{font-weight:800;border-top:2px solid var(--brass);border
 .mod .n{color:var(--brass);font:800 13px/1 var(--display);display:block;margin-bottom:5px}
 .price .big{font:600 15px/1.35 var(--body);color:var(--muted);margin:0 0 8px}
 .price p{font-size:15px;color:var(--muted);margin:0 0 8px}
+.card.price{position:relative}
+.price.featured{border:2px solid var(--brass)}
+.tier-badge{display:inline-flex;align-items:center;font:700 11px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;margin:0 0 12px}
+.tier-badge.open{background:var(--brass);color:var(--blue)}
+.tier-badge.lock{background:var(--surface);border:1px solid var(--line);color:var(--muted)}
+.tier-badge svg{width:11px;height:11px;margin-right:5px}
+.price.locked{background:var(--chip)}
+.price.locked h3,.price.locked .big{color:var(--muted)}
+.itin-card{border:1.5px dashed var(--brass);border-radius:12px;padding:24px 22px}
+
 .vip{background:var(--blue);color:#F4F1EA;border-radius:8px;padding:26px 28px}
 .vip h2,.vip h3{color:#F4F1EA}
 .vip .eyebrow{color:var(--brass)}
@@ -250,9 +260,9 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
     <p class="eyebrow">Inscripción</p>
     <h2>Cómo abren los lugares</h2>
     <div class="grid3">
-      <div class="card price"><h3>Fundadores</h3><p class="big">$297</p><p>Primeros 25 lugares. Abre el viernes 27 de noviembre de 2026. Cuando se acaban los 25, Fundadores cierra para siempre.</p></div>
-      <div class="card price"><h3>Early</h3><p class="big">$497</p><p>Abre cuando Fundadores se llena y cierra el 31 de diciembre de 2026.</p></div>
-      <div class="card price"><h3>Regular</h3><p class="big">$997</p><p>Empieza el 1 de enero de 2027.</p></div>
+      <div class="card price featured"><span class="tier-badge open">Empieza aquí</span><h3>Fundadores</h3><p class="big">$297</p><p>Primeros 25 lugares. Abre el viernes 27 de noviembre de 2026. Cuando se acaban los 25, Fundadores cierra para siempre.</p></div>
+      <div class="card price locked"><span class="tier-badge lock"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="1.5" fill="currentColor"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="2"/></svg>Aún no abre</span><h3>Early</h3><p class="big">$497</p><p>Abre cuando Fundadores se llena y cierra el 31 de diciembre de 2026.</p></div>
+      <div class="card price locked"><span class="tier-badge lock"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="1.5" fill="currentColor"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="2"/></svg>Aún no abre</span><h3>Regular</h3><p class="big">$997</p><p>Empieza el 1 de enero de 2027.</p></div>
     </div>
     <p>Después de tus primeros 12 meses, puedes renovar la comunidad privada por $300 al año. Es una inversión. Un solo bono de una tarjeta puede valer $1,000 o más en viajes, y un buen canje puede pagar esta inversión 10 veces. Necesitas buen crédito, y el ahorro nunca está garantizado: depende de tus puntos, tus fechas y tu constancia.</p>
   </div>
@@ -306,6 +316,7 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
 
 <section>
   <div class="wrap">
+    <div class="itin-card">
     <p class="eyebrow">Próximamente</p>
     <h2>Tarjetas de Estados Unidos sin seguro social</h2>
     <p>¿Vives fuera de Estados Unidos o todavía no tienes seguro social? También puedes entrar al juego de los puntos.</p>
@@ -325,6 +336,7 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
       <p class="form-msg" role="status" aria-live="polite"></p>
     </form>
     <p class="fine">Esta lista es solo para el servicio de ITIN. Es aparte de la lista de espera del Bootcamp.</p>
+    </div>
   </div>
 </section>
 
