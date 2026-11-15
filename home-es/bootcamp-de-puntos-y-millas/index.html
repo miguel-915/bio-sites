@@ -50,6 +50,15 @@ h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14
 .small { font: 400 12px/1.4 var(--body); color: #A6BEB9; margin: 10px 0 0; }
 
 main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
+.guarantee-card { background: var(--surface); border: 2px solid var(--brass); border-radius: 12px; padding: 30px 28px; display: grid; gap: 16px; }
+.guarantee-card .eyebrow { margin: 0; }
+.guarantee-card h2 { font: 800 clamp(28px, 4vw, 38px)/1.15 var(--display); margin: 0; text-wrap: balance; }
+.guarantee-big { font: 800 clamp(38px, 6vw, 60px)/1.05 var(--display); color: var(--brass); margin: 0; }
+.guarantee-card .g-lede { font-size: 18px; line-height: 1.5; margin: 0; max-width: 62ch; }
+.g-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.g-checks li { font-size: 17px; line-height: 1.45; padding-left: 32px; position: relative; }
+.g-checks li::before { content: "\2713"; position: absolute; left: 2px; top: 0; font-weight: 800; color: var(--brass); font-size: 19px; }
+
 .group-h { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
 .group-h span { font: 700 11px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
 .group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
@@ -279,10 +288,20 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">La garantía</p>
-    <h2>El segundo año va por mi cuenta</h2>
-    <p>Termina los módulos principales. Asiste a seis llamadas grupales. Inicia una solicitud de FLIGHT WATCH con fechas que se puedan reservar. Sigue tu plan de tarjetas. Fundadores y VIP también completan sus llamadas personales. Si en 12 meses todavía no canjeaste un viaje, tus siguientes 12 meses son gratis.</p>
-    <p class="disc">Las aprobaciones de tarjetas y la disponibilidad de premios nunca están garantizadas, ni por mí ni por nadie.</p>
+    <div class="guarantee-card">
+      <p class="eyebrow">La garantía</p>
+      <h2>El segundo año va por mi cuenta</h2>
+      <p class="guarantee-big">12 meses más, gratis</p>
+      <p class="g-lede">Si haces el trabajo y en tus primeros 12 meses todavía no canjeaste un viaje, tus siguientes 12 meses son gratis. Hacer el trabajo significa:</p>
+      <ul class="g-checks">
+        <li>Termina los módulos principales</li>
+        <li>Asiste a seis llamadas grupales</li>
+        <li>Inicia una solicitud de FLIGHT WATCH con fechas que se puedan reservar</li>
+        <li>Sigue tu plan de tarjetas</li>
+        <li>Fundadores y VIP también completan sus llamadas personales</li>
+      </ul>
+      <p class="disc">Las aprobaciones de tarjetas y la disponibilidad de premios nunca están garantizadas, ni por mí ni por nadie.</p>
+    </div>
   </div>
 </section>
 

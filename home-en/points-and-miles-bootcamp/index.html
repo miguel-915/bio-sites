@@ -47,6 +47,15 @@ h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14
 .small { font: 400 12px/1.4 var(--body); color: #9AA6B2; margin: 10px 0 0; }
 
 main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
+.guarantee-card { background: var(--surface); border: 2px solid var(--brass); border-radius: 12px; padding: 30px 28px; display: grid; gap: 16px; }
+.guarantee-card .eyebrow { margin: 0; }
+.guarantee-card h2 { font: 800 clamp(28px, 4vw, 38px)/1.15 var(--display); margin: 0; text-wrap: balance; }
+.guarantee-big { font: 800 clamp(38px, 6vw, 60px)/1.05 var(--display); color: var(--brass); margin: 0; }
+.guarantee-card .g-lede { font-size: 18px; line-height: 1.5; margin: 0; max-width: 62ch; }
+.g-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.g-checks li { font-size: 17px; line-height: 1.45; padding-left: 32px; position: relative; }
+.g-checks li::before { content: "\2713"; position: absolute; left: 2px; top: 0; font-weight: 800; color: var(--brass); font-size: 19px; }
+
 .group-h { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
 .group-h span { font: 700 11px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
 .group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
@@ -275,10 +284,20 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">The guarantee</p>
-    <h2>The second year is on me</h2>
-    <p>Finish the core modules. Attend six group calls. Start one FLIGHT WATCH request with bookable dates. Follow your card plan. Founders and VIPs also complete their personal calls. If you still have not redeemed a trip in 12 months, your next 12 months are free.</p>
-    <p class="disc">Card approvals and award availability are never guaranteed, by me or by anyone.</p>
+    <div class="guarantee-card">
+      <p class="eyebrow">The guarantee</p>
+      <h2>The second year is on me</h2>
+      <p class="guarantee-big">12 more months, free</p>
+      <p class="g-lede">If you do the work and still have not redeemed a trip in your first 12 months, your next 12 months are free. Doing the work means:</p>
+      <ul class="g-checks">
+        <li>Finish the core modules</li>
+        <li>Attend six group calls</li>
+        <li>Start one FLIGHT WATCH request with bookable dates</li>
+        <li>Follow your card plan</li>
+        <li>Founders and VIPs also complete their personal calls</li>
+      </ul>
+      <p class="disc">Card approvals and award availability are never guaranteed, by me or by anyone.</p>
+    </div>
   </div>
 </section>
 
