@@ -47,15 +47,6 @@ h1 { font: italic 800 clamp(30px, 5vw, 46px)/1.08 var(--display); margin: 0 0 14
 .small { font: 400 12px/1.4 var(--body); color: #9AA6B2; margin: 10px 0 0; }
 
 main .wrap { padding-block: 36px 24px; display: grid; gap: 44px; }
-.guarantee-card { background: var(--surface); border: 2px solid var(--brass); border-radius: 12px; padding: 22px 20px; display: grid; gap: 12px; }
-.guarantee-title { font: 800 clamp(30px, 4.5vw, 42px)/1.1 var(--display); margin: 0; color: var(--ink); }
-.guarantee-title::after { content: ""; display: block; width: 64px; height: 4px; background: var(--brass); border-radius: 2px; margin-top: 10px; }
-.guarantee-sub { font: 700 20px/1.3 var(--display); margin: 0; color: var(--ink); }
-.guarantee-card .g-lede { font-size: 16px; line-height: 1.55; margin: 0; max-width: 62ch; }
-.g-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.g-checks li { font-size: 16px; line-height: 1.45; padding-left: 30px; position: relative; }
-.g-checks li::before { content: "\2713"; position: absolute; left: 2px; top: 0; font-weight: 800; color: var(--brass); font-size: 17px; }
-
 .group-h { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
 .group-h span { font: 700 11px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
 .group-h h2 { font: 800 24px/1.2 var(--display); margin: 0; text-wrap: balance; }
@@ -110,18 +101,8 @@ table.stack tr.grand td{font-weight:800;border-top:2px solid var(--brass);border
 .mod{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:15px}
 .mod b{font-family:var(--display)}
 .mod .n{color:var(--brass);font:800 13px/1 var(--display);display:block;margin-bottom:5px}
-.price .big{font:600 15px/1.35 var(--body);color:var(--muted);margin:0 0 8px}
+.price .big{font:800 34px/1 var(--display);margin:0 0 6px}
 .price p{font-size:15px;color:var(--muted);margin:0 0 8px}
-.card.price{position:relative}
-.price.featured{border:2px solid var(--brass)}
-.tier-badge{display:inline-flex;align-items:center;font:700 11px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:999px;margin:0 0 12px}
-.tier-badge.open{background:var(--brass);color:var(--blue)}
-.tier-badge.lock{background:var(--surface);border:1px solid var(--line);color:var(--muted)}
-.tier-badge svg{width:11px;height:11px;margin-right:5px}
-.price.locked{background:var(--chip)}
-.price.locked h3,.price.locked .big{color:var(--muted)}
-.itin-card{border:1.5px dashed var(--brass);border-radius:12px;padding:24px 22px}
-
 .vip{background:var(--blue);color:#F4F1EA;border-radius:8px;padding:26px 28px}
 .vip h2,.vip h3{color:#F4F1EA}
 .vip .eyebrow{color:var(--brass)}
@@ -143,7 +124,6 @@ details.faq p{font-size:15px;color:var(--muted);margin:10px 0 2px}
 .about img{width:100%;height:auto;border-radius:8px;display:block}
 @media (max-width:720px){.about{grid-template-columns:1fr}.about img{max-width:220px}}
 .disc{font-size:14px;color:var(--muted);border-left:3px solid var(--brass);padding-left:12px}
-
 /* Spacing and type system, Nov 15, 2026 */
 section:not(.hero){padding:54px 0}
 section h2:not(.guarantee-title){font-size:29px;line-height:1.15;margin:0 0 14px}
@@ -156,6 +136,7 @@ table.stack td{padding:12px 10px}
 .card{padding:24px}
 .guarantee-card{padding:28px 26px}
 @media (max-width:700px){section:not(.hero){padding:38px 0}section h2:not(.guarantee-title){font-size:25px}.vip{padding:24px 20px}}
+
 </style>
 </head>
 <body>
@@ -259,8 +240,7 @@ table.stack td{padding:12px 10px}
       <div class="mod"><span class="n">Module 5</span><b>Finding award space</b></div>
       <div class="mod"><span class="n">Module 6</span><b>Booking, step by step</b></div>
       <div class="mod"><span class="n">Module 7</span><b>Routes to Mexico, Central America, and South America</b></div>
-      <div class="mod"><span class="n">Module 8</span><b>Using points well and your plan</b></div>
-      <div class="mod"><span class="n">Module 9</span><b>Points arbitrage: buying points with strategy</b></div>
+      <div class="mod"><span class="n">Module 8</span><b>Using points well and your plan</b></div><div class="mod"><span class="n">Module 9</span><b>Points arbitrage: buying points with strategy</b></div>
     </div>
   </div>
 </section>
@@ -270,11 +250,11 @@ table.stack td{padding:12px 10px}
     <p class="eyebrow">Enrollment</p>
     <h2>How the seats open</h2>
     <div class="grid3">
-      <div class="card price featured"><span class="tier-badge open">Start here</span><h3>Founders</h3><p class="big">$297</p><p>First 25 seats. Opens Friday, November 27, 2026. When the 25 are gone, Founders closes for good.</p></div>
-      <div class="card price locked"><span class="tier-badge lock"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="1.5" fill="currentColor"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="2"/></svg>Not open yet</span><h3>Early Bird</h3><p class="big">$497</p><p>Opens when Founders fills and closes December 31, 2026.</p></div>
-      <div class="card price locked"><span class="tier-badge lock"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="1.5" fill="currentColor"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="2"/></svg>Not open yet</span><h3>Regular</h3><p class="big">$997</p><p>Begins January 1, 2027.</p></div>
+      <div class="card price"><h3>Founders</h3><p class="big">$297</p><p>First 25 seats. Opens Friday, November 27, 2026. When the 25 are gone, Founders closes for good.</p></div>
+      <div class="card price"><h3>Early Bird</h3><p class="big">$497</p><p>Opens when Founders fills and closes December 31, 2026.</p></div>
+      <div class="card price"><h3>Regular</h3><p class="big">$997</p><p>Begins January 1, 2027.</p></div>
     </div>
-    <p>After your first 12 months, you can renew the private community for $300 per year. This is an investment. One card bonus can be worth $1,000 or more in travel, and one good redemption can pay for this investment 10 times over. You need a good credit score, and savings are never guaranteed: they depend on your points, your dates, and your follow through.</p>
+    <p>After your first 12 months, you can renew the private community for $300 per year. This is an investment. One card bonus can be worth $1,000 or more in travel, and one good redemption can pay for this investment 10 times over. You need a credit score of about 700 or above, and savings are never guaranteed: they depend on your points, your dates, and your follow through.</p>
   </div>
 </section>
 
@@ -308,25 +288,15 @@ table.stack td{padding:12px 10px}
 
 <section>
   <div class="wrap">
-    <div class="guarantee-card">
-      <h2 class="guarantee-title">The Guarantee</h2>
-      <p class="guarantee-sub">The second year is on me</p>
-      <p class="g-lede">If you do the work and still have not redeemed a trip in your first 12 months, your next 12 months are free. Doing the work means:</p>
-      <ul class="g-checks">
-        <li>Finish the core modules</li>
-        <li>Attend six group calls</li>
-        <li>Start one FLIGHT WATCH request with bookable dates</li>
-        <li>Follow your card plan</li>
-        <li>Founders and VIPs also complete their personal calls</li>
-      </ul>
-      <p class="disc">Card approvals and award availability are never guaranteed, by me or by anyone.</p>
-    </div>
+    <p class="eyebrow">The guarantee</p>
+    <h2>The second year is on me</h2>
+    <p>Finish the core modules. Attend six group calls. Start one FLIGHT WATCH request with bookable dates. Follow your card plan. Founders and VIPs also complete their personal calls. If you still have not redeemed a trip in 12 months, your next 12 months are free.</p>
+    <p class="disc">Card approvals and award availability are never guaranteed, by me or by anyone.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="itin-card">
     <p class="eyebrow">Coming soon</p>
     <h2>US credit cards with an ITIN</h2>
     <p>Live outside the United States or still have no Social Security number? You can still get into the points game.</p>
@@ -346,7 +316,6 @@ table.stack td{padding:12px 10px}
       <p class="form-msg" role="status" aria-live="polite"></p>
     </form>
     <p class="fine">This list is only for the ITIN service. It is separate from the Bootcamp waitlist.</p>
-    </div>
   </div>
 </section>
 
@@ -368,8 +337,8 @@ table.stack td{padding:12px 10px}
     <p class="eyebrow">Questions</p>
     <h2>Before you join</h2>
     <details class="faq"><summary>When can I join?</summary><p>Enrollment opens Friday, November 27, 2026. Founders, the first 25 seats at $297, go first. Join the waitlist and the checkout link lands in your inbox first.</p></details>
-    <details class="faq"><summary>I have no points and no travel cards. Is this for me?</summary><p>Yes. The course starts at zero: how credit works, how to become card ready, and which card to open first, in what order.</p></details>
-    <details class="faq"><summary>What credit score do I need?</summary><p>Card approvals need good credit, and no one can guarantee an approval. The course starts with a credit path so you know where you stand before you apply for anything.</p></details>
+    <details class="faq"><summary>I have no points and no travel cards. Is this for me?</summary><p>Yes. The course starts at zero on points: what they are, how cards earn them, and which card to open first, in what order. It assumes a credit score of about 700 or above.</p></details>
+    <details class="faq"><summary>What credit score do I need?</summary><p>Plan on a credit score of about 700 or above. The cards that earn the most points ask for good to excellent credit, and no one can guarantee an approval. If your score is below that today, build it first and come back when you are close to 700. This system works when the approvals do.</p></details>
     <details class="faq"><summary>What if I want help finding the flights?</summary><p>That is what my award booking search is for, and it stays separate from the membership. It finds the seats and guides you through booking them in your own account, so your points and your accounts stay under your control. Inside the membership, the course, the calls, and FLIGHT WATCH teach you to run the same search yourself.</p></details>
     <details class="faq"><summary>How does FLIGHT WATCH work?</summary><p>You send one trip you want. For 90 days we watch it with award alerts, manual checks, and deal newsletters, and we check often. When a seat that fits opens, you hear about it and you book it. It is a watch, not a daily search service.</p></details>
     <details class="faq"><summary>Can my spouse learn with me?</summary><p>Yes. One membership covers your household. Both partners can watch the course and hold cards in their own names, so the house earns welcome bonuses twice as fast. The benefits, like the flight watch and the calls, count once per household. One membership. Two players. Double the welcome bonuses.</p></details>
