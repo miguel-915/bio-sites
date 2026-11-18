@@ -84,7 +84,8 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .sp-form .fine{font-size:13px;color:var(--muted);margin:12px 0 0}
 .sp-form .form-msg{font-size:14px;margin:10px 0 0}
 .sp-form .form-msg.ok{color:var(--brass);font-weight:700}
-.hero-img{width:100%;border-radius:8px;margin-top:18px;aspect-ratio:4/3;object-fit:cover;object-position:center 22%;display:block}
+.hero .wrap{align-items:start}
+.hero-img{width:100%;border-radius:8px;margin-top:16px;aspect-ratio:16/10;object-fit:cover;object-position:center 20%;display:block}
 .hero-points{margin:16px 0 0;padding-left:18px}
 .hero-points li{margin:0 0 6px;font-size:15px;color:rgba(244,241,234,.92)}
 .tq blockquote{margin:0;font-size:15px;color:var(--ink)}
@@ -161,7 +162,7 @@ table.stack td{padding:12px 10px}
     <div>
       <p class="eyebrow">Doce Meses para Despegar</p>
       <h1>De Cero Puntos a Tu Primer Viaje Internacional</h1>
-      <p class="lede">Una membresía de 12 meses con una sola meta: tu primer viaje internacional con puntos. Incluye el Bootcamp de Puntos y Millas completo, la comunidad privada, dos llamadas grupales al mes y una vigilancia de 90 días sobre el vuelo que quieres, con un plan claro en todo el camino.</p>
+      <p class="lede">Una mentoría de 12 meses con una sola meta: tu primer viaje internacional con puntos. Incluye el Bootcamp de Puntos y Millas completo, la comunidad privada, dos llamadas grupales al mes y una vigilancia de 90 días sobre el vuelo que quieres, con un plan claro en todo el camino.</p>
       <p class="lede">Hecho para quien nunca ha salido del país, o ha viajado fuera una o dos veces y quiere un plan real para el siguiente viaje. Yo empecé tarde: mi primer viaje internacional llegó ya pasados los treinta.</p>
       <ul class="hero-points">
         <li>¿Sin puntos todavía? El curso empieza desde cero.</li>
@@ -179,13 +180,13 @@ table.stack td{padding:12px 10px}
         <label for="sp-email">Tu correo</label>
         <input id="sp-email" type="email" name="email_address" placeholder="Tu correo" required autocomplete="email">
         <label for="sp-credit">¿Cuál es tu rango de puntaje de crédito?</label>
-        <input id="sp-credit" type="text" name="fields[credit_score_range]" placeholder="Menos de 650, 650 a 699, 700 a 749, 750 o más, o no estoy seguro" required>
+        <input id="sp-credit" type="text" name="fields[credit_score_range]" required>
         <label for="sp-traveled">¿Alguna vez has viajado fuera del país?</label>
-        <input id="sp-traveled" type="text" name="fields[traveled_outside_country]" placeholder="Nunca, una o dos veces, algunas veces, o viajo seguido" required>
+        <input id="sp-traveled" type="text" name="fields[traveled_outside_country]" required>
         <label for="sp-points">¿Cuántos puntos tienes ahora?</label>
-        <input id="sp-points" type="text" name="fields[points_balance]" placeholder="Ninguno todavía, menos de 50,000, 50,000 a 200,000, o más de 200,000" required>
+        <input id="sp-points" type="text" name="fields[points_balance]" required>
         <label for="sp-dream">¿A dónde quieres que sea tu primer gran viaje?</label>
-        <input id="sp-dream" type="text" name="fields[dream_destination]" placeholder="México, Europa, Asia, el Caribe, o todavía no lo sé">
+        <input id="sp-dream" type="text" name="fields[dream_destination]">
         <button type="submit">Quiero mi lugar</button>
         <p class="form-msg" role="status" aria-live="polite"></p>
       </form>
@@ -289,7 +290,7 @@ table.stack td{padding:12px 10px}
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">La membresía</p>
+    <p class="eyebrow">La mentoría</p>
     <h2>Todo lo que incluye</h2>
     <table class="stack">
       <tr><td>Bootcamp de Puntos y Millas: más de 30 lecciones en video, en orden</td><td>$997</td></tr>
