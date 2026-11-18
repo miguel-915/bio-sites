@@ -75,6 +75,17 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 36px; align-items: start; position: relative; }
 .hero-photo { width: 100%; height: auto; border-radius: 8px; display: block; }
 .hero .stats { grid-column: 1 / -1; margin-top: 0; }
+.wl-modal { position: fixed; inset: 0; background: rgba(6,17,28,.74); display: flex; justify-content: center; align-items: flex-start; padding: 26px 14px; z-index: 80; overflow-y: auto; }
+.wl-modal[hidden] { display: none; }
+.wl-modal-card { position: relative; width: 100%; max-width: 520px; margin: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px; color: var(--ink); }
+.wl-modal-card h3 { font: 800 20px/1.25 var(--display); margin: 0 0 8px; }
+.wl-modal-card > p { margin: 0 0 14px; font-size: 15px; color: var(--muted); }
+.wl-close { position: absolute; top: 10px; right: 14px; background: none; border: 0; font-size: 26px; line-height: 1; cursor: pointer; color: var(--muted); }
+.wl-form { display: grid; gap: 6px; }
+.wl-form label { font: 600 13px/1.3 var(--display); }
+.wl-form input { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 6px; font: 400 15px/1.4 var(--body); background: var(--surface); color: var(--ink); margin-bottom: 8px; }
+.wl-form button { width: 100%; margin-top: 4px; }
+.wl-modal-card .fine { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
 .hero h1 { font-weight: 800; font-size: clamp(38px, 6.4vw, 72px); line-height: 1.02; letter-spacing: -.02em; margin-bottom: 22px; }
 .hero h1 em { font-style: italic; color: var(--brass); }
 .hero .lede { font-size: clamp(17px, 1.8vw, 19px); color: var(--hero-sub); max-width: 75ch; margin: 0 0 30px; }
@@ -336,14 +347,7 @@ footer p { margin: 16px 0 0; max-width: 80ch; }
     </div>
     <div class="panel">
       <p style="margin:0 0 16px">Join the waitlist for launch updates and early bird pricing.</p>
-      <form class="kit" action="https://app.kit.com/forms/10002621/subscriptions" method="post" data-kit>
-          <label class="sr" for="name2">First name</label>
-          <input id="name2" type="text" name="fields[first_name]" placeholder="First name" required autocomplete="given-name">
-          <label class="sr" for="email2">Email address</label>
-          <input id="email2" type="email" name="email_address" placeholder="Email address" required autocomplete="email">
-          <button type="submit" class="btn btn-brass">Join the waitlist</button>
-          <p class="form-msg" role="status" aria-live="polite"></p>
-        </form>
+      <button type="button" class="btn btn-brass" data-open-form>Join the waitlist</button>
     </div>
   </div>
 </section>
@@ -381,6 +385,43 @@ document.querySelectorAll('form[data-kit]').forEach(f => f.addEventListener('sub
     msg.textContent = "That didn't go through. Try again in a minute."; msg.className = 'form-msg'; btn.disabled = false;
   }
 }));
+</script>
+
+<div class="wl-modal" id="waitlist-modal" hidden>
+  <div class="wl-modal-card">
+    <button type="button" class="wl-close" data-close-form aria-label="Close">&times;</button>
+    <h3>Join the waitlist</h3>
+    <p>Founding seats open on Friday, November 27, 2026. The first 25 members join at $297. Waitlist members get the checkout link first.</p>
+    <form class="wl-form" action="https://app.kit.com/forms/10002621/subscriptions" method="post" data-kit>
+      <label for="wl-name">First name</label>
+      <input id="wl-name" type="text" name="fields[first_name]" placeholder="First name" required autocomplete="given-name">
+      <label for="wl-email">Email address</label>
+      <input id="wl-email" type="email" name="email_address" placeholder="Email address" required autocomplete="email">
+      <label for="wl-credit">What is your credit score range?</label>
+      <input id="wl-credit" type="text" name="fields[credit_score_range]" required>
+      <label for="wl-traveled">Have you ever traveled outside the country?</label>
+      <input id="wl-traveled" type="text" name="fields[traveled_outside_country]" required>
+      <label for="wl-points">How many points do you have right now?</label>
+      <input id="wl-points" type="text" name="fields[points_balance]" required>
+      <label for="wl-dream">Where do you want your first big trip to be?</label>
+      <input id="wl-dream" type="text" name="fields[dream_destination]">
+      <button type="submit" class="btn btn-brass">Join the waitlist</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="fine">Founding seats open November 27. Your invite and checkout link arrive by email, nowhere else.</p>
+  </div>
+</div>
+
+<script>
+const wlModal = document.getElementById('waitlist-modal');
+if (wlModal) {
+  const openWl = e => { if (e) e.preventDefault(); wlModal.hidden = false; document.body.style.overflow = 'hidden'; const f = wlModal.querySelector('input'); if (f) f.focus(); };
+  const closeWl = () => { wlModal.hidden = true; document.body.style.overflow = ''; };
+  document.querySelectorAll('[data-open-form]').forEach(b => b.addEventListener('click', openWl));
+  wlModal.querySelectorAll('[data-close-form]').forEach(b => b.addEventListener('click', closeWl));
+  wlModal.addEventListener('click', e => { if (e.target === wlModal) closeWl(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !wlModal.hidden) closeWl(); });
+}
 </script>
 </body>
 </html>
