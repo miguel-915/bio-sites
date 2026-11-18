@@ -81,6 +81,12 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .sp-form .fine{font-size:13px;color:var(--muted);margin:12px 0 0}
 .sp-form .form-msg{font-size:14px;margin:10px 0 0}
 .sp-form .form-msg.ok{color:var(--brass);font-weight:700}
+.hero-img{width:100%;border-radius:8px;margin-top:18px;aspect-ratio:4/3;object-fit:cover;object-position:center 22%;display:block}
+.hero-points{margin:16px 0 0;padding-left:18px}
+.hero-points li{margin:0 0 6px;font-size:15px;color:rgba(244,241,234,.92)}
+.tq blockquote{margin:0;font-size:15px;color:var(--ink)}
+.tq .who{font:700 13px/1.35 var(--display);color:var(--brass);margin:10px 0 0}
+.tq .what{font-size:13px;color:var(--muted);margin:2px 0 0}
 .btn{display:inline-block;background:var(--brass);color:#0A1F33;font:700 14px/1 var(--display);padding:12px 20px;border-radius:6px;text-decoration:none}
 .btn.ghost{background:transparent;border:1.5px solid var(--brass);color:var(--ink)}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
@@ -154,6 +160,12 @@ table.stack td{padding:12px 10px}
       <h1>From Zero Points to Your First International Trip</h1>
       <p class="lede">A 12 month membership built around one goal: your first international trip on points. You get the full Points and Miles Bootcamp, a private community, two group calls a month, and a 90 day watch on the flight you want, with a clear plan the whole way.</p>
       <p class="lede">Built for the person who has never left the country, or has been abroad once or twice and wants a real plan for the next trip. I started late myself, and my first international trip came in my thirties.</p>
+      <ul class="hero-points">
+        <li>No points yet? The course starts at zero.</li>
+        <li>The entry bar is a credit score of about 700 or above.</li>
+        <li>You book in your own accounts. Nobody takes your points or your passwords.</li>
+      </ul>
+      <img class="hero-img" src="/assets/hero-first-class.jpg" alt="Miguel Rueda in a Singapore Airlines first class suite">
     </div>
     <aside class="sp-form" id="join">
       <h3>Join the waitlist</h3>
@@ -163,10 +175,18 @@ table.stack td{padding:12px 10px}
         <input id="sp-name" type="text" name="fields[first_name]" placeholder="First name" required autocomplete="given-name">
         <label for="sp-email">Email address</label>
         <input id="sp-email" type="email" name="email_address" placeholder="Email address" required autocomplete="email">
+        <label for="sp-credit">What is your credit score range?</label>
+        <input id="sp-credit" type="text" name="fields[credit_score_range]" placeholder="Below 650, 650 to 699, 700 to 749, 750 or above, or not sure" required>
+        <label for="sp-traveled">Have you ever traveled outside the country?</label>
+        <input id="sp-traveled" type="text" name="fields[traveled_outside_country]" placeholder="Never, once or twice, a few times, or I travel often" required>
+        <label for="sp-points">How many points do you have right now?</label>
+        <input id="sp-points" type="text" name="fields[points_balance]" placeholder="None yet, under 50,000, 50,000 to 200,000, or over 200,000" required>
+        <label for="sp-dream">Where do you want your first big trip to be?</label>
+        <input id="sp-dream" type="text" name="fields[dream_destination]" placeholder="Mexico, Europe, Asia, the Caribbean, or not sure yet">
         <button type="submit">Join the waitlist</button>
         <p class="form-msg" role="status" aria-live="polite"></p>
       </form>
-      <p class="fine">One email when enrollment opens, plus launch updates.</p>
+      <p class="fine">Founding seats open November 27. Your invite and checkout link arrive by email, nowhere else.</p>
     </aside>
   </div>
 </section>
@@ -180,6 +200,62 @@ table.stack td{padding:12px 10px}
       <a class="card1" href="/booked-with-points/parents-helsinki-ireland/"><img src="/assets/booked/parents-cliffs-of-moher.jpg" alt="The Cliffs of Moher, Ireland" loading="lazy"><span class="cb"><h3>Helsinki and Ireland with my parents</h3><p>419,500 points, one free night certificate, and $2,339.77 cash. The two big business class awards carried a retail price of $15,900. Total saved: $15,657.57.</p><span class="more">Read the full trip</span></span></a>
     </div>
     <p style="margin-top:14px"><a href="/booked-with-points/">All Booked With Points stories</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">From my inbox</p>
+    <h2>Readers who took the trip</h2>
+    <div class="grid3">
+      <div class="card tq">
+        <blockquote>I borrowed one of your photos to put it on my vision board... This week I made that happen! Currently in Rome, flew them here Air France Biz class. Keep inspiring the Latino community. We belong on those fancy seats also! Si se puede.</blockquote>
+        <p class="who">Ely</p>
+        <p class="what">Flew her parents to Rome in Air France business class</p>
+      </div>
+      <div class="card tq">
+        <blockquote>Thank you for your videos when you take your parents on the biz/first class flights. Saw one pop up months ago from you and that inspired me to learn about points and stuff to take them on Qsuites 3 months ago... Changed the way I travel for years to come.</blockquote>
+        <p class="who">Ulices</p>
+        <p class="what">Took his parents on Qatar Qsuites</p>
+      </div>
+      <div class="card tq">
+        <blockquote>More excited for my first business class flight than actually going to Europe... Possible because of you!! Thank you so much</blockquote>
+        <p class="who">Maria</p>
+        <p class="what">Her first business class flight to Europe</p>
+      </div>
+      <div class="card tq">
+        <blockquote>After I saw your post about your Greece trip I was determined to take my parents somewhere this year... I was struggling to find points booking till I saw your post.</blockquote>
+        <p class="who">Christian</p>
+        <p class="what">Found the Rome hotel booking for the trip with his parents</p>
+      </div>
+      <div class="card tq">
+        <blockquote>Huge thanks to @Miguel R for finding the Qatar Airways Business Class availability... I was able to book 2 Qatar Airways Business Class seats from ICN-DOH-LAX for October 20, 2027, at 100K Avios per person!</blockquote>
+        <p class="who">Tri</p>
+        <p class="what">Booked two Qsuites seats for his aunt and cousin</p>
+      </div>
+      <div class="card tq">
+        <blockquote>Just booked our flights from TJ-AMS for $1,600 round-trip Aeromexico Premier. Thanks again! ... My wife and I just finished our trip. TIJ CBX to Amsterdam Roundtrip. Thanks again.</blockquote>
+        <p class="who">Marcos</p>
+        <p class="what">Tijuana to Amsterdam in Aeromexico Premier with his wife</p>
+      </div>
+    </div>
+    <div class="grid3" style="margin-top:16px">
+      <div class="card tq">
+        <blockquote>Just applied for this card and got approved.</blockquote>
+        <p class="who">Sabyr</p>
+        <p class="what">Approved for the Amex Business Gold, then a Sapphire Preferred for his wife</p>
+      </div>
+      <div class="card tq">
+        <blockquote>Thanks for sharing the Alaska biz referral on discord. I got approved!! I used the employee # you mentioned.</blockquote>
+        <p class="who">Sandy</p>
+        <p class="what">Approved for the Alaska business card</p>
+      </div>
+      <div class="card tq">
+        <blockquote>Approved! Thank you!</blockquote>
+        <p class="who">Oscar</p>
+        <p class="what">Card approval after following along</p>
+      </div>
+    </div>
   </div>
 </section>
 
