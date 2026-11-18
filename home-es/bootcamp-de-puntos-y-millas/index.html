@@ -88,6 +88,15 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .hero-img{width:100%;border-radius:8px;margin-top:16px;aspect-ratio:16/10;object-fit:cover;object-position:center 20%;display:block}
 .hero-points{margin:16px 0 0;padding-left:18px}
 .hero-points li{margin:0 0 6px;font-size:15px;color:rgba(244,241,234,.92)}
+.sp-cta{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;color:var(--ink)}
+.sp-cta h3{font:800 20px/1.25 var(--display);margin:0 0 8px;color:var(--ink)}
+.sp-cta p{margin:0 0 14px;font-size:15px;color:var(--muted)}
+.sp-cta button{width:100%;background:var(--brass);color:#0A1F33;border:0;font:700 15px/1 var(--display);padding:13px 20px;border-radius:6px;cursor:pointer}
+.sp-cta .fine{font-size:13px;color:var(--muted);margin:12px 0 0}
+.sp-modal{position:fixed;inset:0;background:rgba(6,17,28,.74);display:flex;justify-content:center;align-items:flex-start;padding:26px 14px;z-index:80;overflow-y:auto}
+.sp-modal[hidden]{display:none}
+.sp-modal-card{position:relative;width:100%;max-width:520px;margin:auto}
+.sp-close{position:absolute;top:10px;right:14px;background:none;border:0;font-size:26px;line-height:1;cursor:pointer;color:var(--muted);z-index:2}
 .tq blockquote{margin:0;font-size:15px;color:var(--ink)}
 .tq .who{font:700 13px/1.35 var(--display);color:var(--brass);margin:10px 0 0}
 .tq .what{font-size:13px;color:var(--muted);margin:2px 0 0}
@@ -171,6 +180,17 @@ table.stack td{padding:12px 10px}
       </ul>
       <img class="hero-img" src="/assets/hero-first-class.jpg" alt="Miguel Rueda en una suite de primera clase de Singapore Airlines">
     </div>
+    <aside class="sp-cta">
+      <h3>Los lugares de Fundadores abren el 27 de noviembre de 2026</h3>
+      <p>Los primeros 25 miembros entran con $297, y la lista de espera recibe el enlace de pago primero. Cuatro preguntas rápidas para ubicarte, y quedas en la lista.</p>
+      <button type="button" data-open-form>Quiero mi lugar</button>
+      <p class="fine">Tu invitación y el enlace de pago llegan por correo, en ningún otro lado.</p>
+    </aside>
+  </div>
+</section>
+<div class="sp-modal" id="waitlist-modal" hidden>
+  <div class="sp-modal-card">
+    <button type="button" class="sp-close" data-close-form aria-label="Cerrar">&times;</button>
     <aside class="sp-form" id="join">
       <h3>Únete a la lista de espera</h3>
       <p>Los lugares de Fundadores abren el viernes 27 de noviembre de 2026. Los primeros 25 miembros entran con $297. La lista de espera recibe el enlace de pago primero.</p>
@@ -193,7 +213,7 @@ table.stack td{padding:12px 10px}
       <p class="fine">Los lugares de Fundadores abren el 27 de noviembre. Tu invitación y el enlace de pago llegan por correo, en ningún otro lado.</p>
     </aside>
   </div>
-</section>
+</div>
 
 <section>
   <div class="wrap">
@@ -446,6 +466,17 @@ document.querySelectorAll('form[data-kit]').forEach(f => f.addEventListener('sub
   } catch (err) { msg.textContent = f.dataset.err; }
   btn.disabled = false;
 }));
+const modal = document.getElementById('waitlist-modal');
+if (modal) {
+  const openModal = e => { if (e) e.preventDefault(); modal.hidden = false; document.body.style.overflow = 'hidden'; const f = modal.querySelector('input'); if (f) f.focus(); };
+  const closeModal = () => { modal.hidden = true; document.body.style.overflow = ''; };
+  document.querySelectorAll('[data-open-form]').forEach(b => b.addEventListener('click', openModal));
+  document.querySelectorAll('a[href="#join"]').forEach(a => a.addEventListener('click', openModal));
+  modal.querySelectorAll('[data-close-form]').forEach(b => b.addEventListener('click', closeModal));
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+  if (window.location.hash === '#join') openModal();
+}
 </script>
 
 </body>
