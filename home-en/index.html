@@ -73,7 +73,7 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 .hero { background: var(--blue); color: var(--hero-ink); padding-block: clamp(40px, 7vw, 88px) clamp(36px, 5vw, 64px); overflow: hidden; position: relative; }
 .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 80% at 85% 20%, color-mix(in srgb, var(--brass) 18%, transparent), transparent 70%); pointer-events: none; }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 36px; align-items: start; position: relative; }
-.hero-photo { width: 100%; border-radius: 8px; display: block; }
+.hero-photo { width: 100%; height: auto; border-radius: 8px; display: block; }
 .hero .stats { grid-column: 1 / -1; margin-top: 0; }
 .hero h1 { font-weight: 800; font-size: clamp(38px, 6.4vw, 72px); line-height: 1.02; letter-spacing: -.02em; margin-bottom: 22px; }
 .hero h1 em { font-style: italic; color: var(--brass); }
