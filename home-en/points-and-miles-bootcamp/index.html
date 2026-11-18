@@ -81,11 +81,13 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .sp-form .fine{font-size:13px;color:var(--muted);margin:12px 0 0}
 .sp-form .form-msg{font-size:14px;margin:10px 0 0}
 .sp-form .form-msg.ok{color:var(--brass);font-weight:700}
-.hero .wrap{display:block}
-.hero .wrap > div{max-width:780px;margin:0 auto;text-align:center}
-.hero-img{width:100%;max-width:520px;border-radius:8px;margin:22px auto 0;display:block}
-.hero-points{margin:16px 0 0;padding-left:18px;display:inline-block;text-align:left}
-.hero-seats{margin:18px 0 0;font-size:16px;font-weight:600}
+.hero .wrap{align-items:stretch}
+.hero-text{display:flex;flex-direction:column;justify-content:space-between}
+.hero-text .eyebrow,.hero-text h1,.hero-text .lede{margin-top:0}
+.hero .wrap.hero-under{display:block;text-align:center;padding-block:0 44px}
+.hero-img{width:100%;border-radius:8px;margin:0;display:block}
+.hero-points{margin:0;padding-left:18px}
+.hero-seats{margin:0;font-size:16px;font-weight:600}
 .hero-fine{margin:10px 0 0;font-size:13px;color:rgba(244,241,234,.75)}
 .hero-points li{margin:0 0 6px;font-size:15px;color:rgba(244,241,234,.92)}
 .sp-cta{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;color:var(--ink)}
@@ -172,7 +174,7 @@ table.stack td{padding:12px 10px}
 
 <section class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-text">
       <p class="eyebrow">Twelve Months to Takeoff</p>
       <h1>From Zero Points to Your First International Trip</h1>
       <p class="lede">A 12 month mentorship built around one goal: your first international trip on points. You get the full Points and Miles Bootcamp, a private community, two group calls a month, and a 90 day watch on the flight you want, with a clear plan the whole way.</p>
@@ -182,11 +184,13 @@ table.stack td{padding:12px 10px}
         <li>The entry bar is a credit score of about 700 or above.</li>
         <li>You book in your own accounts. Nobody takes your points or your passwords.</li>
       </ul>
-      <img class="hero-img" src="/assets/hero-first-class.jpg" alt="Miguel Rueda in a Singapore Airlines first class suite">
-      <p class="hero-seats">Founding seats open November 27, 2026. The first 25 members join at $297, and the waitlist gets the checkout link first.</p>
-      <div class="hero-cta"><button type="button" data-open-form>Join the waitlist</button></div>
-      <p class="hero-fine">Four quick questions, then you are on the list. Your invite and checkout link arrive by email, nowhere else.</p>
     </div>
+    <img class="hero-img" src="/assets/hero-first-class.jpg" alt="Miguel Rueda in a Singapore Airlines first class suite">
+  </div>
+  <div class="wrap hero-under">
+    <p class="hero-seats">Founding seats open November 27, 2026. The first 25 members join at $297, and the waitlist gets the checkout link first.</p>
+    <div class="hero-cta"><button type="button" data-open-form>Join the waitlist</button></div>
+    <p class="hero-fine">Four quick questions, then you are on the list. Your invite and checkout link arrive by email, nowhere else.</p>
   </div>
 </section>
 <div class="sp-modal" id="waitlist-modal" hidden>
