@@ -81,9 +81,12 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .sp-form .fine{font-size:13px;color:var(--muted);margin:12px 0 0}
 .sp-form .form-msg{font-size:14px;margin:10px 0 0}
 .sp-form .form-msg.ok{color:var(--brass);font-weight:700}
-.hero .wrap{align-items:start}
-.hero-img{width:100%;border-radius:8px;margin-top:16px;aspect-ratio:16/10;object-fit:cover;object-position:center 20%;display:block}
-.hero-points{margin:16px 0 0;padding-left:18px}
+.hero .wrap{display:block}
+.hero .wrap > div{max-width:780px;margin:0 auto;text-align:center}
+.hero-img{width:100%;max-width:520px;border-radius:8px;margin:22px auto 0;display:block}
+.hero-points{margin:16px 0 0;padding-left:18px;display:inline-block;text-align:left}
+.hero-seats{margin:18px 0 0;font-size:16px;font-weight:600}
+.hero-fine{margin:10px 0 0;font-size:13px;color:rgba(244,241,234,.75)}
 .hero-points li{margin:0 0 6px;font-size:15px;color:rgba(244,241,234,.92)}
 .sp-cta{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;color:var(--ink)}
 .sp-cta h3{font:800 20px/1.25 var(--display);margin:0 0 8px;color:var(--ink)}
@@ -96,8 +99,8 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .sp-close{position:absolute;top:10px;right:14px;background:none;border:0;font-size:26px;line-height:1;cursor:pointer;color:var(--muted);z-index:2}
 .timg{width:100%;border-radius:6px;border:1px solid var(--line);display:block}
 .tq .timg + .timg{margin-top:8px}
-.hero-cta{margin-top:14px}
-.hero-cta button{background:var(--brass);color:#0A1F33;border:0;font:700 15px/1 var(--display);padding:13px 22px;border-radius:6px;cursor:pointer}
+.hero-cta{margin-top:14px;text-align:center}
+.hero-cta button{background:var(--brass);color:#0A1F33;border:0;font:700 16px/1 var(--display);padding:15px 34px;border-radius:6px;cursor:pointer}
 .tq blockquote{margin:0;font-size:15px;color:var(--ink)}
 .tq .who{font:700 13px/1.35 var(--display);color:var(--brass);margin:10px 0 0}
 .tq .what{font-size:13px;color:var(--muted);margin:2px 0 0}
@@ -180,14 +183,10 @@ table.stack td{padding:12px 10px}
         <li>You book in your own accounts. Nobody takes your points or your passwords.</li>
       </ul>
       <img class="hero-img" src="/assets/hero-first-class.jpg" alt="Miguel Rueda in a Singapore Airlines first class suite">
+      <p class="hero-seats">Founding seats open November 27, 2026. The first 25 members join at $297, and the waitlist gets the checkout link first.</p>
       <div class="hero-cta"><button type="button" data-open-form>Join the waitlist</button></div>
+      <p class="hero-fine">Four quick questions, then you are on the list. Your invite and checkout link arrive by email, nowhere else.</p>
     </div>
-    <aside class="sp-cta">
-      <h3>Founding seats open November 27, 2026</h3>
-      <p>The first 25 members join at $297, and the waitlist gets the checkout link first. Four quick questions so I can place you, then you are on the list.</p>
-      <button type="button" data-open-form>Join the waitlist</button>
-      <p class="fine">Your invite and checkout link arrive by email, nowhere else.</p>
-    </aside>
   </div>
 </section>
 <div class="sp-modal" id="waitlist-modal" hidden>
