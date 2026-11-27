@@ -120,7 +120,7 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 @media (max-width: 560px) { .helps { grid-template-columns: 1fr; } }
 .help { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; text-decoration: none; transition: border-color .15s, transform .15s; }
 .help:hover { border-color: var(--brass); transform: translateY(-2px); }
-.help:not(:last-child)::after { content: "→"; position: absolute; right: 0; top: 50%; transform: translate(50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: var(--brass); color: var(--ink); font: 800 28px/46px var(--display); text-align: center; z-index: 3; box-shadow: 0 1px 4px rgba(0, 0, 0, .18); }
+.help:not(:last-child)::after { content: "→"; position: absolute; right: 0; top: 50%; transform: translate(50%, -50%); color: var(--brass); font: 800 44px/1 var(--display); z-index: 3; }
 @media (max-width: 980px) { .help:nth-child(2)::after { display: none; } }
 @media (max-width: 560px) { .help:not(:last-child)::after { right: auto; left: 50%; top: auto; bottom: 0; transform: translate(-50%, 50%) rotate(90deg); } .help:nth-child(2)::after { display: block; } }
 .help .tag { align-self: flex-start; font: 500 12px/1 var(--mono); padding: 6px 8px; border-radius: 4px; background: var(--chip); color: var(--ink); }
