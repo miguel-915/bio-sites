@@ -90,6 +90,9 @@ footer .wrap { padding-block: 28px 40px; font-size: 12px; color: var(--muted); d
 .hero-points li:last-child{margin-bottom:0}
 .hero-seats{margin:0;font-size:16px;font-weight:600}
 .hero-fine{margin:10px 0 0;font-size:13px;color:rgba(244,241,234,.75)}
+.countdown{margin:14px 0 0;font:700 17px/1.3 var(--display);color:var(--brass)}
+.fd-line{font:700 14px/1.35 var(--display);color:var(--ink);margin:10px 0 0}
+.fd-timer{font-variant-numeric:tabular-nums}
 .hero-points li{margin:0 0 6px;font-size:15px;color:rgba(244,241,234,.92)}
 .sp-cta{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;color:var(--ink)}
 .sp-cta h3{font:800 20px/1.25 var(--display);margin:0 0 8px;color:var(--ink)}
@@ -199,8 +202,12 @@ table.stack td{padding:12px 10px}
     <p class="hero-seats">Founders is open. The first 25 members join at $297, and when those 25 are gone, Founders closes for good.</p>
     <div class="hero-cta"><a href="https://buy.stripe.com/7sYfZhaYe8BRcPK6ZD2go0a">Join now</a></div>
     <p class="hero-fine">One payment step with card, Apple Pay, or Link. Your Skool invite lands in your email right after.</p>
+    <p class="countdown">Founders closes in <span class="fd-timer"></span></p>
   </div>
 </section>
+<script>
+(function(){var end=new Date('2026-12-01T00:00:00-07:00').getTime();function pad(n){return (n<10?'0':'')+n}function tick(){var ms=end-Date.now();var els=document.querySelectorAll('.fd-timer');if(ms<=0){els.forEach(function(e){e.textContent='00h 00m 00s'});var c=document.querySelector('.countdown');if(c){c.textContent='Founders is closed.'}return}var s=Math.floor(ms/1000);var d=Math.floor(s/86400);s%=86400;var h=Math.floor(s/3600);s%=3600;var m=Math.floor(s/60);var sec=s%60;var t=(d>0?d+'d ':'')+pad(h)+'h '+pad(m)+'m '+pad(sec)+'s';els.forEach(function(e){e.textContent=t});setTimeout(tick,1000)}document.addEventListener('DOMContentLoaded',tick)})();
+</script>
 <div class="sp-modal" id="waitlist-modal" hidden>
   <div class="sp-modal-card">
     <button type="button" class="sp-close" data-close-form aria-label="Close">&times;</button>
@@ -366,7 +373,7 @@ table.stack td{padding:12px 10px}
     <p class="eyebrow">Enrollment</p>
     <h2>How the seats open</h2>
     <div class="grid3">
-      <div class="card price"><p class="locktag">Open now</p><h3>Founders</h3><p class="big">$297</p><p>First 25 seats. When the 25 are gone, Founders closes for good.</p><p><a class="btn" href="https://buy.stripe.com/7sYfZhaYe8BRcPK6ZD2go0a">Join now</a></p></div>
+      <div class="card price"><p class="locktag">Open now</p><h3>Founders</h3><p class="big">$297</p><p>First 25 seats. When the 25 are gone, Founders closes for good.</p><p><a class="btn" href="https://buy.stripe.com/7sYfZhaYe8BRcPK6ZD2go0a">Join now</a></p><p class="fd-line">Closes in <span class="fd-timer"></span></p></div>
       <div class="card price locked"><p class="locktag">Not open yet</p><h3>Presale</h3><p class="big">$497</p><p>Opens when Founders fills and closes December 31, 2026.</p></div>
       <div class="card price locked"><p class="locktag">Not open yet</p><h3>Regular</h3><p class="big">$997</p><p>Grand opening January 1, 2027.</p></div>
     </div>
